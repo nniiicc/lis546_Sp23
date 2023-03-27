@@ -1,0 +1,52 @@
+# Site settings
+course_name: LIS 546 - Data Curation II
+course_description: "Examines a broad range of issues in the field of data curation. Focus on recent advances and challenging problems in the curation of research data across disciplines and new trends in open data resources and services for the general public. Draws on practical research findings, case studies, and current public and private sector data initiatives to examine key challenges in the field, as well as practical solutions applied by data professionals."
+course_semester: "Spring 2023"
+
+baseurl: "/lis546_Sp23" # the subpath of your site, e.g. /blog/
+url: "http://nniiicc.github.io/" # the base hostname & protocol for your site
+
+schoolname: "University of Washington Information School"
+schoolurl: "https://ischool.uw.edu/"
+twitter_username: uw_ischool
+
+address: |
+    Box 352840 - Mary Gates Hall, Ste. 370
+    Seattle
+    Washington
+
+# Set your Google Analytics tracking ID (set up yours at http://www.google.com/analytics/)
+# google_analytics: UA-XXXXXXXX-X
+
+### Do not change the followings unless you know what you are doing ###
+
+# Build settings
+markdown: kramdown
+
+# Other options
+permalink: blog/:year/:month/:title
+excerpt_separator: "<!--more-->"
+
+include: ['_images', '_css']
+exclude: ['develop']
+
+dateformat: "%m/%d/%Y"
+
+future: true
+collections:
+    events:
+        output: true
+    lectures:
+        output: true
+    assignments:
+        output: true
+    announcements:
+        output: false
+
+
+defaults:
+  - scope:
+      path: ""
+      type: "assignments"
+    values:
+      layout: "assignment"
