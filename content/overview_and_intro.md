@@ -8,14 +8,12 @@ As the second in a sequence of courses offered at the UW iSchool, Data Curation 
 
 This knowledge will be useful when applied to practical activities such as data normalization, cleaning, or packaging for sharing and reuse.
 
-We will also pay particular attention to the repository architectures (technical design) and information infrastructures (technological and social connectivity) that constrain and afford data access. Throughout the quarter we will draw on research, case studies, and practical working examples in order to examine key challenges in the field. See the video below for an extended introduction to the course structure this term.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nGYnknL1QFs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+We will also pay particular attention to the repository architectures (technical design) and information infrastructures (technological and social connectivity) that constrain and afford data access. Throughout the quarter we will draw on research, case studies, and practical working examples in order to examine key challenges in the field.
 
 **Accessibility**       
 - There will be minimal material on the Canvas site. I hope that this makes skimming and digesting the material much easier, and it provides a sustainable resource that you can return to at any time in the future (and is publicly accessible). The course content will remain accessible to you regardless of your being enrolled as a student at UW.
 
-- There will be a short and hopefully helpful lecture each week, but the majority of the substantive content is in the form of pages on this website and as links to articles and other websites.
+- There will be a short and hopefully helpful video-recorded lecture each week, but the majority of the substantive content is in the form of pages on this website and as links to articles and other websites.
 
 - If you cannot, for any reason, access course materials please be in touch and I will figure out a way to get the material to you.
 
@@ -83,25 +81,25 @@ There are two aspect of this class that will require your time and attention.
     <td class="tg-0lax">2</td>
     <td class="tg-0lax">Tables, Trees, and Triples</td>
     <td class="tg-0lax">Cookie Recipes</td>
-    <td class="tg-0lax"><a href="https://norlab.github.io/LIS-546-SPR2021/assignments/02_assignment_data_pitch" target="_blank" rel="noopener noreferrer">Data Pitch</a></td>
+    <td class="tg-0lax"><a href="https://nniiicc.github.io/lis546_Sp23/assignments/02_assignment_data_pitch" target="_blank" rel="noopener noreferrer">Data Pitch</a></td>
   </tr>
   <tr>
     <td class="tg-0lax">3</td>
     <td class="tg-0lax">Tidy Data</td>
     <td class="tg-0lax">Messy Recipe Data</td>
-    <td class="tg-0lax"><a href="https://norlab.github.io/LIS-546-SPR2021/assignments/03_assignment_statement_of_work" target="_blank" rel="noopener noreferrer">Definition, Scope, Audience</a></td>
+    <td class="tg-0lax"><a href="https://nniiicc.github.io/lis546_Sp23/assignments/03_assignment_statement_of_work" target="_blank" rel="noopener noreferrer">Definition, Scope, Audience</a></td>
   </tr>
   <tr>
     <td class="tg-0lax">4</td>
     <td class="tg-0lax">Data Integration</td>
     <td class="tg-0lax">311 Data</td>
-    <td class="tg-0lax"><a href="https://norlab.github.io/LIS-546-SPR2021/assignments/04_assignment_users_and_uses" target="_blank" rel="noopener noreferrer">User Stories</a></td>
+    <td class="tg-0lax"><a href="https://nniiicc.github.io/lis546_Sp23/assignments/04_assignment_users_and_uses" target="_blank" rel="noopener noreferrer">User Stories</a></td>
   </tr>
   <tr>
     <td class="tg-0lax">5</td>
     <td class="tg-0lax">Data Packaging</td>
     <td class="tg-0lax">Data Curator Demo</td>
-    <td class="tg-0lax"><a href="https://norlab.github.io/LIS-546-SPR2021/assignments/05_assignment_collection_policies" target="_blank" rel="noopener noreferrer">Data Collection Policies</a></td>
+    <td class="tg-0lax"><a href="https://nniiicc.github.io/lis546_Sp23/assignments/05_assignment_collection_policies" target="_blank" rel="noopener noreferrer">Data Collection Policies</a></td>
   </tr>
   <tr>
     <td class="tg-0lax">6</td>
@@ -113,19 +111,19 @@ There are two aspect of this class that will require your time and attention.
     <td class="tg-0lax">7</td>
     <td class="tg-0lax">Data Acquisition, Search, and Discovery</td>
     <td class="tg-0lax">APIs</td>
-    <td class="tg-0lax"><a href="https://norlab.github.io/LIS-546-SPR2021/assignments/06_assignment_transformations_and_quality" target="_blank" rel="noopener noreferrer">Data Transformations and Quality</a></td>
+    <td class="tg-0lax"><a href="https://nniiicc.github.io/lis546_Sp23/assignments/06_assignment_transformations_and_quality" target="_blank" rel="noopener noreferrer">Data Transformations and Quality</a></td>
   </tr>
   <tr>
     <td class="tg-0lax">8</td>
     <td class="tg-0lax">Metadata Application Profiles</td>
     <td class="tg-0lax">None</td>
-    <td class="tg-0lax"><a href="https://norlab.github.io/LIS-546-SPR2021/assignments/08_assignment_metadata" target="_blank" rel="noopener noreferrer">Metadata Application Profiles</a></td>
+    <td class="tg-0lax"><a href="https://nniiicc.github.io/lis546_Sp23/assignments/08_assignment_metadata" target="_blank" rel="noopener noreferrer">Metadata Application Profiles</a></td>
   </tr>
   <tr>
     <td class="tg-0lax">9</td>
     <td class="tg-0lax">Ontologies and Linked Data</td>
     <td class="tg-0lax">None</td>
-    <td class="tg-0lax"><a href="https://norlab.github.io/LIS-546-SPR2021/assignments/07_assignment_licensing" target="_blank" rel="noopener noreferrer">Data Licensing</a></td>
+    <td class="tg-0lax"><a href="https://nniiicc.github.io/lis546_Sp23/assignments/07_assignment_licensing" target="_blank" rel="noopener noreferrer">Data Licensing</a></td>
   </tr>
   <tr>
     <td class="tg-0lax">10</td>
@@ -146,17 +144,13 @@ Your grade for this course is made up of four different components: Participatio
 
 - Protocol Assignments: Most weeks also have a protocol related assignment. If you complete these before our weekly meetings I can give you feedback and help you structure these so that they are useful to your final deliverable. You only need to complete these by including them in your final protocol deliverable. (20% of your final grade)
 
-- Protocol: The final assignment that is due on or before `Sunday June 06, 2021` - The assignment is described in detail on this [page](https://norlab.github.io/LIS-546-SPR2021/assignments/01_assignment_overview). In short, the assignment asks you to envision curating and archiving a set of open data that is focused on a particular topic of interest to a particular audience. This builds upon your experience in developing a protocol in DC I. The final protocol can be turned in a variety of formats, but must include all of the components to be given full credit. (60% of your final grade)
+- Protocol: The final assignment that is due on or before `Friday June 02, 2023` - The assignment is described in detail on this [page](https://nniiicc.github.io/lis546_Sp23/assignments/01_assignment_overview). In short, the assignment asks you to envision curating and archiving a set of open data that is focused on a particular topic of interest to a particular audience. This builds upon your experience in developing a protocol in DC I. The final protocol can be turned in a variety of formats, but must include all of the components to be given full credit. (60% of your final grade)
 
 ## What to do if you find a mistake in this text
-
-I have done my best to customize and adapt Professor Weber's course content. Since this is my first time preparing the content in this form there will inevitably be mistakes or usability issues. If you find a mistake, an issue, or want to make a recommendation for improvement please send me an email `norlab@uw.edu`. I promise I want to hear about it.
+If you find a mistake, an issue, or want to make a recommendation for improvement please send me an email `nmweber@uw.edu`. I promise I want to hear about it.
 
 **Acknowledgements**
-
-I wouldn't be teaching this course without the support of Nic Weber and Carole Palmer. A significant portion of the content for this course was originally created by Professor Weber and I want to be fully transparent about that. I couldn't have done this without his work. I also want to include the acknowledgements from Professor Weber regarding the content he created:
-
-> I have had a lot of help putting together these materials. Where possible I have documented these individuals and resources throughout. Some explicit thanks is necessary - Jackson Brown, Andrea Thomer, Peter Organisciak, Katrina Fenlon, and Alex Garnett have contributed ideas for exercises, readings, and reviewed portions of each chapter.
+ I have had a lot of help putting together these materials. Where possible I have documented these individuals and resources throughout. Some explicit thanks is necessary - Eva Brown, Andrea Thomer, Peter Organisciak, Katrina Fenlon, and Alex Garnett have contributed ideas for exercises, readings, and reviewed portions of each chapter.
 
  <h1><a id="Introduction">Introduction to Data Curation II</a></h1>    
 **Original Author: Nic Weber**  
@@ -233,4 +227,4 @@ In DC II we are going to tackle topics that help us significantly expand this de
 I will also introduce some more advanced topics that relate to processes of acquiring, packaging, linking, and representing data such that it can be published to the web.
 
 <h2><a id="Exercise">Exercise</a></h2>
-Introduce yourself on the [Canvas discussion board](). This is not a graded exercise. 
+Introduce yourself on the [Canvas discussion board](https://canvas.uw.edu/courses/1641385/discussion_topics/8008430). This is not a graded exercise.
