@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  
+
+
+
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title> Repository Architectures - Data Curation II / Spring 2023 </title>
+  <meta name="description" content="Repository Architectures - Data Curation II / Spring 2023">
+  
+  <link rel="stylesheet" href="/lis546_Sp23/_css/main.css">
+  <link rel="canonical" href="http://localhost:4000/lis546_Sp23/content/repository-architectures">
+  <link rel="alternate" type="application/rss+xml" title="Data Curation II / Spring 2023 - University of Washington Information School" href="http://localhost:4000/lis546_Sp23/feed.xml" />
+<link rel='stylesheet' id='open-sans-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&#038;subset=latin%2Clatin-ext&#038;ver=4.2.4' type='text/css' media='all' />
+<link href='https://fonts.googleapis.com/css?family=Titillium+Web:600italic,600,400,400italic' rel='stylesheet' type='text/css'>
+
+
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper" style="z-index: 100;">
+      <table><tr>
+          <td><img width="75" src="/lis546_Sp23/_images/iSchoolSymbolOnly_RGB_White.png" valign="middle"></td>
+          <td style="padding-left:10px;"><a class="schoolname" style="font-size: 15px;" class="site-title" href="https://ischool.uw.edu/">University of Washington Information School</a>
+          <br/>
+          <span style="margin-top: -2px;margin-bottom: -10px;" class="site-title"><a href="/lis546_Sp23/" title="Data Curation II / Spring 2023 - University of Washington Information School"><b>Data Curation II</a></b></span>
+          <br/>
+          <span class="coursesemeter" style="font-size: 12px;font-weight: bold;margin-top: 10px;display: block;">Spring 2023</span>
+          </td>
+        </tr></table>
+
+    <nav class="site-nav">
+
+      <a href="#" class="menu-icon menu.open">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>  
+
+    <div class="trigger"><h1>Main Navigation</h1>
+
+ <ul class="menu">
+    
+    <li>
+        <a class="page-link" href="/lis546_Sp23/">
+            <i class="fa fa-home fa-lg"></i> Home
+        </a>
+    </li>
+    
+    <li>
+        <a class="page-link" href="/lis546_Sp23/schedule/">
+            <i class="fas fa-calendar-alt"></i> Schedule
+        </a>
+    </li>
+    
+    <li>
+        <a class="page-link" href="/lis546_Sp23/lectures/">
+            <i class="fas fa-book-reader"></i> Modules
+        </a>
+    </li>
+    
+    <li>
+        <a class="page-link" href="/lis546_Sp23/assignments/">
+            <i class="fas fa-user-graduate"></i> Assignments
+        </a>
+    </li>
+    
+    <li>
+        <a class="page-link" href="/lis546_Sp23/project/">
+            <i class="fas fa-user-graduate"></i> Project
+        </a>
+    </li>
+    
+</ul>
+
+     </div>  
+    </nav>
+
+  </div>
+
+  <div class="header-texture" style="height:100%; z-index: 0; position: absolute; top:0; right: 0; left: 0; 
+  background-image: url('/lis546_Sp23/_images/pattern.png');" />
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <h1 id="repository-architectures">Repository Architectures</h1>
+<p><strong>Original Author: Nic Weber</strong><br />
+<strong>Editing &amp; Updates: Bree Norlander</strong></p>
+
+<p>In the most generic sense, data repositories provide for the publication and long-term preservation of data. As a sociotechnical infrastructure, data repositories also play a key role in data discovery, in data packaging, and in the day to day work of curation. In this chapter I will build upon DC 1’s discussion of a data repository as a layered “architecture” for curation. In doing so I will introduce the ISO standard for an Open Archival Information System (OAIS), and relate this to contemporary repository software architectures that facilitate data publishing, access, citation, and preservation.</p>
+
+<h2 id="repositories">Repositories</h2>
+<p>The last 20 years have seen data increasingly published to the web as structured information, free for sharing and reuse. We have, thus far, discussed multiple innovations that have made this increase in data collection and publishing possible, including how data are practically stored, retrieved, and packaged for reuse. Early efforts at increasing data access focused specifically on how to embed data in electronic publishing environments (<a href="https://github.com/norlab/LIS-546-SPR2021/raw/master/content/readings/Data-on-the-Web-Skeleton.pdf">Abiteboul et al</a>, 2000) and how to provide programmatic access to data that were stored on remote servers (<a href="https://alliance-primo.hosted.exlibrisgroup.com/permalink/f/lvbsh/TN_cdi_askewsholts_vlebooks_9781449359744">Richardson et al</a>, 2013). Over the last decade technologies have been developed to better connect different components of the data publication lifecycle - starting from a small number of hard to use proprietary repositories to a diverse range of (slightly easier to use) open-source options. These repositories depend on an “architecture” - that is a complex and highly coordinated integration of software, hardware, and human services.</p>
+
+<h2 id="layers-of-a-data-repository">Layers of a Data Repository</h2>
+<p>In Data Curation 1 we discussed the idea that repositories are a series of technical “layers” or a “stack” of technologies - each layer consists of a set of services and interfaces that allow data to be reliably preserved and published for reuse. The layers of a repository are, roughly, as follows:</p>
+
+<p><img src="https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/hardware.png" alt="" /></p>
+<ul>
+  <li><strong>Hardware</strong>: The hardware layer of a repository consists of technologies that practically store, and serve data to a software layer. The hardware layer of a repository, at minimum, consists of a set of servers (hosting databases, websites, etc.) and a set of backup storage environments such as spinning disks or tape-based storage. The hardware layer is closest to what we described in the Introduction chapter as the “Physical” layer of a computing system (hence the “hard” in <a href="https://en.wikipedia.org/wiki/Computer_hardware">hardware</a>).</li>
+</ul>
+
+<p><img src="https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/software.png" alt="" /></p>
+<ul>
+  <li><strong>Software</strong>: The software layer of a repository consists of code that runs a web-interface, and provides APIs that connect different servers to one another so that data can be reliably retrieved, and served to end-users. The software layer presents a graphic user interface (GUI) to users of the data repository and allows for ease of access. This software layer also provides a GUI for curators who manage deposits to a data repository, and allows for metadata and other descriptive elements to be attached to data before it is ingested into a long-term storage environment. Often the software layer of a repository is described as a “repository framework” (e.g. Dataverse, CKAN, or DSpace) - this simply means the different software components that are particularly configured for data access and preservation (more on this below). The software and hardware layer carry out preservation and long-term storage of data.</li>
+</ul>
+
+<p><img src="https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/policy.png" alt="" /></p>
+<ul>
+  <li><strong>Policy</strong>: The policy layer of a repository consists of curation services such as deposit, ingest, metadata creation, and publication of data to the web. The policy layer provides specific rules for how these services are to be carried out, and specifies <strong>who</strong> is in charge of <strong>what</strong> practical functions of data publication and preservation.</li>
+</ul>
+
+<p><img src="https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/repository.png" alt="" /></p>
+<ul>
+  <li><strong>Governance</strong>: The governance layer of a repository consists of institutional guidelines that specify <strong>how</strong> data should be managed over the long term, the rights of data producers and consumers, and the intellectual property claims that can be made by any institutional actor.</li>
+</ul>
+
+<h3 id="data-preservation--oais">Data Preservation + OAIS</h3>
+<p>Throughout the course we have defined data as “information objects playing the role of evidence.” At the lowest level of abstraction all digital “information objects” are a binary sequence of 1’s and 0’s - that is, they are bits of information that are encoded on storage media. At the hardware level, data repositories provide a way for data (as encoded binary information) to be reliably stored on media such as an optical or spinning disk. At the software layer, a data repository provides an interface so that curators can manage and prepare data for archiving at the hardware layer.</p>
+
+<p>The preservation component of a layered repository architecture can’t be overstated in importance - it is this combination of hardware and software that enable data repositories and curators to reliably provide for long-term archiving of data such that data remain accessible indefinitely.</p>
+
+<p>To better understand the services and functionalities of a repository in terms of preservation, I will briefly introduce and discuss the Open Archival Information System (OAIS).</p>
+
+<p>The OAIS is a conceptual model (sometimes called a “reference” model) for describing the design and responsibilities of reliable long-term preservation repositories. OAIS was developed by NASA data curators in the late 1990s, but has since been adopted as an International Standard (ISO).</p>
+
+<p>As a conceptual model OAIS does not specify particular software or hardware requirements, but instead describes the core functions necessary to carry out reliable data preservation in <em>any</em> repository. In short, an OAIS provides a vocabulary for different data repository designers, curators, and administrators to generically describe the practical services and technical components that are necessary for reliable long-term preservation.</p>
+
+<p>The OAIS literature can be a bit dense and difficult to comprehend on first read. I will attempt to give just a preliminary overview of this conceptual model below. (If you are interested in this kind of content - you should definitely take Professor Weber’s <em>Digital Preservation</em> course where you will discuss these concepts in greater depth. But, as emerging professional curators it is helpful to at least understand the core concepts of an OAIS, and how they apply to the curation services of a data repository.) In lecture this week I will describe the OAIS as it applies to a use case from the Qualitative Data Repository (<a href="https://qdr.syr.edu/">QDR</a>). So, just a warning that if this seems <em>overly</em> conceptual or abstract - be sure to watch the lecture so that you have a concrete working example to apply these terms. (Caveat: Nic Weber is the Technical Director of QDR.)</p>
+
+<h4 id="oais-roles">OAIS Roles</h4>
+<p>In an OAIS there are three specific roles that humans play:</p>
+
+<ul>
+  <li><strong>Producers</strong> - These are the content providers. They submit data to be preserved by an OAIS.</li>
+  <li><strong>Consumers</strong> - These are the “users” of an OAIS. They will browse, search, and request data from an OAIS.</li>
+  <li><strong>Management</strong> - These are the individuals charged with carrying out the functions of an OAIS. Management is practically charged with preserving data, creating information packages (described below) and developing policies for the OAIS. (Critically - the OAIS as a conceptual model does not specify a specific role for curators - it leaves the actual day to day work, and long-term maintenance of the repository somewhat undefined in the management role. This is a major limitation of the model, but for now let’s just waive our hands at this omission.)</li>
+</ul>
+
+<p>One of the fundamental concepts of an OAIS is a <strong>“Designated Community”</strong> - this is the specific set of producers and consumers that are served by an OAIS. Management has the responsibility of clearly defining a designated community for an OAIS, and monitoring their emerging needs. In the OAIS a designated community is assumed to have a particular “knowledge base” - this is what that community can be <em>reliably</em> expected to know about the holdings of a data repository. In an OAIS most of the work in generating metadata, and packaging data are in service of the “Designated Community” needs. A curator necessarily has to have a deep understanding of the designated communities needs, and monitor these shifting or changing needs over time.</p>
+
+<h4 id="oais-information-packages">OAIS Information Packages</h4>
+<p>In an OAIS all content is described in terms of an “information package” consisting of data, metadata, and a machine-readable log of any preservation actions that have been taken by an OAIS. There are three specific types of information packages in an OAIS:</p>
+
+<ul>
+  <li><strong>Submission Information Package (SIP)</strong>: A submission information package is the data that a <code class="language-plaintext highlighter-rouge">Producer</code> sends to an OAIS to preserve. A SIP is initially submitted to an OAIS and then managed by curators.</li>
+  <li><strong>Archival Information Package (AIP)</strong>: A SIP is transformed into an archival information package by a curator. This transformation might consist of activities like enhancing metadata about the SIP, and storing different components of the SIP in a repository’s hardware. It is worth noting that these activities may also include creating new copies of the data, or transforming the data to a new format. The AIP is what is ultimately <strong>ingested</strong> by an OAIS for long-term preservation.</li>
+  <li><strong>Dissemination Information Package (DIP)</strong>: When a <code class="language-plaintext highlighter-rouge">Consumer</code> requests data from an OAIS, a curator will assemble an AIP (or multiple AIPs), to create a package of data to be delivered to the <code class="language-plaintext highlighter-rouge">Consumer</code>. The DIP is then, practically, what the <code class="language-plaintext highlighter-rouge">Consumer</code> receives from an OAIS as data.</li>
+</ul>
+
+<h4 id="oais-core-services">OAIS Core Services</h4>
+<p>Any OAIS is expected to carry out 6 core activities: Ingest, Archival Storage, Data Management, Preservation Planning, Access, and Administration</p>
+
+<ul>
+  <li><strong>Ingest</strong>: When a SIP is received a curator transforms this package into an AIP and prepares this package to be preserved. This is, in essence, the procedure for getting data into the long-term storage environment of a repository.</li>
+  <li><strong>Archival Storage</strong>: After an AIP is created, the components (such as metadata or data files) are practically stored in multiple environments.</li>
+  <li><strong>Data Management</strong>: Over time, a curator will perform preservation actions against an AIP. Recall that in previous chapters we discussed the role of “checksums” for creating a reliable way to transfer data from one entity to another. A checksum is also used within an OAIS to insure that the data being stored has not become corrupted, and is what it purports to be (that is, the data have authenticity).</li>
+  <li><strong>Preservation Planning</strong>: In addition to managing data, an OAIS will plan to refresh or update storage media, maintain software, and regularly monitor a designated community’s needs to ensure that preserved data can be reliably retrieved and served to Consumers.</li>
+  <li><strong>Access</strong>: In creating DIP’s for a designated community, an OAIS is expected to continually monitor end-user services that can guarantee search and discovery of data remains consistent for Consumers. The access service of an OAIS also requires continual monitoring of the designated community to insure that their needs are being met.</li>
+  <li><strong>Administration</strong>: Finally, the Management role of an OAIS is expected to govern, and make strategic funding or licensing decisions that can guarantee the long-term accessibility and authenticity of stored data.</li>
+</ul>
+
+<p>Collectively, each of these services are carried out by the Management role in an OAIS, and often apply to a particular information package as it moves through an OAIS (from Producer to Consumer).</p>
+
+<h4 id="the-oais-model">The OAIS Model</h4>
+<p>The following diagram is a quick (but admittedly busy) overview of the three major components of an OAIS (Roles, Information Packages, and Services). The diagram should be read moving from right to left - that is <code class="language-plaintext highlighter-rouge">Producers</code> deposit a SIP, <code class="language-plaintext highlighter-rouge">Management</code> transforms a SIP to AIP and also provides services (within the OAIS), and <code class="language-plaintext highlighter-rouge">Consumers</code> request AIPs that are delivered as a DIP. (See - I told you there was a lot of jargon.) Inside the OAIS all core services are performed (this is denoted by the black lined boundary separating Consumers and Producers from the repository).</p>
+
+<p><img src="https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/oais-model.png" alt="" /></p>
+
+<p>To reinforce one important point about the OAIS model - as depicted in this diagram - it is conceptual. It provides a reference language that is not specific to any one repository, but can be used to describe roles, services, and information packages that are managed by ANY data repository.</p>
+
+<h3 id="data-repository-frameworks">Data Repository Frameworks</h3>
+<p>As I mentioned at the beginning of this chapter, the curation community has over the last decade developed a number of repository frameworks that make the day to day work of curating, publishing, and preserving data practically possible. These frameworks are often marginal in their differences - they each use a slightly different set of hardware and software components to carry out specified functions of an OAIS. But, these marginal differences have important implications for institutions in selecting, implementing, and running a data repository. A repository framework like <a href="https://ckan.org/">CKAN</a> for example is content agnostic - it doesn’t have any specific features that are developed for a particular designated community. Instead it is a highly modifiable open-source technology that can be used by governments, scientific institutions, or industry that have access to general hardware. Somewhat oppositely, a repository framework like <a href="https://dataverse.org/">Dataverse</a> is developed specifically for social science data. Dataverse provides functionality to social science data curators that need to implement specific metadata standards when creating an AIP, and is configured to run on the type of hardware that is often available to a university IT staff. Dataverse also has features that allow for <code class="language-plaintext highlighter-rouge">Consumers</code> and <code class="language-plaintext highlighter-rouge">Producers</code> to register for OAIS services based on their university credentials (e.g. that they are a verified member of a particular university). This registration process is an important way for <code class="language-plaintext highlighter-rouge">Management</code> to implement what an OAIS describes as <code class="language-plaintext highlighter-rouge">Access</code> controls - who can deposit data, who can search for and obtain data, etc.</p>
+
+<p>The three most prevalently used data repository frameworks that you are likely to encounter are Fedora, CKAN, and Dataverse. Fedora, the repository we haven’t yet discussed, is a highly extensible framework. This means that Fedora provides a core set of features that have, in turn, a core set of hardware dependencies. These core features can be modified and tailored by any institution that has unique needs for serving a “designated community”. This extensibility is a major feature of Fedora, and has resulted in what can seem like a dizzying array of repository frameworks that differ by name and feature-set. <a href="https://mike.giarlo.name/">Mike Giarlo</a>, a data curation developer, has helpfully provided an overview of the evolution of Fedora in the image below.</p>
+
+<p><img src="https://pbs.twimg.com/media/EUk7X_AUYAA46FB?format=jpg&amp;name=medium" alt="" /></p>
+
+<p>I provide this so that you can get a quick overview of the ways a repository framework like Fedora can be modified and reused across institutions based on their specific needs for serving a designated community. It is worth noting that even as someone who has worked in this field for 10 years, it wasn’t until Mike provided this diagram that the relationship between different repositories was even remotely clear to me. So, if reviewing and reading documentation about repositories seems confusing - welcome to the club!</p>
+
+<p>The important concept to take away from this brief overview of existing frameworks available to data curators is that there are multiple different ways in which to practically set up a storage and preservation environment. The particular services and roles that are played within a repository are shaped by what the framework is designed primarily to achieve (e.g. serving one particular community versus another), but ultimately  <code class="language-plaintext highlighter-rouge">Management</code> in an OAIS has the discretion to set policies and to govern data as they best see fit. It is in this sense that a repository is a sociotechnical infrastructure - its the combination of people and technologies that practically serve designated communities.</p>
+
+<h3 id="summary">Summary</h3>
+<p>This module has reviewed the major architectural components of a data repository, including the software, hardware, policy and governance “layers”. In describing the relationship between hardware and software layers we looked specifically at a conceptual model, the Open Archival Information System (OAIS), to better understand how preservation is carried out between different stakeholders - including <code class="language-plaintext highlighter-rouge">Consumers</code>, <code class="language-plaintext highlighter-rouge">Producers</code> and <code class="language-plaintext highlighter-rouge">Management</code>. Less abstractly, I also introduced the idea of a repository as a framework that is practically implemented with specific hardware and software configurations that are meant to serve a particular designated community. In the readings below, there are links to the technical specifications for each of these repository frameworks - I highly encourage you to pick one of these and skim the documentation to understand exactly how concepts in the OAIS model are implemented.</p>
+
+<p><strong>Chapter References</strong></p>
+
+<ul>
+  <li>Abiteboul, S., Buneman, P., &amp; Suciu, D. (2000). Data on the Web: from relations to semistructured data and XML. Morgan Kaufmann. <a href="https://github.com/norlab/LIS-546-SPR2021/raw/master/content/readings/Data-on-the-Web-Skeleton.pdf">PDF</a></li>
+  <li>Richardson, L., Amundsen, M., Amundsen, M., &amp; Ruby, S. (2013). RESTful Web APIs: Services for a Changing World. “ O’Reilly Media, Inc.” <a href="https://alliance-primo.hosted.exlibrisgroup.com/permalink/f/lvbsh/TN_cdi_askewsholts_vlebooks_9781449359744">UW Libraries Link</a></li>
+</ul>
+
+<h2 id="lecture">Lecture</h2>
+
+<p>&lt;iframe width=853 height=509 frameborder=”0” scrolling=”no” src=”https://screencast-o-matic.com/embed?sc=cYhYohkEou&amp;v=5&amp;controls=1&amp;ff=1” allowfullscreen=”true”&gt;&lt;/iframe&gt;</p>
+<h2 id="readings">Readings</h2>
+
+<p><strong>Required</strong></p>
+
+<p>Read this very brief description of digital libraries (cyberinfrastructure) from the National Science Foundation program launched in the mid 1990. It provides a nice and very brief description of how data repositories have emerged from early digital library funding: <a href="https://web.archive.org/web/20190207233414/https://www.nsf.gov/news/special_reports/cyber/digitallibraries.jsp">Link</a></p>
+
+<p>Now, let’s fast forward to a current landscape of many different repository software platforms available. The following post from the IQSS staff at Harvard’s Dataverse provides an excellent table comparing existing data repository services. Pay attention to the categories being compared, and how this related to the affordances of the software (also see the ‘optional readings’ section for more literature like this). <a href="https://dataverse.org/blog/comparative-review-various-data-repositories">Link</a></p>
+
+<p>Next, read this “overly honest” report from the University of Illinois Library (the largest circulating academic library in the world) on developing a data repository:</p>
+
+<ul>
+  <li>Fallaw, C., Dunham, E., Wickes, E., Strong, D., Stein, A., Zhang, Q., … &amp; Imker, H. J. (2016). Overly honest data repository development. <a href="https://journal.code4lib.org/articles/11980">Code4Lib</a></li>
+</ul>
+
+<p><strong>Review</strong> documentation for just one repository platform listed below. Be sure to also look at an example of the platform’s deployment.</p>
+
+<p>Samavera (Open-source repository for universities and institutional repositories)</p>
+
+<ul>
+  <li><a href="https://samvera.org/samvera-open-source-repository-framework/">About</a></li>
+  <li><a href="https://samvera.org/samvera-open-source-repository-framework/technology-stack/">Technical Stack</a></li>
+  <li>Example deployment: <a href="https://digital.sciencehistory.org/">Science History Institute</a></li>
+</ul>
+
+<p>Dataverse (Open-source repository for social science data)</p>
+
+<ul>
+  <li><a href="https://dataverse.org/about">About</a></li>
+  <li><a href="http://guides.dataverse.org/en/latest/">Documentation</a></li>
+  <li>Example deployment: <a href="https://data.qdr.syr.edu/">Qualitative Data Repository</a> or <a href="https://dataverse.tdl.org/">Texas Data Repository</a></li>
+  <li>See the QDR Core Seal Trust documentation for more details on how Dataverse is configured. <a href="https://www.coretrustseal.org/wp-content/uploads/2018/11/Qualitative-Data-Repository.pdf">PDF</a></li>
+</ul>
+
+<p>Fedora (Open-source repository with semantic capabilities - often used by science repositories)</p>
+
+<ul>
+  <li><a href="https://duraspace.org/fedora/about/">About</a></li>
+  <li><a href="https://duraspace.org/fedora/resources/technical-specifications/">Specifications</a></li>
+  <li><a href="https://wiki.duraspace.org/display/FF">Developer Wiki</a></li>
+  <li>Example Deployment: <a href="https://archaeologydataservice.ac.uk/">Archaeology Data Service</a></li>
+  <li>ADS certification <a href="https://assessment.datasealofapproval.org/assessment_96/seal/html/">documentation</a> for further info on how they use Fedora</li>
+</ul>
+
+<p>CKAN (open-source data repository - often used for civic data)</p>
+
+<ul>
+  <li><a href="https://ckan.org/">About</a></li>
+  <li><a href="https://docs.ckan.org/en/latest/sysadmin-guide.html">Documentation</a></li>
+  <li>Example deployment: <a href="https://www.data.gov/">U.S. Government</a> or <a href="https://data.gov.au/">Australian Government</a></li>
+  <li>Some <a href="https://ckan.org/portfolio/data-gov-au/">additional info</a> on the Australian Government instantiation of CKAN</li>
+</ul>
+
+<p>Clowder (Open-source for long-tail data)</p>
+
+<ul>
+  <li><a href="https://clowder.ncsa.illinois.edu/">Description of project</a></li>
+  <li><a href="https://dl.acm.org/citation.cfm?id=3219159">Description of technical design</a></li>
+  <li>Example deployment: <a href="https://czo-archive.criticalzone.org/national/">Critical Zone Observatories (Archived)</a></li>
+</ul>
+
+<p><strong>Additional optional reading:</strong></p>
+
+<ul>
+  <li>Amorim, R. C., Castro, J. A., Da Silva, J. R., &amp; Ribeiro, C. (2017). A comparison of research data management platforms: architecture, flexible metadata and interoperability. Universal Access in the Information Society, 16(4), 851-862. <a href="https://repositorio-aberto.up.pt/bitstream/10216/111537/2/229906.pdf">PDF</a></li>
+  <li>Lnenicka, M. (2015). An in-depth analysis of open data portals as an emerging public e-service. International Journal of Social, Education, Economics and Management Engineering, 9(2), 589-599.  (see table 3 in particular for a comparative approach to Open Data portal evaluation) <a href="https://pdfs.semanticscholar.org/f83e/e7fa439fb9011ff064a90a42a2c2f1fb43b4.pdf">PDF</a></li>
+  <li><a href="https://confluence.cornell.edu/display/culpublic/Cornell+University+Library+Repository+Principles+and+Strategies+Handbook">Cornell University Library Repository Principles and Strategies Handbook</a> (I highly recommend this if you are looking for some background on how a University Library strategizes around digital infrastructures)</li>
+  <li>Blanke, T., &amp; Hedges, M. (2013). <a href="https://www.sciencedirect.com/science/article/pii/S0167739X11001178">Scholarly primitives: Building institutional infrastructure for humanities e-Science</a>. Future Generation Computer Systems, 29(2), 654-661.</li>
+</ul>
+
+<h2 id="exercise">Exercise</h2>
+<p>There is no exercise this week. However, if you would like to apply some of the concepts that have been reviewed in the Chapter and in Lecture you can see this <a href="https://norlab.github.io/LIS-546-SPR2021/assignments/09_assignment_repo_arch_OPTIONAL">optional component of your protocol assignment</a> for selecting and evaluating a repository framework.</p>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+<!--     <h2 class="footer-heading">University of Washington Information School</h2> -->
+         <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+ 
+
+         <p class="text">
+Box 352840 - Mary Gates Hall, Ste. 370<br />
+Seattle<br />
+Washington<br />
+
+      </div>
+
+      <div class="footer-col  footer-col-2">
+       <ul class="social-media-list">
+     
+
+          
+
+          
+  <li>
+    <a href="https://twitter.com/uw_ischool">
+      <i class="fab fa-twitter" style="color:gray"></i> uw_ischool
+    </a>
+  </li>
+
+
+          
+
+          
+
+          
+  <li>
+    <a href="https://ischool.uw.edu/">
+      <i class="fas fa-globe" style="color:gray"></i> ischool.uw.edu/
+    </a>
+  </li>
+
+
+
+
+       
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+  </body>
+
+</html>
+<!-- d.s.m.s.050600.062508.030515.080516.030818 | "Baby, I'm Yours" -->

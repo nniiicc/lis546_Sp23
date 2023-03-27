@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  
+
+
+
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title> Repository Architectures (OPTIONAL) Assignment - Data Curation II / Spring 2023 </title>
+  <meta name="description" content="Assignment OPTIONAL: Repository ArchitecturesMost of us will never design a new data curation system from the ground up. We will, by and large, develop on to...">
+  
+  <link rel="stylesheet" href="/lis546_Sp23/_css/main.css">
+  <link rel="canonical" href="http://localhost:4000/lis546_Sp23/assignments/09_assignment_repo_arch_OPTIONAL">
+  <link rel="alternate" type="application/rss+xml" title="Data Curation II / Spring 2023 - University of Washington Information School" href="http://localhost:4000/lis546_Sp23/feed.xml" />
+<link rel='stylesheet' id='open-sans-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&#038;subset=latin%2Clatin-ext&#038;ver=4.2.4' type='text/css' media='all' />
+<link href='https://fonts.googleapis.com/css?family=Titillium+Web:600italic,600,400,400italic' rel='stylesheet' type='text/css'>
+
+
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper" style="z-index: 100;">
+      <table><tr>
+          <td><img width="75" src="/lis546_Sp23/_images/iSchoolSymbolOnly_RGB_White.png" valign="middle"></td>
+          <td style="padding-left:10px;"><a class="schoolname" style="font-size: 15px;" class="site-title" href="https://ischool.uw.edu/">University of Washington Information School</a>
+          <br/>
+          <span style="margin-top: -2px;margin-bottom: -10px;" class="site-title"><a href="/lis546_Sp23/" title="Data Curation II / Spring 2023 - University of Washington Information School"><b>Data Curation II</a></b></span>
+          <br/>
+          <span class="coursesemeter" style="font-size: 12px;font-weight: bold;margin-top: 10px;display: block;">Spring 2023</span>
+          </td>
+        </tr></table>
+
+    <nav class="site-nav">
+
+      <a href="#" class="menu-icon menu.open">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>  
+
+    <div class="trigger"><h1>Main Navigation</h1>
+
+ <ul class="menu">
+    
+    <li>
+        <a class="page-link" href="/lis546_Sp23/">
+            <i class="fa fa-home fa-lg"></i> Home
+        </a>
+    </li>
+    
+    <li>
+        <a class="page-link" href="/lis546_Sp23/schedule/">
+            <i class="fas fa-calendar-alt"></i> Schedule
+        </a>
+    </li>
+    
+    <li>
+        <a class="page-link" href="/lis546_Sp23/lectures/">
+            <i class="fas fa-book-reader"></i> Modules
+        </a>
+    </li>
+    
+    <li>
+        <a class="page-link" href="/lis546_Sp23/assignments/">
+            <i class="fas fa-user-graduate"></i> Assignments
+        </a>
+    </li>
+    
+    <li>
+        <a class="page-link" href="/lis546_Sp23/project/">
+            <i class="fas fa-user-graduate"></i> Project
+        </a>
+    </li>
+    
+</ul>
+
+     </div>  
+    </nav>
+
+  </div>
+
+  <div class="header-texture" style="height:100%; z-index: 0; position: absolute; top:0; right: 0; left: 0; 
+  background-image: url('/lis546_Sp23/_images/pattern.png');" />
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Repository Architectures (OPTIONAL) Assignment</h1>
+    <p class="post-meta">Released on Sunday 05/02/2021</p>
+  </header>
+
+  <div>
+    
+    <span style="font-weight: bold">Due Date: Thursday 06/03/2021 23:59</span>
+    
+    <!--
+    <p style="font-weight: bold">Download
+      
+      
+      
+    </p>
+-->
+ <br>
+
+  </div>
+
+  <br />
+  <article class="post-content">
+    <h2 id="assignment-optional-repository-architectures">Assignment OPTIONAL: Repository Architectures</h2>
+<p>Most of us will never design a new data curation system from the ground up. We will, by and large, develop on top of existing software platforms that provide basic features. This means we can focus our time and attention on <strong>configuring</strong> these architectures to meet our specific needs.</p>
+
+<p>There are many existing open-source data repositories from which we can choose. However, deciding between different repository platforms can be a daunting task. We have to balance time, skills, user needs, and the requirements for both hardware and other related software.</p>
+
+<p>In this exercise we’ll try to use some basic criteria to profile the software underlying a repository platform, and then decide which repository we feel might ultimately be best for our data collections.</p>
+
+<p>Side note - many of you will not need to evaluate a repository for the sake of your protocol, but this is a handy skill to practice so may still be worth your time.</p>
+
+<p>For this exercise you can chose between four repository platforms.</p>
+
+<ol>
+  <li><a href="https://ckan.org/">CKAN</a> - by the Open Knowledge Foundation <a href="http://demo.ckan.org/">Demo</a></li>
+  <li><a href="http://dataverse.org/">Dataverse</a> - by Harvard University <a href="https://demo.dataverse.org/">Demo</a> (see in particular this <a href="http://guides.dataverse.org/en/latest/installation/intro.html#intended-audience">introduction</a></li>
+  <li><a href="https://samvera.org/samvera-open-source-repository-framework/technology-stack/">Samavera</a> - by a consortium of University Libraries and Cultural Heritage Institutions</li>
+  <li><a href="https://wiki.duraspace.org/display/FF">Fedora</a> - by the DuraSpace consortium.</li>
+</ol>
+
+<p><strong>Evaluation criteria</strong>     <br />
+In order to evaluate a repository we need clear criteria about what makes one more suitable to our users’ needs than any other.</p>
+
+<p>Here is an example of a profile I created for the <a href="https://docs.google.com/document/d/1_wB4SUWwsZYcYq87k4_GfFxL9pPYXDqFsTGwhXhriQY/edit">Qualitative Data Repository</a> when our advisory board needed a simple explanation of why the technical team would invest a year of time and money into switching from one repository software platform (Fedora) to another (Dataverse).</p>
+
+<p>In general we can evaluate a repository in two ways:</p>
+
+<ol>
+  <li>Profiling the software that underlies a repository system: The underlying software for a repository can be thought of as the “repository architecture” (and is sometimes colloquially called the “repository stack”). An architecture typically consists of all the different components that are needed to realize the repository. An architecture typically includes an operating system, a server application, a database, a search engine, and a set of protocols that allow for data to be transferred between different components of the architecture. For example - the list below is the Dataverse architecture:</li>
+</ol>
+
+<ul>
+  <li>Linux: RHEL/CentOS is highly recommended since all development and QA happens on this distribution.</li>
+  <li>Glassfish: a Java EE application server to which the Dataverse application (war file) is to be deployed.</li>
+  <li>PostgreSQL: a relational database.</li>
+  <li>Solr: a search engine. A Dataverse-specific schema is provided.</li>
+  <li>SMTP server: for sending mail for password resets and other notifications.</li>
+  <li>Persistent identifier service: DOI and Handle support are provided. Production use requires a registered DOI or Handle.net authority.</li>
+</ul>
+
+<ol>
+  <li>Creating user stories / use cases to understand what expectations our users might have about a repository. We have previous completed exercises on these more “user centered” techniques - so for now we will focus our time and attention on evaluating the underlying software of a repository.</li>
+</ol>
+
+<p>In choosing a repository platform we should try to find the right balance between software (and our own skills) and user needs (or how well the software meets those needs).</p>
+
+<p><strong>Profile</strong></p>
+
+<p>Here is a template you can use when starting to evaluate a new repository platform:</p>
+
+<p><em>Platform-Name</em></p>
+
+<ul>
+  <li>Who are the producers of the repository?</li>
+  <li>What is the license of the repository’s software?</li>
+  <li>What are the hardware requirements of the repository?</li>
+  <li>What are the related software requirements of the repository (in other words - what is its architecture)?</li>
+  <li>What is the current release or version number that is available for download?
+    <ul>
+      <li>How often are releases made available?</li>
+      <li>How do repository developers report an error or bug found in a release?</li>
+    </ul>
+  </li>
+  <li>How many people are using the repository? What kinds of data do they curate?</li>
+  <li>How is the software modified by those users? (e.g. are there plugins or extensible libraries?)</li>
+  <li>What type of data is typically stored in the repository? Does the architecture afford any special features for particular kinds of data (e.g. geospatial data repository software might have a map plugin)</li>
+  <li>How customizable is the metadata for the repository? Can new application profiles be easily created and implemented?</li>
+  <li>Is the repository interoperable with other types of repositories? (e.g. Does the repository have an easily accessible API?)</li>
+</ul>
+
+<p><strong>Major Strengths:</strong></p>
+
+<p><strong>Major weaknesses:</strong></p>
+
+<p><strong>Overall Assessment:</strong></p>
+
+
+  </article>
+  <div style="color: gray;">
+      <h3>Late Policy</h3>
+      <ul>
+    
+    <li>All assignments are due at 11:59 PM Pacific Time unless otherwise noted.</li>
+    
+    <li>If you cannot meet a deadline please get in touch with me 24 hours in advance of the due date to request an extension. - I have a "no questions asked" policy on extensions.  I will not ask you to share the personal reasons why you need an extension, but if you would like to share with me for any reason please feel free. I am available listen.</li>
+    
+    <li>If you have not made arrangments with me, all late work will be automatically penalized 10% of the final grade of the assignment (e.g.  If you would have received a 100% you will receive a 90%.)  and will incur a 10% penalty for each additional day that the assignment is not complete.</li>
+    
+    <li>For those of you working in groups, please remember that your group members will be negatively impacted by any unexcused lateness on your part.</li>
+    
+</ul>
+    </div>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+<!--     <h2 class="footer-heading">University of Washington Information School</h2> -->
+         <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+ 
+
+         <p class="text">
+Box 352840 - Mary Gates Hall, Ste. 370<br />
+Seattle<br />
+Washington<br />
+
+      </div>
+
+      <div class="footer-col  footer-col-2">
+       <ul class="social-media-list">
+     
+
+          
+
+          
+  <li>
+    <a href="https://twitter.com/uw_ischool">
+      <i class="fab fa-twitter" style="color:gray"></i> uw_ischool
+    </a>
+  </li>
+
+
+          
+
+          
+
+          
+  <li>
+    <a href="https://ischool.uw.edu/">
+      <i class="fas fa-globe" style="color:gray"></i> ischool.uw.edu/
+    </a>
+  </li>
+
+
+
+
+       
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+  </body>
+
+</html>
+<!-- d.s.m.s.050600.062508.030515.080516.030818 | "Baby, I'm Yours" -->

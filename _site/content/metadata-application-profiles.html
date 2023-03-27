@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  
+
+
+
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title> Metadata Application Profiles - Data Curation II / Spring 2023 </title>
+  <meta name="description" content="Metadata Application Profiles - Data Curation II / Spring 2023">
+  
+  <link rel="stylesheet" href="/lis546_Sp23/_css/main.css">
+  <link rel="canonical" href="http://localhost:4000/lis546_Sp23/content/metadata-application-profiles">
+  <link rel="alternate" type="application/rss+xml" title="Data Curation II / Spring 2023 - University of Washington Information School" href="http://localhost:4000/lis546_Sp23/feed.xml" />
+<link rel='stylesheet' id='open-sans-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&#038;subset=latin%2Clatin-ext&#038;ver=4.2.4' type='text/css' media='all' />
+<link href='https://fonts.googleapis.com/css?family=Titillium+Web:600italic,600,400,400italic' rel='stylesheet' type='text/css'>
+
+
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper" style="z-index: 100;">
+      <table><tr>
+          <td><img width="75" src="/lis546_Sp23/_images/iSchoolSymbolOnly_RGB_White.png" valign="middle"></td>
+          <td style="padding-left:10px;"><a class="schoolname" style="font-size: 15px;" class="site-title" href="https://ischool.uw.edu/">University of Washington Information School</a>
+          <br/>
+          <span style="margin-top: -2px;margin-bottom: -10px;" class="site-title"><a href="/lis546_Sp23/" title="Data Curation II / Spring 2023 - University of Washington Information School"><b>Data Curation II</a></b></span>
+          <br/>
+          <span class="coursesemeter" style="font-size: 12px;font-weight: bold;margin-top: 10px;display: block;">Spring 2023</span>
+          </td>
+        </tr></table>
+
+    <nav class="site-nav">
+
+      <a href="#" class="menu-icon menu.open">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>  
+
+    <div class="trigger"><h1>Main Navigation</h1>
+
+ <ul class="menu">
+    
+    <li>
+        <a class="page-link" href="/lis546_Sp23/">
+            <i class="fa fa-home fa-lg"></i> Home
+        </a>
+    </li>
+    
+    <li>
+        <a class="page-link" href="/lis546_Sp23/schedule/">
+            <i class="fas fa-calendar-alt"></i> Schedule
+        </a>
+    </li>
+    
+    <li>
+        <a class="page-link" href="/lis546_Sp23/lectures/">
+            <i class="fas fa-book-reader"></i> Modules
+        </a>
+    </li>
+    
+    <li>
+        <a class="page-link" href="/lis546_Sp23/assignments/">
+            <i class="fas fa-user-graduate"></i> Assignments
+        </a>
+    </li>
+    
+    <li>
+        <a class="page-link" href="/lis546_Sp23/project/">
+            <i class="fas fa-user-graduate"></i> Project
+        </a>
+    </li>
+    
+</ul>
+
+     </div>  
+    </nav>
+
+  </div>
+
+  <div class="header-texture" style="height:100%; z-index: 0; position: absolute; top:0; right: 0; left: 0; 
+  background-image: url('/lis546_Sp23/_images/pattern.png');" />
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <h1 id="metadata-application-profiles">Metadata Application Profiles</h1>
+<p><strong>Original Author: Nic Weber</strong><br />
+<strong>Editing &amp; Updates: Bree Norlander</strong></p>
+
+<p>There are an abundance of explanations and tutorials for how metadata should be created under domain specific constraints, but there is surprisingly little attention paid to principles that underlie all knowledge organization and representation activities that are required to create valid metadata. Drawing inspiration from the data science concept of “Tidy Data” this chapter introduces a set of principles for creating Tidy Metadata. These principles are domain-agnostic - they can and should be applied to any setting in which accurate description, retrieval, and discovery are necessary.</p>
+
+<h2 id="introduction">Introduction</h2>
+<p>The underlying principles of creating metadata come from fields such as knowledge organization and representation, and are applied practically to domain specific data. <a href="https://eml.ecoinformatics.org/">Ecology data</a> have different needs than do, for example, <a href="https://www.dublincore.org/about/">cultural heritage</a> materials. As a result, many discipline or domain specific metadata standards have been developed to accommodate these different resources.</p>
+
+<p>At a broad level of abstraction, metadata provides for both human and machine-interpretable information necessary for accurate retrieval, discovery, and use of digital objects. But, often metadata creators are not formally trained in either knowledge organization or knowledge representation. For data curators, this poses a number of challenges:</p>
+
+<ul>
+  <li>In upstream curation, curators often need to identify, select, and create a standard for data creators (or collectors) to follow.</li>
+  <li>In downstream curation, curators often need to <strong>refactor</strong> metadata, either to make the metadata comply with an existing standard, or to structure the metadata so that it applies to one and only one conceptual entity.</li>
+</ul>
+
+<p>In the <a href="https://norlab.github.io/LIS-546-SPR2021/content/overview_and_intro.html#Introduction">Introduction module</a> there are simple <a href="https://norlab.github.io/LIS-546-SPR2021/content/overview_and_intro.html#Definitions">definitions</a> of core concepts related to metadata that will be helpful to review before reading the rest of this module.</p>
+
+<h2 id="semantics-and-syntax-of-metadata">Semantics and Syntax of Metadata</h2>
+<p>In the most simple form, metadata consists of ‘attribute - value’ pairs that describe some property of data, or a set of data. Recall that in the introduction, we established that attributes are “the defining features of a class or sub-class, and refer to instances. An instance is a member of a class if it has <strong>all</strong> of the attributes of that class.”</p>
+
+<p>Attributes and values can be expressed, semantically, as descriptive, administrative, or technical information about data.</p>
+
+<ul>
+  <li>Descriptive information includes attributes like the title, creator, date of creation, etc.</li>
+  <li>Administrative information includes what institution produced the data, who curated the data, what licenses apply to the data, etc.</li>
+  <li>Technical information includes how the data were collected, processed, or analyzed. Provenance metadata is often treated as a technical or administrative attribute of a dataset.</li>
+</ul>
+
+<p>Syntactically, we can express or encode attributes using a number of standards. Machine-readable metadata are most often syntactically expressed as JSON or XML. Human-readable metadata can be expressed as a simple table, and its encoding can take a variety of forms - from plain text files to Excel tables.</p>
+
+<h2 id="tidy-metadata">Tidy Metadata</h2>
+<p>Tidy data establishes some general principles that <em>should</em> apply to the structure and representation of tables. These principles should be applicable across all kinds of tables that have variables, values, and various kinds of observations. The most simple formulation of tidy data is:</p>
+
+<ul>
+  <li>Each variable is a column</li>
+  <li>Each observation is a row</li>
+  <li>Each type of observational unit is a table</li>
+</ul>
+
+<p>Metadata should have some similar principles. That is, there should be some general rules that we can follow to describe attributes, values, and their corresponding relationship to instances of a class. Below are the principles I will propose for tidy metadata as it applies to tables of data.</p>
+
+<p>The properties of a dataset are expressed as an attribute-value pair that conforms to a schema:</p>
+
+<ol>
+  <li>Attributes are declared by a namespace.</li>
+  <li>Values are, where possible, constrained by a controlled vocabulary (this does <strong>not</strong> apply to free-text fields).</li>
+  <li>Schemas are published to the web.</li>
+</ol>
+
+<p>Let’s unpack each of these statements so that it makes sense in the context of data curation.</p>
+
+<p><strong>“Schemas are published to the web”</strong>: a metadata schema establishes and defines data elements (attributes) and the rules governing the use of data elements to describe a resource (for detailed metadata strategies see: Gourley, D., Zhang, A. (2014). <em><a href="https://alliance-primo.hosted.exlibrisgroup.com/permalink/f/lvbsh/TN_cdi_askewsholts_vlebooks_9781780631387">Creating Digital Collections: A Practical Guide</a></em>. United Kingdom: Elsevier Science.). Schemas are, in plain language, the rules of engagement for creating metadata. That is, they govern what are the valid and invalid use of an attribute-value pair to describe a dataset. Schemas then have to be public in order to be validated. Publishing a schema to the web means that the schema must be at a resolvable web address (a url) and should be encoded in a machine-readable language (e.g. XML or JSON). Schemas should, where possible, use definitions of elements (attributes) as a unique namespace.</p>
+
+<p><strong>“Attributes are declared by a <a href="https://en.wikipedia.org/wiki/Namespace">namespace</a>“</strong>: In publishing a schema to the web, we should also take care to define the use of an attribute such that each attribute has a unique location where the definition and explanation of its use is publicly accessible and identifiable in a schema. The attribute namespace has a subtle, but important relationship to a schema. A schema can be made up multiple namespaces, each namespace can be a part of a different schema (I’ll offer an example below so that this is less abstract).</p>
+
+<p><strong>“Values are, where possible, constrained by a controlled vocabulary”</strong>: Recall that in the module on Tidy Data, we discussed the appeal to authority control for standard units of measurement. In metadata we want to rely upon this authority control in a similar way - this helps to standardize what types of values an attribute can have, and provide clear guidance for how these values should be constrained.</p>
+
+<h3 id="tidy-metadata-examples">Tidy Metadata Examples</h3>
+<p>A simple way to express metadata describing the painting “Mona Lisa” might look something like this:</p>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
+.tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-cly1{text-align:left;vertical-align:middle}
+.tg .tg-wa1i{font-weight:bold;text-align:center;vertical-align:middle}
+@media screen and (max-width: 767px) {.tg {width: auto !important;}.tg col {width: auto !important;}.tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;}}</style>
+
+<div class="tg-wrap"><table class="tg">
+<thead>
+  <tr>
+    <th class="tg-wa1i">Attribute</th>
+    <th class="tg-wa1i">Value</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-cly1">Creator</td>
+    <td class="tg-cly1">Leonardo da Vinci</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Year_Created</td>
+    <td class="tg-cly1">c. 1503-1519</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Medium</td>
+    <td class="tg-cly1">Oil on poplar</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Dimmensions</td>
+    <td class="tg-cly1">77 x 53</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Location</td>
+    <td class="tg-cly1">Musée du Lovre, Paris</td>
+  </tr>
+</tbody>
+</table></div>
+<p><br /></p>
+
+<p>The metadata elements in this table are arranged as pairs of attributes and values that generically describe the painting “Mona Lisa”.</p>
+
+<p>Putting our tidy metadata principles to work - we could do the following:</p>
+
+<p><strong>Values constrained by a controlled vocabulary</strong>: Just as with tidy data, we want the values of our table to have an authority control. The value of <code class="language-plaintext highlighter-rouge">Creator</code> is a good initial candidate. We could express this name in a number of ways, but ultimately we want it adhere to a standard. The <a href="http://www.getty.edu/research/tools/vocabularies/ulan/about.html">Union List of Artists Names</a> (ULAN) provides an authority file that describes artists, and their attributes (derivative names, nationality, etc.). We should then be able to find a controlled vocabulary in ULAN for <a href="http://www.getty.edu/vow/ULANFullDisplay?find=Leonardo+Da+Vinci&amp;role=&amp;nation=&amp;prev_page=1&amp;subjectid=500010879">Leonardo da Vinci</a> and be able to control (or constrain) the value in our metadata record based on this definition. We could take the same approach for <code class="language-plaintext highlighter-rouge">Location</code>, <code class="language-plaintext highlighter-rouge">Medium</code>, <code class="language-plaintext highlighter-rouge">Dimensions</code> - each value - in our metadata.</p>
+
+<p><strong>Attributes declared by a namespace</strong>: The attributes in our metadata table should also have a definition that is available at a namespace. For <code class="language-plaintext highlighter-rouge">Creator</code> we could appeal to a standard like <a href="https://www.dublincore.org/">Dublin Core</a> - which is used broadly to create descriptive information about cultural heritage objects. The plain language definition for a creator in Dublin Core is available <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/creator">here</a>, and the namespace for this attribute is <code class="language-plaintext highlighter-rouge">https://purl.org/dc/terms/creator</code>. In declaring the namespace for the <code class="language-plaintext highlighter-rouge">Creator</code> attribute we are saying that this is not our own unique idea of who created a painting, but a specific definition (that of Dublin Core) of what a creator of a work of art means.</p>
+
+<p><strong>Brief Note on Readability</strong></p>
+
+<p>In metadata creation, there is often a distinction made between <em>human-readability</em> and <em>machine-readability</em>. These distinctions are exactly as they appear - human-readable metadata is that which can be easily interpreted by an actual person. The table above is an example of a human readable metadata record. Machine readable metadata means that (similar to our discussions of encoding data in <a href="https://norlab.github.io/LIS-546-SPR2021/content/tables-trees-triples.html">Tables, Trees, and Triples</a>) a machine can interpret and act upon a metadata record. When we appeal to namespaces, and publish schemas to the web - what we are doing, as data curators, is creating a machine-readable metadata record. These two approaches to creating metadata don’t necessarily have to be a tradeoff. Think about how we create independence in data representation (at the logical level) and remember that we can use “data” to feed into “graphic user interfaces”. Metadata is no different. We can create machine-readable metadata, and publish this metadata so that it is accessible in a graphic user interface. Privileging the creation of machine-readable metadata, as I do with tidy metadata principles, is simply in service of trying to create sustainable metadata records. We can always translate a machine-readable record into a human-readable record, but the same is not true in reverse. It takes substantially more effort to transform a human-readable record into something a machine can interpret.</p>
+
+<p><strong>Publish a schema to the web</strong>: In using controlled vocabularies for our values, and namespaces for our attributes, we want a tidy way to reference these in a machine-readable format. This is what we can achieve by making our schema available on the web. For the sake of this example, let’s assume that we are only going to use attributes from the Dublin Core standard. If this is the case, then we can depend on the schema for Dublin Core that is already publicly available on the web at <a href="http://purl.org/dc/elements/1.1/"><code class="language-plaintext highlighter-rouge">http://purl.org/dc/elements/1.1/</code></a> - this is a web address with a machine-readable set of definitions for each attribute in our metadata record.</p>
+
+<h3 id="a-valid-dublin-core-record">A Valid Dublin Core Record</h3>
+
+<p>Let’s continue to work from the assumption that we are creating a metadata record for the Mona Lisa. When we are finished, our tidy metadata record should look something like this, when expressed as XML</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;metadata
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:dcterms="http://purl.org/dc/terms/"&gt;
+
+&lt;dc:title&gt;Portrait of Lisa Gherardini, wife of Francesco del Giocondo, known as the Mona Lisa (the Joconde in French)&lt;/dc:title&gt;
+&lt;dcterms:alternative&gt;Mona Lisa&lt;/dcterms:alternative&gt;
+&lt;dc:creator&gt;Leonardo da Vinci&lt;/dc:creator&gt;
+&lt;dc:description&gt;This portrait was doubtless started in Florence around 1503. It is thought to be of Lisa Gherardini, wife of a Florentine cloth merchant named Francesco del Giocondo - hence the alternative title, La Gioconda. However, Leonardo seems to have taken the completed portrait to France rather than giving it to the person who commissioned it. After his death, the painting entered François I's collection.&lt;/dc:description&gt;
+&lt;dc:publisher&gt;Musee du Lourve&lt;/dc:publisher&gt;
+&lt;dc:contributor&gt;Musee du Lourve&lt;/dc:contributor&gt;
+&lt;dcterms:created xsi:type="dcterms:W3CDTF"&gt;1503-01-01&lt;/dcterms:created&gt;
+&lt;dcterms:created xsi:type="dcterms:W3CDTF"&gt;1509-12-31&lt;/dcterms:created&gt;
+&lt;dc:type xsi:type="dcterms:DCMIType"&gt;Image&lt;/dc:type&gt;
+&lt;dcterms:medium xsi:type="dcterms:IMT"&gt;Oil on Poplar&lt;/dcterms:medium&gt;
+&lt;dc:identifier xsi:type="dcterms:URI"&gt;https://www.louvre.fr/en/oeuvre-notices/mona-lisa-portrait-lisa-gherardini-wife-francesco-del-giocondo&lt;/dc:identifier&gt;
+&lt;dc:source xsi:type="dcterms:URI"&gt;https://www.louvre.fr/en/oeuvre-notices/mona-lisa-portrait-lisa-gherardini-wife-francesco-del-giocondo&lt;/dc:source&gt;
+&lt;dc:language xsi:type="dcterms:ISO639-2"&gt;FRA&lt;/dc:language&gt;
+&lt;dc:language xsi:type="dcterms:ISO639-2"&gt;ITA&lt;/dc:language&gt;
+&lt;dc:language xsi:type="dcterms:ISO639-2"&gt;ENG&lt;/dc:language&gt;
+
+&lt;/metadata&gt;
+</code></pre></div></div>
+
+<p>Tidy Metadata:</p>
+
+<ul>
+  <li>In the header of our XML record we provided a machine-readable link to a schema at <code class="language-plaintext highlighter-rouge">http://purl.org/dc/elements/1.1/</code></li>
+  <li>Each attribute is defined as a set of elements in the Dublin Core schema, and these elements are linked as namespaces in our our Schema.</li>
+  <li>Where possible, we have used an authority control on the values of our record. For example, the <code class="language-plaintext highlighter-rouge">Language</code> attribute is constrained by the controlled vocabulary <code class="language-plaintext highlighter-rouge">ISO639-2</code> - which provides for country and language codes. In the <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes">standard</a> I identified French, Italian, and English.  Notice, the same is true for the date attribute <code class="language-plaintext highlighter-rouge">created</code>. In this case, we appealed to the <a href="https://www.w3.org/TR/NOTE-datetime">W3C Date Time Format</a> to control our date(s). This specifies a date should be expressed as <code class="language-plaintext highlighter-rouge">YYYY-MM-DD</code> - but also note that we took advantage of the date range in our metadata record. Since it is unclear when exactly da Vinci finished the painting, we represent this uncertainty as two dates of creation: The first day of 1503 and the last day of 1509.</li>
+</ul>
+
+<h2 id="using-tidy-metadata-principles-for-maps">Using Tidy Metadata Principles for MAPs</h2>
+<p>Tidy metadata principles start to take on more meaning when we apply them to the types of data curation challenges we face in building schemas, identifying attribute namespaces, and controlling values for <em>unique</em> resources. In practically performing data curation we won’t always have the advantage of describing resources that have just one best set of attributes or just one standard to appeal to. Often times we will necessarily want to combine different attributes and different standards to create a unique, but standard way of describing a resource. This is, essentially, the gist of a metadata application profile. An application profile allows a specific institution or metadata creator to combine the most appropriate attributes and authority controls for describing resources they manage.</p>
+
+<p>I think of a metadata application profile like a playlist - sometimes it’s perfectly reasonable to put on <a href="https://en.wikipedia.org/wiki/Fetch_the_Bolt_Cutters">Fiona Apple’s latest</a> (and you should definitely listen to this album [says Professor Weber]) and take a walk. But, sometimes we want to create a mix of the best individual tracks from different albums for our cross-country drive.</p>
+
+<p>Metadata application profiles combine the best attributes, from different schemas, necessary for accurate description. In practice, this means that we have to create a machine-readable way to define and govern each of the attributes that we include in a metadata application profile. There are generally two approaches to creating a MAP:</p>
+
+<p><strong>1. Combine attributes from existing schemas</strong>: The most common way to create a MAP is to reuse attribute definitions that have already been published. We can do this, practically, by declaring in our record which attributes we are using from which schemas.</p>
+
+<p>In XML, this might look like the following combination of Dublin Core and the Data Documentation Initiative (DDI) which is used in social sciences:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;metadata
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:ddi="http://ddi:profile:3_1"&gt;
+
+&lt;dc:title&gt;Portrait of Lisa Gherardini, wife of Francesco del Giocondo, known as the Mona Lisa&lt;/dc:title&gt;
+&lt;ddi:language xsitype="ISO639-1"/&gt;English&lt;/ddi:language&gt;
+&lt;ddi:language xsitype="ISO639-1"/&gt;French&lt;/ddi:language&gt;
+&lt;ddi:language xsitype="ISO639-1"/&gt;Italian&lt;/ddi:language&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>In the header of our XML file we referenced two scheams: DDI <code class="language-plaintext highlighter-rouge">xmlns:ddi="http://ddi:profile:3_1"</code> and Dublin Core <code class="language-plaintext highlighter-rouge">xmlns:dc="http://purl.org/dc/elements/1.1"</code></li>
+  <li>For the attributes, we used a mix of <code class="language-plaintext highlighter-rouge">dc:title</code> and <code class="language-plaintext highlighter-rouge">ddi:language</code> - both are defined by namespaces in our referenced schemas. Why would we want to select a different attribute? In this instance, Dublin Core and DDI differ, slightly, in how they define a language of a resource (here is how DDI defines a <a href="https://ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/FieldLevelDocumentation/schemas/reusable_xsd/elements/Language.html">language</a>). If we worked at an institution where we felt that the definition most suited to our descriptive needs was DDI, a MAP gives us a way to combine DDI and Dublin Core. In the readings, I have listed some examples of MAPs that do exactly this.</li>
+</ul>
+
+<p>One interesting note about MAPs: In some cases it is not only a matter of selecting the best attributes for description, but modifying an attribute set so that it can accurately describe the role that data are playing as evidence in some field. An excellent example of this is the Darwin Core metadata profile - which is used to describe species occurrence records in natural history. <a href="https://dwc.tdwg.org/terms/">Darwin Core</a> uses numerous attributes defined by Dublin Core (hence the name) but modifies their definition slightly to be interpreted accurately by natural historians. Think for example about the attribute <a href="https://www.dublincore.org/specifications/dublin-core/dces/">Creator</a> in the Dublin Core attributes - this is defined as “An entity primarily responsible for making the resource”. Unless we want to get into a deep philosophical discussion about creationism and the origins of species, this is an attribute definition of a cultural heritage resource that poorly aligns with the needs of a natural historian. To skirt this philosophical dilemma, Darwin Core removes the need for a creator in its MAP, and instead defines concepts like “Occurrence” and “Event of Observation” to better meet the needs of natural historians.</p>
+
+<p><strong>2. Publish your own unique attribute namespace</strong>: There may be cases where, after searching existing schemas, there is a need to create a new attribute that can uniquely describe a resource. In this case, the institution that is creating metadata will take on the responsibility of defining and publishing a namespace that defines a unique attribute. For most cases, <strong>creating a unique attribute namespace should be a last resort</strong>. It is difficult to practically sustain a unique published namespace - it requires making sure that the attribute definition remains accessible publicly on the web, and that any machine that attempts to process (or understand) your attribute definition can do so indefinitely. That being said, there are times when this is necessary.</p>
+
+<p>Here are two examples of institutions that have created unique attribute namespaces:</p>
+
+<ul>
+  <li>
+    <p>The <a href="https://dp.la/">Digital Public Library of America (DPLA)</a>, which aggregates published digital content from cultural heritage institutions across the United States, has a need to create a unique namespace for attributes of a resource that are aggregated. At DPLA, there will often be multiple copies of or replications of a resource. In trying to provide a canonical resource, DPLA needs a way to describe when one resource has been replaced by another (that is, one copy has been superseded by an original). In this case, DPLA needed to create a unique namespace for the attribute of a resource that had been replaced. So DPLA created the attribute <code class="language-plaintext highlighter-rouge">dpla:isReplacedBy</code> and <code class="language-plaintext highlighter-rouge">dpla:replaces</code>. They then published the definition for this attribute to the web so that other machines can accurately interpret what is meant by <code class="language-plaintext highlighter-rouge">dpla:isReplacedBy</code> and <code class="language-plaintext highlighter-rouge">dpla:replaces</code>. You can view DPLA’s Metadata Application Profile <a href="https://pro.dp.la/hubs/metadata-application-profile">here</a>.</p>
+  </li>
+  <li>
+    <p><del><a href="https://project-open-data.cio.gov/">Project Open Data</a></del> now <a href="https://resources.data.gov/">resources.data.gov</a> is an initiative by various US federal agencies to create policies and standards that can guide the accurate publication of government data to the web. Resources.data.gov appears to be working on a schema, but the Project Open Data’s <a href="https://project-open-data.cio.gov/v1.1/schema/">metadata schema</a> is still published (which it should be) and defines various attributes of a government dataset that should be included in any dataset’s metadata. This schema is, at its core, a modification of many attributes from the W3C’s <a href="https://www.w3.org/TR/vocab-dcat-2/">Data Catalog Vocabulary (DCAT)</a>. For example, the <code class="language-plaintext highlighter-rouge">type</code> attribute in Project Open Data’s schema is simply borrowing from the DCAT namespace (see the definition <a href="https://project-open-data.cio.gov/v1.1/schema/#type">here</a>). But, Project Open Data also loosely defines a number of attributes in their schema. That is, they are creating unique namespaces and giving directions to data publishers to follow their schema without borrowing from or reusing existing attribute namespaces and definitions. This is, in my view, wildly inefficient but not so uncommon. I offer this as a cautionary tale. Project Open Data has taken on the task of publishing, updating, and sustaining this schema and its unique namespace attributes indefinitely. If, at any time, these namespaces are unavailable then the machines depending upon the unique definitions will not be able to accurately interpret resources described by Project Open Data’s schema. I would also note that there has not been broad conformance with this schema across federal agencies - I’ll leave commentary about WHY this might be the case up to your imagination.</p>
+  </li>
+</ul>
+
+<h2 id="tidy-metadata-best-practices">Tidy Metadata Best Practices</h2>
+<p>In this module, I have laid out some principles for how metadata <em>should</em> be created. These are principles that, in practice, may require modification or may be unnecessary given the time intensive task of describing digital data.</p>
+
+<p>Metadata is, as we’ve discussed throughout the quarter, a tradeoff between expressivity and tractability. Throughout this module I am arguing that tractable metadata is that which follows a tidy metadata principle of, where possible, reusing existing schemas, attributes, and controlled vocabularies. This significantly reduces the need to sustain metadata standards, and allows for our metadata records to be broadly accessible to both humans (through a graphic user interface) and machines (through encoding).</p>
+
+<p>A few other important notes for practicing tidy metadata principles.</p>
+
+<ul>
+  <li><strong>Cardinality</strong>: Cardinality refers to constraints on the use of an attribute. Cardinality describes whether an attribute is optional, or mandatory. In creating tidy metadata, we can use cardinality to practically control the number of attributes that are necessary in our metadata records. We can for example create rules that say a number of attributes are possible to include in a record, but are not mandatory. This alleviates metadata creators from having to describe too many attributes of a resource, but also empowers them to, where possible, include these attributes. Cardinality can also apply to value constraints. We can say whether a <code class="language-plaintext highlighter-rouge">Date</code>, for example, must conform with an ISO standard or whether this is an optional constraint. Cardinality is often exceptionally useful for doing upstream curation where we may want to unburden data collectors from creating too much metadata, and encourage, where possible, their use of a practical standard for doing so.</li>
+  <li><strong>Where to find namespaces, schemas, and authority control?</strong>: In this chapter, I’ve broadly advocated for adherence to and reuse of existing attributes and schemas. Practically, these standards are very domain specific. Working in one domain or another requires navigating all of the standards that have been previously developed, and carefully selecting an appropriate standard. Unhelpfully, I will say this gets much easier in practice. But, that generic advice doesn’t do much good for the early-career data curator.
+    <ul>
+      <li>To locate existing schemas, and their pre-defined attributes I find the Research Data Alliance (RDA) catalog of metadata standards to be very useful. A front-end browser for this catalog is available <a href="https://rdamsc.bath.ac.uk/search">here</a> and if you are interested in how this was created, a repository of the issues, discussions, and code is available <a href="https://github.com/rd-alliance/metadata-catalog-dev">here</a> as well as a paper describing the process <a href="https://rd-alliance.org/metadata-principles-and-their-use.html">here</a>.</li>
+      <li>In the private sector, metadata is an increasingly commodified resource. Many LIS graduates go on to do professional taxonomic work at places like Getty, Amazon, Expedia, etc. The schemas used internally by these companies are often difficult to access - so unfortunately I can’t really point to good examples here. However, it is worth seeing how the private sector values and attempts to create paid services around metadata - such as <a href="https://www.octopai.com/">Octopai</a>.</li>
+      <li>To locate and accurately use authority controls, the task is even harder. In part, because there are so many different types of institutions that promote a way to standardize the value of a metadata attribute. Think, for example, of all the different ways that a date can be expressed. I find two resources helpful when thinking about general value constraints: 1. Marcia Zeng’s <a href="https://marciazeng.slis.kent.edu/metadatabasics/working.htm">description and resource list</a> and 2. This short list from <a href="https://www.minitex.umn.edu/CatMeta/Standards/Value.aspx">MiniTex</a>. As with attributes, many choices in an authority control depend upon what data we are curating, for whom, and during what period of time. I realize that is unsatisfying, but I promise that this gets easier the more that you have to locate and find authorities to constrain a value. Over time, I find myself, when given the choice, selecting the authorities that I trust, and that I prefer (e.g. ISO 639-1 for Languages).</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+<p><br /><br />
+One parting note - There is a concept which doesn’t fit neatly into our discussion of MAPs and Tidy Metadata, but is important to think about when approaching metadata for data curation. I’ll try to briefly summarize the idea of a 1:1 principle and unpack why this is important for data curation in the concluding section.</p>
+
+<h2 id="principle-11-relationships">Principle: 1:1 Relationships</h2>
+<blockquote>
+  <p>The principle whereby related but conceptually different entities, for example a painting and a digital image of the painting, are described by separate metadata records. (<a href="https://www.dublincore.org/specifications/dublin-core/usageguide/glossary/">Reference</a>)</p>
+</blockquote>
+
+<p>The one to one (1:1) principle holds that metadata records should correspond to one, and only one entity (or instance) of a class (<a href="https://www.dublincore.org/specifications/dublin-core/usageguide/2005-08-15/">Hillmann</a>, 2005, sec. 1.2). This principle was first articulated in the context of cultural heritage metadata where related, but conceptually different instances are often difficult to interpret.</p>
+
+<p>The canonical example of the 1:1 principle is a photograph of the Mona Lisa, and the actual painting of the Mona Lisa by Leonardo Da Vinci. If we search for all of the records that describe the Mona Lisa we can find numerous metadata records about the Mona Lisa with the creator Leonardo da Vinci. <a href="https://www.europeana.eu/en/search?page=1&amp;view=grid&amp;query=Mona%20Lisa">Here</a> are the results from searching for “Mona Lisa” in the Europeana database which aggregates metadata across European cultural heritage institutes. If we actually look closely at these records - we will find multiple examples of the creator being named as “Leonardo da Vinci”.</p>
+
+<p>But, this surely isn’t the case. There is one and only one instance of a painting by Leonardo da Vinci named Mona Lisa. If following the 1:1 principle, there should be one and only one record that claims the creator of Mona Lisa is Leonardo da Vinci. All other instances are replications, or different instantiations (e.g. photographs, trinkets, t-shirts, etc) of the original painting that were created by someone other than Leonardo da Vinci.</p>
+
+<p>In his <a href="https://alliance-primo.hosted.exlibrisgroup.com/permalink/f/lvbsh/TN_cdi_proquest_journals_1415842856">doctoral thesis</a>, Richard Urban empirically examined violations of the 1:1 principle (2012). He found that metadata creators, from professional catalogers to those untrained in knowledge organization, applied this principle unevenly. The result is a broad confusion about what items a cultural heritage institution actually holds, and which are replications or secondary sources.</p>
+
+<p>At its core, the 1:1 principle is trying to disentangle the complex relationship between digital objects and their various manifestations. In data curation, we often need to adhere to this principle when we are describing complex datasets that contain multiple tables, multiple versions of a table, or multiple instances of the same data. To practically do this, we can follow a few basic rules:</p>
+
+<ol>
+  <li>Recognize item-level and collection-level relationships: Item-level and collection-level metadata is meant to provide a way for individual objects (data) to be described in a part/whole relationship. Collection level metadata is often about describing attributes of the aggregate of a set of resources, rather than any one resource specifically. But, these relationships may be hard to disentangle upon first glance. The first step I take when dealing with complex relationships like this is to try to specify the <em>autonomy</em> of the data being described. Does it make sense as a stand-alone dataset that can be accurately interpreted, or does it have a relationship with additional resources that are needed for meaningful reuse. If the latter is the case, then there is a need to create a collection level description.</li>
+  <li>Classes and instances (this is very similar to item-level and collection-level descriptions): When approaching a dataset or table, often we need to determine what class this instance of data belongs to. Remember our Homer, Lisa and Bart Simpson example from the <a href="https://norlab.github.io/LIS-546-SPR2021/content/tables-trees-triples.html">Tables, Trees, &amp; Triples</a> module? We have instances (characters) of the class (Simpson family). The membership in the class is defined by attributes such as having a parent that is named Simpson. In adhering to 1:1 principle we should create metadata that can represent these relationships without violating the idea that one record corresponds with one instance. That is, we can create a description of a class (Simpsons) and instances of the class (characters), but we should not be creating a Simpson family record if it contains only one character description. Instead - we can use the collection-item level descriptions to accommodate this relationship. We could, for example create a record that describes all Simpsons, and then individual records for each character. We might also nest these attributes, such that only our Collection-level metadata records describes the instances of the class (members). In Dublin Core we can use attributes like <code class="language-plaintext highlighter-rouge">is_part_of</code> to define these types of collection-item level relationships (read more <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/isPartOf">here</a>).</li>
+  <li>Reuse existing records: Just as we should take care to reuse existing namespaces and schemas following tidy metadata principles, we might also attempt to reuse <em>parts</em> of existing metadata records that already exist. For example, if we were describing a photo of a the Mona Lisa we should be able to find existing records describing the painting, and existing records describing photos of original art works. We can then attempt to create a unique record of our photo of the Mona Lisa by reusing these existing schemas, namespaces, and attribute-value pairs. In this search for related items - we can further establish whether we are creating a unique record, or whether we are describing a unique resource for the first time. The former, finding and discovering related records, is useful if and only if the data we are curating is likely to exist in multiple places. This is a useful technique for downstream curation, but is of limited value to upstream curators.</li>
+</ol>
+
+<p><strong>Referenced works</strong></p>
+
+<ul>
+  <li>Hillmann, D. (2005). <a href="https://www.dublincore.org/specifications/dublin-core/usageguide/2005-08-15/">Using Dublin Core, Dublin Core Metadata Initiative</a> (DCMI).</li>
+  <li>Wickham, H. (2014). <a href="https://www.jstatsoft.org/article/view/v059i10/v59i10.pdf">Tidy data</a>. Journal of Statistical Software, 59(10), 1-23.</li>
+  <li>Urban, R. J. (2012). <a href="https://alliance-primo.hosted.exlibrisgroup.com/permalink/f/lvbsh/TN_cdi_proquest_journals_1415842856">Principle paradigms: revisiting the Dublin Core 1:1 principle</a> (Doctoral dissertation, University of Illinois at Urbana-Champaign).</li>
+</ul>
+
+<h2 id="lecture">Lecture</h2>
+
+<p>&lt;iframe width=853 height=473 frameborder=”0” scrolling=”no” src=”https://screencast-o-matic.com/embed?sc=cYhi29gDkq&amp;v=6&amp;ff=1&amp;title=0&amp;controls=1” allowfullscreen=”true”&gt;&lt;/iframe&gt;</p>
+
+<h2 id="reading">Reading</h2>
+
+<p>Application profiles:</p>
+
+<ul>
+  <li>
+    <p>Heery, R., &amp; Patel, M. (2000). <a href="http://www.ariadne.ac.uk/issue/25/app-profiles/">Application profiles: mixing and matching metadata schemas</a>. Ariadne, (25).</p>
+  </li>
+  <li>
+    <p><a href="https://www.dublincore.org/specifications/dublin-core/singapore-framework/">The Singapore Framework for Application Profiles</a>. Note this is currently under revision by DCMI. You can catch up on their work <a href="https://github.com/dcmi/dcap">here</a> (and also see an example of <code class="language-plaintext highlighter-rouge">use cases</code> in the wild)</p>
+  </li>
+</ul>
+
+<p>Some examples of metadata application profiles:</p>
+
+<ul>
+  <li><a href="https://pro.dp.la/hubs/metadata-application-profile">DPLA</a></li>
+  <li><a href="https://confluence.cornell.edu/display/mwgweb/CUL+Metadata+Application+Profiles">Cornell Library</a></li>
+  <li><a href="https://carnegiehall.github.io/digitalcolls-metadataprofile/">Carnegie Hall Archives</a></li>
+</ul>
+
+<p>Relevant (optional) readings:</p>
+
+<ul>
+  <li>Hebron, T. K. (2018). <a href="https://journal.code4lib.org/articles/13632">Extending and Adapting Metadata Audit Tools for Mountain West Digital Library Members</a> Code4Lib Journal, (41).</li>
+  <li>Curado Malta, M., Bermúdez Sabel, H., Baptista, A. A., &amp; González-Blanco García, E. (2018). <a href="http://e-spacio.uned.es/fez/view/bibliuned:363-Egonzalez15">Validation of a metadata application profile domain model</a>.</li>
+  <li>
+    <p>Case Study for discussion (optional):</p>
+  </li>
+  <li>Stein, A., &amp; Dunham, E. (2018). <a href="https://www.ideals.illinois.edu/handle/2142/103173">Meaningful Data Sharing: Developing the Illinois Data Bank Metadata Framework</a>. Journal of Library Metadata, 18(2), 59-83.</li>
+</ul>
+
+<h2><a id="Exercise">Exercise</a></h2>
+<p>The exercise for this week is to work on your protocol, and in particular the <a href="https://norlab.github.io/LIS-546-SPR2021/assignments/07_assignment_metadata">Metadata Application Profile Assignment</a>. Your readings this week describe metadata application profiles in detail.</p>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+<!--     <h2 class="footer-heading">University of Washington Information School</h2> -->
+         <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+ 
+
+         <p class="text">
+Box 352840 - Mary Gates Hall, Ste. 370<br />
+Seattle<br />
+Washington<br />
+
+      </div>
+
+      <div class="footer-col  footer-col-2">
+       <ul class="social-media-list">
+     
+
+          
+
+          
+  <li>
+    <a href="https://twitter.com/uw_ischool">
+      <i class="fab fa-twitter" style="color:gray"></i> uw_ischool
+    </a>
+  </li>
+
+
+          
+
+          
+
+          
+  <li>
+    <a href="https://ischool.uw.edu/">
+      <i class="fas fa-globe" style="color:gray"></i> ischool.uw.edu/
+    </a>
+  </li>
+
+
+
+
+       
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+  </body>
+
+</html>
+<!-- d.s.m.s.050600.062508.030515.080516.030818 | "Baby, I'm Yours" -->

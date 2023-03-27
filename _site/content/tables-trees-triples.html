@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  
+
+
+
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title> Tables, Trees, and Triples - Data Curation II / Spring 2023 </title>
+  <meta name="description" content="Tables, Trees, and Triples - Data Curation II / Spring 2023">
+  
+  <link rel="stylesheet" href="/lis546_Sp23/_css/main.css">
+  <link rel="canonical" href="http://localhost:4000/lis546_Sp23/content/tables-trees-triples">
+  <link rel="alternate" type="application/rss+xml" title="Data Curation II / Spring 2023 - University of Washington Information School" href="http://localhost:4000/lis546_Sp23/feed.xml" />
+<link rel='stylesheet' id='open-sans-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&#038;subset=latin%2Clatin-ext&#038;ver=4.2.4' type='text/css' media='all' />
+<link href='https://fonts.googleapis.com/css?family=Titillium+Web:600italic,600,400,400italic' rel='stylesheet' type='text/css'>
+
+
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper" style="z-index: 100;">
+      <table><tr>
+          <td><img width="75" src="/lis546_Sp23/_images/iSchoolSymbolOnly_RGB_White.png" valign="middle"></td>
+          <td style="padding-left:10px;"><a class="schoolname" style="font-size: 15px;" class="site-title" href="https://ischool.uw.edu/">University of Washington Information School</a>
+          <br/>
+          <span style="margin-top: -2px;margin-bottom: -10px;" class="site-title"><a href="/lis546_Sp23/" title="Data Curation II / Spring 2023 - University of Washington Information School"><b>Data Curation II</a></b></span>
+          <br/>
+          <span class="coursesemeter" style="font-size: 12px;font-weight: bold;margin-top: 10px;display: block;">Spring 2023</span>
+          </td>
+        </tr></table>
+
+    <nav class="site-nav">
+
+      <a href="#" class="menu-icon menu.open">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>  
+
+    <div class="trigger"><h1>Main Navigation</h1>
+
+ <ul class="menu">
+    
+    <li>
+        <a class="page-link" href="/lis546_Sp23/">
+            <i class="fa fa-home fa-lg"></i> Home
+        </a>
+    </li>
+    
+    <li>
+        <a class="page-link" href="/lis546_Sp23/schedule/">
+            <i class="fas fa-calendar-alt"></i> Schedule
+        </a>
+    </li>
+    
+    <li>
+        <a class="page-link" href="/lis546_Sp23/lectures/">
+            <i class="fas fa-book-reader"></i> Modules
+        </a>
+    </li>
+    
+    <li>
+        <a class="page-link" href="/lis546_Sp23/assignments/">
+            <i class="fas fa-user-graduate"></i> Assignments
+        </a>
+    </li>
+    
+    <li>
+        <a class="page-link" href="/lis546_Sp23/project/">
+            <i class="fas fa-user-graduate"></i> Project
+        </a>
+    </li>
+    
+</ul>
+
+     </div>  
+    </nav>
+
+  </div>
+
+  <div class="header-texture" style="height:100%; z-index: 0; position: absolute; top:0; right: 0; left: 0; 
+  background-image: url('/lis546_Sp23/_images/pattern.png');" />
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <h1 id="tables-trees-and-triples">Tables, Trees, and Triples</h1>
+<p><strong>Original Author: Nic Weber</strong><br />
+<strong>Editing &amp; Updates: Bree Norlander</strong></p>
+
+<h2 id="introduction">Introduction</h2>
+<p>Susan Leigh Star once famously wrote that “Information science is the study of boring things.” (Star, 2002) <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.19.7523&amp;rep=rep1&amp;type=pdf">PDF</a>. She meant this in loving way. As a field of practitioners and researchers we’re concerned with the organization and encoding of information, as well as the standards and practices that govern reliable knowledge production. This requires us to study and become versant in particular “boring” details of how information is represented within broader information systems and infrastructures. An information infrastructure is, by Starr’s account, highly relational. Information and infrastructures mean different things to different people at different points in time. Data is no different. In fact, there is a soundbite that you may come across in the data curation community that goes like this:</p>
+
+<blockquote>
+  <p>One person’s metadata is another person’s data.</p>
+</blockquote>
+
+<p>(Here’s a humorous <a href="https://web.archive.org/web/20201001125543/https://blogs.informatica.com/2015/07/31/metadata-so-mom-can-understand/">example</a>.) This quote is getting at exactly what Star meant by the relational nature of information and infrastructure. That is, all data are contextual - they mean different things to different people at different points in time. The definition of data that we use in DC I and II recognizes this through the idea of types and roles: Data are types of information objects playing the role of evidence. The role of evidence will be contextually dependent upon who is using what data, when, and for what purpose. (As we begin to engage with topics for DC II it’s important to keep this idea of the relational nature of data and infrastructures in the back of our minds. Many of the decisions you’ll face in practically doing data curation don’t have a right or a wrong answer. They have certain approaches which are more valuable or useful given a certain context. As we come to the conclusion of the quarter I’ll try to re-emphasize places where readings, discussions, and lectures have provided helpful ways to toggle back and forth from the immediate “boring” details of data curation, and the broader conceptual settings where these “boring things” become salient.)</p>
+
+<p>Given the fundamental relational nature of data we should start the course off by thinking about how to make decisions about ways data should be represented and made accessible to users. Because, if we accept that choices we make in how to structure, represent, and format data in turn shape access and use, then there must be some guiding principles, or at least an explanation that helps us make sense of these different choices. Indeed, there are a many different paradigmatic ways to approach the relational nature of data. [Weber’s] mentor Allen Renear, along with Elizabeth Wickett and Andrea Thomer, have nicely summarized this data concept as being about the abstractions afforded by using “Tables, Trees, or Triples.” This first module unpacks some of their ideas and helps frame our course.</p>
+
+<h2 id="levels-of-abstraction">Levels of abstraction</h2>
+
+<p>Let’s begin with an anecdote about a “thing” or an “instance” of a thing that is made into data.</p>
+
+<p>An ecology graduate student sitting in the Brazilian Atlantic rainforest biome observes a species of a frog. Not just any frog, an <a href="https://amphibiaweb.org/species/3299">Adenomera</a> of the genus leptodactylid. She makes a mark of the observation in her field notebook. A while later she observes another Adenomera. She makes a similar mark in her field notebook. But, now she also makes a third mark - observing the pattern dispersion in a 4x4 meter box where the observations occur. She further records some metadata that includes the lattitude and longitude of the observations, as well as the time of her observations. (This is an actual observation you will find described in <a href="https://www.researchgate.net/profile/Mauricio_Almeida-Gomes/publication/233597154_Ecological_observations_on_the_leaf-litter_frog_Adenomera_marmorata_in_an_Atlantic_rainforest_area_of_southeastern_Brazil/links/5609b1a608ae840a08d41315/Ecological-observations-on-the-leaf-litter-frog-Adenomera-marmorata-in-an-Atlantic-rainforest-area-of-southeastern-Brazil.pdf">this paper</a>.)</p>
+
+<p>The data that our intrepid ecology graduate student has collected is made portable by her taking the field notebook back to her lab, and entering the data into a computer. But, she has a decision to make: How should she enter that data in her computer? Should she open an Excel sheet and begin structuring the data into rows and columns? Should she fire up MySQL and create a new database table? Maybe she is in a hurry and simply wants to write up her fieldnotes in a plain text file and go have a beer.</p>
+
+<p>The choices she makes in this brief instance are what transforms her observations from the <strong>conceptual level</strong> of “a thing that happened in the world” to the <strong>logical level</strong> of how that data are structured with a standard, or non-standard schema. Our computers further abstract this data into a <strong>physical level</strong> where the data are <em>encoded</em> or made machine interpretable as files, and bits (1s and 0s) written to a disk and stored on a server or drive somewhere.</p>
+
+<p>These three levels - the conceptual, logical, and physical - are all related to the idea of abstraction. This terminology is common in the domain of database management and refers to, “the process of hiding irrelevant information at each level of a database” (<a href="https://holycoders.com/dbms-data-abstraction-and-data-independence/">reference</a>). We abstract away from the messiness of the conceptual world by using logic that structures information in physical storage and retrieval hardware. (You can imagine that without abstraction we might contantly be staring at 0s and 1s on our screens instead of charts and GIFs and tweets.)</p>
+
+<p>The choices made at the logical level will have profound consequences for later reuse. And while our ecology graduate student has many choices available to her (will she or will she not go have that beer?) at the logical level of data representation her choices typically break down into three categories: Tables, trees, or triples.</p>
+
+<h2 id="tables">Tables</h2>
+<p>The idea of a “table” comes from the Edgar Codd’s relational data model (1969) where first-order predicate logic is used to express ordered lists of related instances (tables), as well as relations between tables (the database). A bit of background on Codd’s model: The relational database was born out of necessity. In the late 1960’s as governments and businesses started to move much of their data gathering into a digital (or quasi-digital) form for computers to interact with there were many idiosyncratic ways of doing so. Each different way depended upon the computing environments, and the organizations that were storing data. To a computer scientist this was chaos. And to Edgar Codd there was a simple and elegant solution: Tables. The relational model for database management is a structure and language consistent with first-order predicate logic - it conceives of “tuples” (ordered lists of data) grouped into relations. In short, the relational model is “a declarative method for specifying data and queries: users directly state what information the database contains and what information they want from it, and let the database management system software take care of describing data structures for storing the data and retrieval procedures for answering queries” <a href="https://en.wikipedia.org/wiki/Relational_model">Wikipedia</a>. In other words, a user should simply structure the data (tuples) in terms of rows and columns, and use a simple logic to declare how those rows and columns relate to one another. How simple: <em>Tables are relations of data and databases are relations of tables</em>. In this way, tables give structure to data through a column (an attribute or variable), a row (an observed instance) and a value (the data represented as a number, text string, category, etc.). The power of the relational approach to structuring data is that we can store large amounts of information without redundancy, and depend on querying syntax to retrieve subsets or “views” of the data. End users don’t need to know anything about data at the physical level, they only need to know enough about the logical representation of the data (some attributes) in order to find what they’re looking for.</p>
+
+<p>Most of the graphical user interfaces (GUIs) that provide access to information in our lives - from mobile apps to library catalogues - are driven by databases that further hide this logical model from end users. We don’t need to know anything about the schema in Zappos’ database to know that if we select <code class="language-plaintext highlighter-rouge">brand - converse</code> and <code class="language-plaintext highlighter-rouge">color - black</code> and <code class="language-plaintext highlighter-rouge">size - 7.5</code> we can locate our new Chuck Taylor All Stars for summer.</p>
+
+<p>Excel - and before that <a href="https://en.wikipedia.org/wiki/Lotus_1-2-3">Lotus 1-2-3</a> - are undeniably the most interesting mix of a graphical user interface and a database that allows us to easily create tables of information (or spreadsheets) that mirror the relational model of data management. While Excel doesn’t easily facilitate the linking of tables to one another (though it tries to mimic this with worksheets within workbooks), it still gives us the structuring power of the table in terms of columns, rows, and values. And like a database this allows end users to abstract away from the physical level of data storage.</p>
+
+<p>Tables help provide a structure for related observations or instances of a thing. But, tables are not well suited for expressing logical structures that go beyond simple observed instances. Put simply, a database, in being based on a rigid first-order predicate logic, doesn’t handle nuance well.</p>
+
+<h2 id="trees">Trees</h2>
+<p>A declarative markup language is quite literally built for expressing nuance. Charles Goldfarb in 1981 developed the notion of a descriptive markup language that could, in ways similar to the relational data model, allow for complex information to be expressed at the logical level, but not require that users know anything about physical storage. A markup language, like HTML or XML, structures data in a hierarchical fashion. It depends upon a schema - which defines an element or tag set - and the application of tags to give structure to our data (values).</p>
+
+<p>A markup language can therefore express complex relationships through its schema and structuring of information. And this logic - the hierarchy that will be defined by our schema - in turn allows physical levels of information storage that are, relatively, efficient at retrieving complex information.</p>
+
+<p>Let’s use an example from William Blake’s poem “The Sick Rose” from the anthology <em>Songs of Experience</em>.</p>
+
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Songs_of_innocence_and_of_experience%2C_page_39%2C_The_Sick_Rose_%28Fitzwilliam_copy%29.png/800px-Songs_of_innocence_and_of_experience%2C_page_39%2C_The_Sick_Rose_%28Fitzwilliam_copy%29.png" alt="Image of William Blake's poem The Sick Rose" width="500" /></p>
+
+<p>Our computers can easily render this JPG, but they cannot easily process or make sense of the data of this poem (stanzas, lines, or words). Putting this type of information into a database also doesn’t make a sense. What would we even call an attribute, or a value of this instance?</p>
+
+<p>Writing an XML schema that defines properties of Blake’s work - like anthology, poem, stanza, and line - will allow us to create a structured data representation of the poem that can be easily be stored and retrieved at the physical level.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;anthology&gt; 
+  &lt;poem&gt;  		
+    &lt;heading&gt;The SICK ROSE&lt;/heading&gt;  		
+    &lt;stanza&gt;   		
+      &lt;line&gt;O Rose thou art sick.&lt;/line&gt;   		
+      &lt;line&gt;The invisible worm,&lt;/line&gt;   		
+      &lt;line&gt;That flies in the night&lt;/line&gt;   		
+      &lt;line&gt;In the howling storm:&lt;/line&gt;		
+    &lt;/stanza&gt;  		
+    &lt;stanza&gt;   		
+      &lt;line&gt;Has found out thy bed&lt;/line&gt;   		
+      &lt;line&gt;And his dark secret love&lt;/line&gt;   		
+      &lt;line&gt;Does thy life destroy.&lt;/line&gt;		
+    &lt;/stanza&gt;
+  &lt;/poem&gt;&lt;!-- more poems go here --&gt;
+&lt;/anthology&gt;
+</code></pre></div></div>
+
+<p>(Before we continue, you might be wondering, “how does that look like a tree?”. Or maybe you’re not wondering, but I [Norlander] did. In fact, the term tree in this case comes from a mathematical definition of a tree, not the definition of that large plant in your yard. For more information, check out this <a href="https://en.wikipedia.org/wiki/XML_tree">Wikipedia</a> article.)</p>
+
+<p>The XML tree provides for relations between data both through the schema, and through the syntax. An anthology contains a poem, a poem contains stanzas, and stanzas contain lines. Each indentation in the above XML nests these elements further inside one another. This is what creates the “hierarchy” that our computers interpret as a tree.</p>
+
+<p>The tag that closes the poem and contains a note <code class="language-plaintext highlighter-rouge">&lt;!-- more poems go here --&gt;</code> is important. This hints at the idea that we can add more poems with more lines to the anthology markup by simply using the pre-defined schema. So, similar to a table we have the ability through logic to relate data to one another, but we also gain the ability to use the syntax and nesting to further refine and express relationships between data that are hierarchical. The ability to express relationships in structured text is what makes a hierarchical form like a tree so valuable for publishing electronic content.</p>
+
+<h2 id="data-independence">Data Independence</h2>
+<p>What I’ve been describing in the tables and trees sections thus far - this idea of abstracting away from physical storage to a logical level of data structuring - is the concept of <strong>Data Independence</strong>.</p>
+
+<p>By organizing data at a logical level, either through relations (e.g. a relational database) or element sets based on a pre-defined schema (e.g. hierarchical models using XML or JSON), we can easily add new data or new relations without having to rewrite our entire database system (or our XML schema). That is, data independence is the ability to present the stored information (at the physical level) in different ways to different users. So we can offload the organization and structure to a general schema, and we can then build rich graphic user interfaces that display the data any way we choose. Data independence also means that we can easily modify and update applications that depend on this structured schema, and minimally impact end-users that interact with a graphic user interface. Both tables and trees make this logical level data independence possible, and allow data to grow (or scale) more or less infinitely.</p>
+
+<p>The following image depicts the relationship between the concepts we’ve been talking about thus far. Note that a separation between the physical level and the logical level is what enables data independence. Here the logical level practically is split again into three areas where, as data curators, we manage different aspects of our user’s experience. At the schema level we define the logical representation and relationship between data, at the data level we manage information, create and edit metadata, and provide documentation, and at the user interface we provide data to end users (in this picture, as a drop down menu).</p>
+<figure>
+  <img src="https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/Simpsons-Abstractions.jpg" alt="Data Abstraction Levels of Homer Simpson" width="800" />
+  <figcaption>Figure 1</figcaption>
+</figure>
+<h2 id="trees-and-tables">Trees and Tables</h2>
+<p>You may have left the last section thinking to yourself, “If the syntax of a markup language affords us so much expressive power, why not use a markup language like XML for all data?”</p>
+
+<p>What we gain in expressive power from a markup language comes at the expense of computational tractability. The more syntax we have to write to define how and where a set of data are interpreted by our computers at the physical level, the more difficult and expensive it will be to retrieve that data.</p>
+
+<p>This tradeoff can be made a bit clearer if we look at the differences between the two most widely used notation systems for hierarchically structured data: JSON (<a href="https://www.json.org/json-en.html">javascript object notation</a>) and XML (<a href="https://www.w3.org/XML/">extensible markup langauge</a>).</p>
+
+<p>XML, or a hierarchical tree like structure of data, depends on nesting element sets within one another (these were the indentations in our Blake XML). If we want to represent these same elements in a stream - that is in something that our computers can efficiently retrieve as a list or dictionary - JSON is better suited to this task than a markup language. This is, partially, because JSON is based on a programming language not a markup standard. JSON treats an object as <em>independent</em> from any kind of semantic meaning that humans might reliably expect that object to have. JSON, in its syntactical structuring of data, is therefore able to achieve a kind of independence at the data level that XML cannot. But removing this semantic (or contextual) meaning has both affordances and limitations. By keeping data objects “independent” from the schema we have the ability to compute against (that is retrieve, reorder, and analyze) objects efficiently. But, we also lose the ability to embed meaning in the structure of our data. (Note: If you come from a computer science background you may recognize this as the concept of <code class="language-plaintext highlighter-rouge">object oriented</code> programming.)</p>
+
+<p>This will make more sense by looking at how the two different notation systems structure the same information. For our example, let’s use Homer Simpson and his relatives (This from a <a href="https://stackoverflow.com/questions/2620270/what-is-the-difference-between-json-and-xml">Stack Overflow</a> discussion that has been raging for over 9 years. If you search hard enough you’ll probably be able to find my [Weber’s] own contribution to this debate, but I don’t encourage it).</p>
+
+<p>In JSON we could represent Homer’s familial relations with a list in the following way:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+    "firstName": "Homer",
+    "lastName": "Simpson",
+    "relatives": [ "Grandpa", "Marge", "The Boy", "Lisa", "I think that's all of them" ]
+}
+</code></pre></div></div>
+
+<p>The same information, when represented in a markup language like XML (which follows a tree-like hierarchical form), looks like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;Person&gt;
+    &lt;FirstName&gt;Homer&lt;/FirstName&gt;
+    &lt;LastName&gt;Simpsons&lt;/LastName&gt;
+    &lt;Relatives&gt;
+        &lt;Relative&gt;Grandpa&lt;/Relative&gt;
+        &lt;Relative&gt;Marge&lt;/Relative&gt;
+        &lt;Relative&gt;The Boy&lt;/Relative&gt;
+        &lt;Relative&gt;Lisa&lt;/Relative&gt;
+        &lt;Relative&gt;I think that's all of them&lt;/Relative&gt;
+    &lt;/Relatives&gt;
+&lt;/Person&gt;
+</code></pre></div></div>
+
+<p>Practically, we can think about how we would retrieve data from these two representations of the same information, and the efficiency of our computers to do so.</p>
+
+<p>Just looking at the syntax we can see that JSON is more computationally efficient. There are fewer lines of encoded information and fewer assignments of our computer’s memory to represent the same information. In JSON we can represent all of the relatives in a simple list, and then use the order of that list to retrieve any member (e.g. <code class="language-plaintext highlighter-rouge">&gt; Relatives[4]</code> returns <code class="language-plaintext highlighter-rouge">Lisa</code>).</p>
+
+<p>In the XML we represent each family member with a <code class="language-plaintext highlighter-rouge">&lt;Relative&gt;</code> tag. In our XML schema we would have defined what the <code class="language-plaintext highlighter-rouge">&lt;Relative&gt;</code> tag means and rules that govern its proper use. If we want to retrieve the fourth relative <code class="language-plaintext highlighter-rouge">Lisa</code> from this tree our computers have to read each line until it comes to the fourth <code class="language-plaintext highlighter-rouge">&lt;Relative&gt;</code> syntax marker, store the value <code class="language-plaintext highlighter-rouge">Lisa</code> in our RAM, and then return it to us. This is undeniably a simple retrieval task that won’t overwhelm any sufficiently powered laptop, but we can imagine this getting much more complex and computationally taxing the more data that we have nested in a markup language like XML. Our computers would have to traverse hundreds or thousands of lines of the XML tree to retrieve data that could be simply listed.</p>
+
+<p>But, the tradeoff is that in JSON we don’t have any semantic meaning built into our syntax. In the first JSON example there is no semantic meaning for a string of characters assigned to a list. So we only know something about that list based on the position of any one data object in relation to the entire list. We could quickly retrieve the fourth object in that list, <code class="language-plaintext highlighter-rouge">Lisa</code>, but our computer has no meaning for that object - only that it is fourth in the list of objects. XML can use a schema to define each markup tag and how it should be used. To understand this tradeoff issue at scale, let’s represent a bit more data about the Simpsons family in the two notation systems. (This example comes from <a href="https://blogs.mulesoft.com/dev/howto/dataweave-generating-xml/">MuleSoft XML developers</a>.)</p>
+
+<p>In JSON we could represent family members and their ages as follows:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[
+ { "lastName" :"Simpson",
+ "firstName" :"Homer",
+ "age" :39
+ },
+ { "lastName" :"Simpson",
+ "firstName" :"Lisa",
+ "age" :8
+ },
+ { "lastName" :"Simpson",
+ "firstName" :"Bart",
+ "age" :10
+ },
+ { "lastName" :"Simpson",
+ "firstName" :"Marge",
+ "age" :36
+ },
+ { "lastName" :"Simpson",
+ "firstName" :"Maggie",
+ "age" :1
+ }
+]
+</code></pre></div></div>
+
+<p>In XML, the representation of this information looks like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;?xml version='1.0' encoding='ISO-8859-1'?&gt;
+&lt;simpsons:family xmlns:simpsons="http://training.mulesoft.com/simpsons""&gt;
+  &lt;simpsons:member&gt;
+    &lt;simpsons:last-name&gt;Simpson&lt;/simpsons:last-name&gt;
+    &lt;simpsons:first-name&gt;Homer&lt;/simpsons:first-name&gt;
+    &lt;simpsons:age&gt;39&lt;/simpsons:age&gt;
+  &lt;/simpsons:member&gt;
+  &lt;simpsons:member&gt;
+    &lt;simpsons:last-name&gt;Simpson&lt;/simpsons:last-name&gt;
+    &lt;simpsons:first-name&gt;Lisa&lt;/simpsons:first-name&gt;
+    &lt;simpsons:age&gt;8&lt;/simpsons:age&gt;
+  &lt;/simpsons:member&gt;
+  &lt;simpsons:member&gt;
+    &lt;simpsons:last-name&gt;Simpson&lt;/simpsons:last-name&gt;
+    &lt;simpsons:first-name&gt;Bart&lt;/simpsons:first-name&gt;
+    &lt;simpsons:age&gt;10&lt;/simpsons:age&gt;
+  &lt;/simpsons:member&gt;
+  &lt;simpsons:member&gt;
+    &lt;simpsons:last-name&gt;Simpson&lt;/simpsons:last-name&gt;
+    &lt;simpsons:first-name&gt;Marge&lt;/simpsons:first-name&gt;
+    &lt;simpsons:age&gt;36&lt;/simpsons:age&gt;
+  &lt;/simpsons:member&gt;
+  &lt;simpsons:member&gt;
+    &lt;simpsons:last-name&gt;Simpson&lt;/simpsons:last-name&gt;
+    &lt;simpsons:first-name&gt;Maggie&lt;/simpsons:first-name&gt;
+    &lt;simpsons:age&gt;1&lt;/simpsons:age&gt;
+  &lt;/simpsons:member&gt;
+&lt;/simpsons:family&gt;
+</code></pre></div></div>
+
+<p>Again, just looking the two approaches structuring data we can see that JSON is more efficient - there are fewer lines and the data has independence. For example, we could also easily rearrange the data in JSON to simply be two lists:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[
+ { "firstName" : ["Homer", "Lisa", "Bart", "Marge", "Maggie"]
+   "age": [39, 8, 10, 36, 1]
+}
+</code></pre></div></div>
+
+<p>But, what XML sacrifices in computational tractability and independence it makes up for in expressivity. Our schema, which is defined in the second line <code class="language-plaintext highlighter-rouge">&lt;simpsons:family xmlns:simpsons="http://training.mulesoft.com/simpsons""&gt;</code> uses a namespace <code class="language-plaintext highlighter-rouge">http://training.mulesoft.com/simpsons</code> to define a class of instances <code class="language-plaintext highlighter-rouge">simpsons</code> as well as properties of those instances, such as <code class="language-plaintext highlighter-rouge">last-name</code>, <code class="language-plaintext highlighter-rouge">first-name</code>, and <code class="language-plaintext highlighter-rouge">age</code>. This syntax gives us a semantic meaning - our computers don’t just think “this is a member of a list” but instead our computers know “this is an instance of the simpsons class that has the property ‘first-name’ and the value ‘Homer’”</p>
+
+<p>To reiterate something you’re going to get sick of me saying: The tradeoffs in choosing between XML and JSON, or really any logical level data abstraction, are about balancing the need for tractability and expressivity. For textual data that contains many nuances implied in the semantic content, we want to choose something like XML. When we need to privilege fast computation (e.g. retrieval) and data independence then we are more likely to choose something like JSON. Neither approach is right or wrong, but each choice comes at a cost.</p>
+
+<h2 id="triples">Triples</h2>
+<p>In thinking about differences between tables and trees - we recognize that each has certain affordances and limitations. In describing the affordances of a markup language for trees I stressed its “semantic” power by saying:</p>
+
+<blockquote>
+  <p>our computers don’t just think “this is a member of a list” but instead our computers know “this is a member of the simpsons, that has the property ‘first-name’ and the value ‘Homer’”</p>
+</blockquote>
+
+<p>The fact that our computers are knowledgeable about the semantic meaning of data, through our notation system, means that we could, in theory, design a system that takes greater advantage of this semantic meaning. At the logical level, if we use a schema to define instances as members of classes, we <em>could</em> also assign properties to those instances. And, by relating those properties to one another, we could start to <strong>know</strong> something about how instances and class membership relate to each other.</p>
+
+<p>In short, this is the ambition of the semantic web - by storing information about objects and instances at the logical level we can build powerful “inferencing systems” that can use logic to reason about the semantic content of our data based on their properties. Where this starts to take a “Eureka!” turn is that by defining a small set of formal logical relationships our computers can start to infer (without explicit direction) relationships that should exist between instances and classes based on their properties.</p>
+
+<p>For example, if we know that <code class="language-plaintext highlighter-rouge">Lisa</code> is the daughter of <code class="language-plaintext highlighter-rouge">Homer</code> and we create a logical rule that all daughters identify as <code class="language-plaintext highlighter-rouge">gender:female</code> and that all <code class="language-plaintext highlighter-rouge">daughter: age</code> are necessarily less than <code class="language-plaintext highlighter-rouge">father:age</code> then we can reasonably infer some things about Lisa: We know that <code class="language-plaintext highlighter-rouge">Lisa</code> is a <code class="language-plaintext highlighter-rouge">female</code> and that, by being the daughter of <code class="language-plaintext highlighter-rouge">Homer</code> she is younger than he. And, we know this without having to explicitly state that <code class="language-plaintext highlighter-rouge">Lisa is a female</code> - our computers can simply reason this through the logical statement that “All daughters identify as female, and Lisa is a daughter.”</p>
+
+<p>If we also know that <code class="language-plaintext highlighter-rouge">Homer</code> has a son <code class="language-plaintext highlighter-rouge">Bart</code> we can also infer some more information about both <code class="language-plaintext highlighter-rouge">Lisa</code> and <code class="language-plaintext highlighter-rouge">Bart</code> : We can infer that <code class="language-plaintext highlighter-rouge">Lisa has a brother Bart</code> and transitively <code class="language-plaintext highlighter-rouge">Bart has a sister Lisa</code>. We know all of this by defining the logical relationships between sons, daughters, gender identities, fathers, and siblings in our schema.</p>
+
+<p>The natural language expressions that appear above have simple logical syntax that are the basis of a notation language known as “RDF” or the <a href="https://www.w3.org/RDF/">Resource Description Framework</a>. In RDF, a <strong>triple</strong> is the formalization of a natural language statement that consist of three components: 1. Subject; 2. Object; and, 3. Predicate. An example of an RDF triple statement like “Lisa has a brother Bart” contains the <code class="language-plaintext highlighter-rouge">subject:Lisa</code>, the <code class="language-plaintext highlighter-rouge">object:Bart</code>, and the <code class="language-plaintext highlighter-rouge">predicate:has_a_brother</code>. In an RDF schema, we could define the logic of a predicate like <code class="language-plaintext highlighter-rouge">has_a_brother</code> such that “all brothers identify as male”, and “all brothers have a sibling”, and “all brothers and sisters share at least one parent”. This declaration in our scehma let’s our computers infer that a statement like “Lisa has a brother Bart” means, without explicitly stating it, that Bart identifies with the gender male, and that he shares at least one parent with Lisa.</p>
+
+<p>RDF triples, by using logic to define relationships between instances and classes, become the most powerful of all three choices we have at the logical level of data representation. (Do you anticipate a “but . . .” coming?) But, creating a logically coherent RDF schema is an incredibly difficult task. Triples, and all of their inferential power, are both computationally expensive to retrieve, and descriptively difficult to create and maintain. The tradeoff that we face between tables, trees, and triples presents a modification to the one I’ve discussed thus far - between tractability and expressiveness. The new tradeoff we have is inference, or intelligence: If we want a logical level data representation that is “artificially intelligent” - that is it can infer without explicit directions - then we have to sacrifice some expressivity and a lot of tractability.</p>
+
+<p>We will return to the concept of the Semantic Web and RDF in the 10th week of class, but its helpful to have this logical level data representation in mind as we work through the quarter. In part, because RDF and the Semantic Web are an emergent way of curating data to provide meaning for end users. At the same time, the Semantic Web has been “five years away” since 1998.</p>
+
+<h2 id="summary">Summary</h2>
+<p>In this chapter I introduced a number of concepts. Here’s a brief review:</p>
+
+<ul>
+  <li>Levels of abstraction. These include a separation between how we represent data in terms of concepts, logic, and physical storage (See Figure 1 for a quick overview).</li>
+  <li>Data Independence is the ability to separate data encodings from the logical level where it is managed and made accessible to users. By making data independent from its storage we can easily modify, and add data at the logical level.</li>
+  <li>Notation languages, such as XML, JSON, and RDF all have tradeoffs. In DC I we described these tradeoffs in terms of expressivity and tractability. In DC II we introduce the idea of “intelligence” to data representation, but we hold this at arms length because it comes at such a high curation cost.</li>
+</ul>
+
+<h1 id="lecture">Lecture</h1>
+
+<p>&lt;iframe width=853 height=482 frameborder=”0” scrolling=”no” src=”https://screencast-o-matic.com/embed?sc=cYfQcuavjV&amp;v=5&amp;ff=1” allowfullscreen=”true”&gt;&lt;/iframe&gt;</p>
+
+<hr />
+
+<h2 id="readings">Readings</h2>
+<p>The following blog post is an easy to digest look at the different data shapes we’ve discussed in this module. If you’re already familiar with tables and nested lists you can skim this.</p>
+<ul>
+  <li>Kodes, Katie (2019) <a href="https://katiekodes.com/intro-xml-json-2/">Data’s Shape</a></li>
+</ul>
+
+<p>Additional readings this week are from the W3C standard for <code class="language-plaintext highlighter-rouge">Data on the Web</code>. W3C is the World Wide Web Consortium - the main standardization organization for web technologies. In 2017 a working group of experts in data curation came together to develop a set of best practices for structuring, publishing, and making data on the web accessible. The Best Practices document is an excellent resource to return to as you develop your protocol and if (when) you find yourself working in a data curation role.</p>
+
+<ul>
+  <li>Lóscio et al (2017) Data on the Web - Best Practices: <a href="https://www.w3.org/TR/dwbp/">https://www.w3.org/TR/dwbp/</a> (If you are pressed for time, you can probably skim the content through to section 8 where the specific best practices begin.)</li>
+  <li>Read one additional Data on the Web - Use Case from this list: <a href="https://www.w3.org/TR/dwbp-ucr/">https://www.w3.org/TR/dwbp-ucr/</a></li>
+</ul>
+
+<p>In future weeks we will use the Data on the Web primer for activities related to our data curation protocol.</p>
+
+<p><strong>Optional Readings</strong></p>
+
+<p>For a bit of historical background, Ch 1 of this book (pages 1-13) provides an excellent overview of how data were originally made compliant with web standards. The rest of the book also provides a great overview of data models and database integration more generally, but it is very much a lengthy and time intensive read:</p>
+
+<ul>
+  <li>Abiteboul, S., Buneman, P., &amp; Suciu, D. (2000). Data on the Web: from relations to semistructured data and XML. Morgan Kaufmann. <a href="https://github.com/norlab/LIS-546-SPR2021/raw/master/content/readings/Data-on-the-Web-Skeleton.pdf">PDF</a></li>
+</ul>
+
+<h2><a id="Exercise">Exercise</a></h2>
+<p>In preparation for our class on <code class="language-plaintext highlighter-rouge">Tidy Data</code> next week we will attempt to add some structure to a rather innocuous piece of information that is published to the web and that maybe you’ve encountered even more frequently during COVID-19 quarantine: Chocolate Chip Cookie Recipes.</p>
+
+<p>Imagine that you are starting a data repository specifically for cookie recipes. You get to choose how best to set up your repository. You are at the stage where you want to decide how to represent the data included in a recipe. Your exercise for this week is to look at this <a href="https://www.pccmarkets.com/recipe/thick-chewy-chocolate-chip-cookies/">chocolate chip cookie recipe</a> (<a href="https://github.com/norlab/LIS-546-SPR2021/raw/master/content/readings/PCC_Chocolate_Chip_Cookies.pdf">PDF version</a>) and choose to represent it as a table, tree, or triple. Use what you’ve learned in this module and this <a href="https://katiekodes.com/intro-xml-json-2/">blog post</a> as a guide for tables and trees. If you choose to make triples, start by outlining the <code class="language-plaintext highlighter-rouge">subject - object - predicate</code> relationship. If you want to get fancy, take a look at this <a href="https://www.stardog.com/tutorials/data-model/">blog post</a>.</p>
+
+<p>Some things to keep in mind:</p>
+
+<ul>
+  <li>Don’t worry about using established metadata schema for this exercise (we’ll get to that later). You can make-up the schema (i.e. the column names or tags used to indicate the variable, the namespaces) and you don’t need to create definitions for the metadata, just make sure your terms are fairly self-explanatory (e.g. use <code class="language-plaintext highlighter-rouge">ingredient</code> instead of <code class="language-plaintext highlighter-rouge">thing</code>).</li>
+  <li>There isn’t a “right” answer to which representation you choose</li>
+  <li>On the <a href="https://canvas.uw.edu/courses/1465297/discussion_topics/6164920">canvas forum</a>, share your representation with the class, and explain why you made the choices you did. What was difficult, what was easy? You can share this in whatever form you like (create one directly in Canvas, link to a Google Doc, Upload an Excel file, post a .jpg of your hand-drawn representation, etc.)</li>
+</ul>
+
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+<!--     <h2 class="footer-heading">University of Washington Information School</h2> -->
+         <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+ 
+
+         <p class="text">
+Box 352840 - Mary Gates Hall, Ste. 370<br />
+Seattle<br />
+Washington<br />
+
+      </div>
+
+      <div class="footer-col  footer-col-2">
+       <ul class="social-media-list">
+     
+
+          
+
+          
+  <li>
+    <a href="https://twitter.com/uw_ischool">
+      <i class="fab fa-twitter" style="color:gray"></i> uw_ischool
+    </a>
+  </li>
+
+
+          
+
+          
+
+          
+  <li>
+    <a href="https://ischool.uw.edu/">
+      <i class="fas fa-globe" style="color:gray"></i> ischool.uw.edu/
+    </a>
+  </li>
+
+
+
+
+       
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+  </body>
+
+</html>
+<!-- d.s.m.s.050600.062508.030515.080516.030818 | "Baby, I'm Yours" -->

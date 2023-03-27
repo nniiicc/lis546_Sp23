@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  
+
+
+
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title> Linked Data - Data Curation II / Spring 2023 </title>
+  <meta name="description" content="Linked Data - Data Curation II / Spring 2023">
+  
+  <link rel="stylesheet" href="/lis546_Sp23/_css/main.css">
+  <link rel="canonical" href="http://localhost:4000/lis546_Sp23/content/linked-data">
+  <link rel="alternate" type="application/rss+xml" title="Data Curation II / Spring 2023 - University of Washington Information School" href="http://localhost:4000/lis546_Sp23/feed.xml" />
+<link rel='stylesheet' id='open-sans-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&#038;subset=latin%2Clatin-ext&#038;ver=4.2.4' type='text/css' media='all' />
+<link href='https://fonts.googleapis.com/css?family=Titillium+Web:600italic,600,400,400italic' rel='stylesheet' type='text/css'>
+
+
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper" style="z-index: 100;">
+      <table><tr>
+          <td><img width="75" src="/lis546_Sp23/_images/iSchoolSymbolOnly_RGB_White.png" valign="middle"></td>
+          <td style="padding-left:10px;"><a class="schoolname" style="font-size: 15px;" class="site-title" href="https://ischool.uw.edu/">University of Washington Information School</a>
+          <br/>
+          <span style="margin-top: -2px;margin-bottom: -10px;" class="site-title"><a href="/lis546_Sp23/" title="Data Curation II / Spring 2023 - University of Washington Information School"><b>Data Curation II</a></b></span>
+          <br/>
+          <span class="coursesemeter" style="font-size: 12px;font-weight: bold;margin-top: 10px;display: block;">Spring 2023</span>
+          </td>
+        </tr></table>
+
+    <nav class="site-nav">
+
+      <a href="#" class="menu-icon menu.open">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>  
+
+    <div class="trigger"><h1>Main Navigation</h1>
+
+ <ul class="menu">
+    
+    <li>
+        <a class="page-link" href="/lis546_Sp23/">
+            <i class="fa fa-home fa-lg"></i> Home
+        </a>
+    </li>
+    
+    <li>
+        <a class="page-link" href="/lis546_Sp23/schedule/">
+            <i class="fas fa-calendar-alt"></i> Schedule
+        </a>
+    </li>
+    
+    <li>
+        <a class="page-link" href="/lis546_Sp23/lectures/">
+            <i class="fas fa-book-reader"></i> Modules
+        </a>
+    </li>
+    
+    <li>
+        <a class="page-link" href="/lis546_Sp23/assignments/">
+            <i class="fas fa-user-graduate"></i> Assignments
+        </a>
+    </li>
+    
+    <li>
+        <a class="page-link" href="/lis546_Sp23/project/">
+            <i class="fas fa-user-graduate"></i> Project
+        </a>
+    </li>
+    
+</ul>
+
+     </div>  
+    </nav>
+
+  </div>
+
+  <div class="header-texture" style="height:100%; z-index: 0; position: absolute; top:0; right: 0; left: 0; 
+  background-image: url('/lis546_Sp23/_images/pattern.png');" />
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <h1 id="linked-data">Linked Data</h1>
+<p><strong>Original Author: Nic Weber</strong><br />
+<strong>Editing &amp; Updates: Bree Norlander</strong></p>
+
+<p>The ninth week in Data Curation II addresses the prospect of linked data for curation. At various points this quarter we have discussed the idea of semantically enhanced data that takes on a form of artificial intelligence. This “intelligence” is practically achieved through enhanced markup of data and web infrastructure that enables applications to make use of data that are published following strict linked data standards. Thus far we have touched on, but not explored in-depth the ways that linked data practically manifests in curation work. In the following module, I will introduce some working definitions and provide an overview of concepts related to linked data and the promise, but ultimate failure of the semantic web.</p>
+
+<h2 id="the-early-web">The Early Web</h2>
+
+<p>A “web of information” seems almost silly to say aloud in certain academic or technical circles. We have, over a very short period of time, gone from an internet infrastructure that was rudimentary and difficult to access, to a paradigm of native web-publishing. Graphic user interfaces have provided a layer of accessibility to what are otherwise rote protocols for transferring information between computers, and for structuring rich information experiences. We can browse, search, and discover all kinds of data by simply navigating and “clicking” on hypertext links.</p>
+
+<p>For all of the affordances of the web there are also some substantial limitations of a first generation of web technologies for data. These technologies allow for some exchange and consumption of data, but our end-user experience of the web often seems frustratingly incomplete. For example, HTML, CSS, and Javascript provide for a rich user experience with web-pages, but the underlying markup of text using these standards doesn’t allow for the interoperable exchange of structured data between applications. Without a way to make the data behind a web-page portable and transferrable, we are left with static pages that can simply point at one another, but not accurately incorporate or consume data from one another.</p>
+
+<p>Let’s take an example of searching for information:</p>
+
+<p>On the early web, if I searched <a href="https://en.wikipedia.org/wiki/Ask.com">Ask Jeeves</a> (check out this archived <a href="https://web.archive.org/web/19990224191415/http://askjeeves.com/">page</a> from 1999) for the keyword “Ursula Franklin” I would likely get a list of indexed pages that include a reference to or about the scientist named Ursula Franklin (Here are the <a href="https://cse.google.com/cse?cx=partner-pub-7633895505036451:4516228122&amp;q=Ursula+Franklin&amp;ref=www.google.com/">actual results from Ask Jeeves</a>). In order to browse and uncover some facts about this monumentally important person, I need to click on a link, read a page, and digest the factual information that the static webpage contains. This is despite the fact that Ask Jeeves has indexed millions of webpages about Ursula Franklin - many of these pages contain structured factual information about her life, her publications, and her contributions to a scientific enterprise. The early web only allowed pages to point at one another through links.</p>
+
+<p>In contemporary search engines, I can search Google for “Ursula Franklin” and immediately receive both indexed webpages about the scientist, as well as some structured factual information about her life, her written works, and similar scientists.</p>
+
+<p><img src="https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/GoogleUrsula.png" alt="" /></p>
+
+<p>The display of this factual information (called the <a href="https://support.google.com/knowledgepanel/answer/9163198?hl=en">“knowledge panel”</a> isn’t <em>just</em> a neat trick by Google - it is made possible by semantically enhanced information that is queried and retrieved based on <strong>linked data</strong> standards. This contemporary version of the web allows for the data, information embedded in pages such as photos, videos, and facts, to be queried and retrieved. That is practically achieved through markup with linked data standards that both point at one another, but also allow for indexing and retrieval of data.</p>
+
+<p>In the following sub-sections I’ll unpack how this linked data ecosystem evolved, and the implications that a paradigm of linked data holds for the working curation professional.</p>
+
+<h2 id="the-promise-and-failure-of-the-semantic-web">The promise and failure of the Semantic Web</h2>
+<p>In short, the semantic web was an approach to the development of web technologies that privileged machine-readable data. This readability or “machine intelligence” was proposed to overcome the limitations of Web 1.0. The early technologies that facilitated exchange of information, such as HTTP and HTML, were meant to enable a web of information to emerge - linking documents to one another through standards that could interoperate regardless of what browser, or which search engine we choose to use.</p>
+
+<p>The semantic web, which was positioned between the interactivity of Web 2.0 and Web 3.0, was to be facilitated by markup languages that allow for the semantic contents of data to be declared explicitly, and logic to be used inferentially to build connections between data embedded in web documents. In this vision of the semantic web, web content could both be displayed (like typical HTML and CSS) as well as queried and acted upon by web applications. We previously discussed both schema.org and the idea of a “triple” as ways in which data can be encoded such that they are machine-readable on the web. The idea of the triple is central to the vision of semantic web evangelists. They see all factual content as relationships which can be explicitly declared. By explicitly declaring just a few relationships we can build up a variety of “inferences”. Think back to our discussion of Simpsons characters - by knowing some familial relationships we could infer that Lisa and Bart were siblings without having to explicitly declare that is the case.</p>
+
+<p>Where the semantic web failed was in believing that this kind of explicit declaration of web content was scalable. The effort needed to structurally enhance all factual information with rigid standards was overwhelming (given the difficulty of using standards like the Resource Description Framework or <a href="https://en.wikipedia.org/wiki/Resource_Description_Framework">RDF</a>) - given the variety of information on the web and the effort needed to explicitly declare this factual information in a markup language like RDF. As a result, the semantic web vision of building inference engines has faltered. But, the ability to use markup to facilitate the exchange of data on the web - linked data - has had much more success. Linked data makes use of lightweight standards that allow for a few simple statements to be included in a web-page, facilitating the exchange of data. Moving from a vision of “inference” and “intelligence” to machine-readable linking of data has proved much more viable for data curators.</p>
+
+<p>In previous chapters we have discussed some of the ways in which machine-readability is achieved, but we did not go into detail about how this encoding practically takes place. In the following section I will describe some of the practical realities of linked data, and how linked data is created using the standard JSON-LD.</p>
+
+<h2 id="linked-data-1">Linked Data</h2>
+<p>The linked data paradigm, which is the practical manifestation of the semantic web vision, makes use of structured markup to enhance web resources such that we can query and discover related information through simple declarations.</p>
+
+<p>Let’s take a simple web page that includes a bunch of random ideas expressed about people, places, and things (note: I choose the <a href="https://hipsum.co/">hipster Lorum Ipsum</a> random text generation to create text for this “dummy” web page). If one of those topics in our web page is about Austin, TX web 1.0 would create a link between that topic and a relevant page about Austin, TX.</p>
+
+<p><img src="https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/austin-earlyWeb.jpg" alt="" /></p>
+
+<p>In a linked data paradigm we could not only create a simple link from one web resource to another, but we could semantically enhance this markup using existing data about Austin, TX on the world wide web. We would practically do this by explicitly stating that Austin, TX is a place, that place is near some other places in Texas, and Austin, TX has a particular population. Just as we have discussed in previous chapters - we want to make these kinds of explicit declarations drawing upon existing standards. In this example, we want to draw on authoritative data about places that exist in the real world. <a href="https://en.wikipedia.org/wiki/DBpedia">DbPedia</a> is a linked data resource that contains exactly this kind of information. DbPedia is in fact all of the information that exists in Wikipedia put into a linked data format. This allows us to make simple declarations in our markup “linking” to what DbPedia knows about the place Austin, TX.</p>
+
+<p><img src="https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/AustinLateWeb.jpg" alt="" /></p>
+
+<p>Note that in the markup of the image above - we not only created an HTML link between the two resources, but we also included some markup that referenced DbPedia. We essentially said “DbPedia - tell us all of the facts that you know about Austin, TX including its population and what other places Austin, TX is near”. The linked data graph that results from this markup is below our syntax. Using just this simple markup, DbPedia was queried and returned to our webpage some factual information about Austin, TX - including that it has a population of 964,254, and that it is near other cities in Texas. Pretty neat, right? All we had to do was ask DbPedia what it knows about Austin, TX and the linked data syntax of our page allowed machines to trade factual information about what is known about Austin, TX.</p>
+
+<p>Our original “dummy page” is now “machine readable” in the sense that it contains not only a reference to another web page about Austin, TX but a whole range of new facts.</p>
+
+<p>In the example above I cheated a little by knowing that DbPedia was a linked data source. I had to have prior knowledge that such a valuable resource existed and that I could create some admittedly non-trivial syntax to semantically enhance my webpage. The good news is that you don’t have to know a lot of linked data sources to create valuable linked data. In fact, all of the linked data sources (sometimes called the “linked data cloud”) started back in 2007 with just 12 sources.</p>
+
+<p><img src="https://lod-cloud.net/versions/2007-05-01/lod-cloud.png" alt="" /></p>
+
+<p>It has now (as of May 2020) grown to over <a href="https://lod-cloud.net/">1300 authoritative linked data sources</a> (note that image is big and may take a long time to load) that can be used to semantically enhance any web page. More importantly, we can create linked data using standards like Schema.org to turn any data that we publish to the web into linked data. That is, we can link any data we publish up to this growing “cloud” through syntax. Doing so increases the ability of our data to be meaningfully discovered, indexed by emerging linked data sources, and in essence, connected to all other data that exists on the web!</p>
+
+<p>In the next section we will look at how we can practically link our data to existing resources. This is achieved through the standard JSON-LD.</p>
+
+<h2 id="json-ld">JSON-LD</h2>
+<p>Schema.org - which we have talked about in the previous chapter on Data Discovery - is practically implemented on the web through an encoding standard called JSON-LD (which stands for JSON-Linked Data). To understand the power of JSON-LD let’s think all the way back to our chapter on <a href="https://norlab.github.io/LIS-546-SPR2021/content/tables-trees-triples.html">Tables, Trees, and Triples</a> where I described differences in hierarchical data structuring (XML) vs graph structuring (JSON). Recall that in that chapter I warned:</p>
+
+<blockquote>What we gain in expressive power from a markup language comes at the expense of computational tractability. The more syntax we have to write to define how and where a set of data are interpreted by our computers at the physical level, the more difficult and expensive it will be to retrieve that data.</blockquote>
+
+<p>In that chapter I also explained that JSON is an object-oriented graph and XML is a hierarchical tree. The tradeoff between these two structures is that XML can use a schema to explicitly declare what it’s content is about (I’ll save you some jumping back and forth and paste that section below):</p>
+
+<blockquote>JSON treats an object as independent from any kind of semantic meaning that humans might reliably expect that object to have. JSON, in its structuring of data, is therefore able to achieve a kind of independence at the data level that XML cannot. But, removing this semantic (or contextual) meaning has both affordances and limitations. By keeping data objects “independent” from the schema we have the ability compute against (that is retrieve, reorder, and analyze) objects efficiently. But, for JSON we also lose the ability to embed meaning in the structure of our data.</blockquote>
+
+<p>JSON-LD is an attempt to add meaning to the structure of graph data through a schema. In fact, Schema.org provides (one of many) schemas for JSON-LD. This means our independent objects in JSON can be given a declarative value (a schema) and that schema can, if structured properly, start to link our data to all of the linked data that exists on the world wide web.</p>
+
+<p>JSON-LD has some key markup features that are necessary to practically implement linked data. In introducing these features I’ll also note how the syntax of JSON-LD works through examples.</p>
+
+<h2 id="json-ld-applications">JSON-LD Applications</h2>
+<p>JSON-LD operates exactly like JSON - there are attributes and values that are declared. In JSON these declarations are “dumb” objects - they don’t have any semantic meaning. In JSON-LD we have the ability to give these objects meaning through external schemas. The two features we will look at first are the Context and ID tags.</p>
+
+<h3 id="context-or-context">Context or <code class="language-plaintext highlighter-rouge">@Context</code></h3>
+<p>In JSON-LD the <code class="language-plaintext highlighter-rouge">@Context</code> tag is used to declare a schema that will be used to name attributes in the dataset. So any attribute in our JSON-LD should be understood as following the schema that <code class="language-plaintext highlighter-rouge">@Context</code> defines. If we plan to use, for example, the Schema.org standard we can, in the <code class="language-plaintext highlighter-rouge">@Context</code> syntax, specify this is the standard we are following and expect that all of the machines that interpret our data’s attributes understand this as being in the Schema.org standard.</p>
+
+<p>Here is an example of how this might practically work. The following is a typical JSON representation of some structured information about Professor Weber.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "name": "Nic Weber",
+  "homepage": "http://nicweber.info",
+  "photo": "http://nicweber.info/nic.png"
+}
+</code></pre></div></div>
+
+<p>In this data we have attribute and value pairs like <code class="language-plaintext highlighter-rouge">name</code> and <code class="language-plaintext highlighter-rouge">Nic Weber</code>. But our attributes don’t mean anything to a machine. These are just objects that we, as data curators, have to know and understand in order to make sense of.</p>
+
+<p>If we use the JSON-LD <code class="language-plaintext highlighter-rouge">@Context</code> tag we can pull in a schema to give our attributes some semantic meaning.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "@context": {
+    "name": "http://schema.org/name"
+    "homepage": "http://schema.org/url"
+    "photo": "http://schema.org/image""
+    
+  },
+  "name": "Nic Weber"
+  "homepage": "http://nicweber.info"
+  "photo": "http://nicweber.info/nic.png"
+}
+</code></pre></div></div>
+
+<p>In this example we have declared that our attributes are not just dumb objects, but they mean something specific in the linked data standard of Schema.org. The <code class="language-plaintext highlighter-rouge">name</code> variable in fact means what Schema.org defines as a “name”. A machine can interpret this information given the namespace that defines “name” at the following address <code class="language-plaintext highlighter-rouge">http://schema.org/name</code>.</p>
+
+<p>Note that in this example our data also has an attribute <code class="language-plaintext highlighter-rouge">homepage</code> that corresponds with the Schema.org definition for a URL, and a <code class="language-plaintext highlighter-rouge">photo</code> which corresponds with the Schema.org definition of an Image. So a machine can interpret that Nic Weber is the name of a person, that person has a webpage, and that webpage contains a photo of Nic Weber. If another web resource wanted to consume my linked data - they could ask Schema.org “What do you know about Nic Weber” and retrieve a result like “This is a person, with a webpage, and a photo”. To see this in practice - here is a result when you search for me on Google. The University of Washington has used Schema.org to say who I am, what my photo is, and through this web of linked data Google also identifies my Google Scholar page where it pulls in Co-authors and relevant publications that appear on the web.</p>
+
+<p><img src="https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/Nic-GoogleResults.png" alt="" /></p>
+
+<p>All of this semantic meaning is achieved through the use of JSON-LD and Schema.org.</p>
+
+<h3 id="id-or-id">ID or <code class="language-plaintext highlighter-rouge">@ID</code></h3>
+<p>In a linked data paradigm every factual statement is made up of resources, and in order to resolve or find those resources we need an identifier which uniquely picks out that the information about that resource.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">@ID</code> tag in JSON-LD then is simply the syntax that is used to uniquely identify things that are being described in the data. Practically, this differs only slightly from the <code class="language-plaintext highlighter-rouge">@Context</code> which is used to pull in an existing schema and name attributes. With <code class="language-plaintext highlighter-rouge">@ID</code> we can instead use the namespaces to identify our objects.</p>
+
+<p>Here is a JSON-LD encoding of the same factual information as our previous example.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "http://schema.org/name": "Nic Weber",
+  "http://schema.org/url": { "@id": "http://nicweber.info" },
+  "http://schema.org/image": { "@id": "http://nicweber.info/nic.png" }
+}
+</code></pre></div></div>
+
+<p>Note, we are still using Schema.org as the authority for things like “name”, “url”, and “image”, only with the <code class="language-plaintext highlighter-rouge">@ID</code> tag we used the schema.org namespace as our actual attribute name. So for a JSON-LD encoding of information about Nic Weber, there is no plain language “name” attribute, but instead the attribute is “http://schema.org/name”. In some ways - this makes machine operations easier, there are fewer lines of data to read and interpret. But, the cost of using this form of syntax is that it is much less human readable (we have to know, for example, what “url” means to accurately interpret what the link “http://nicweber.info” stands for).</p>
+
+<p>Both approaches, using plain language attribute names as well as id names, are valid. We can use either to create linked data about Nic Weber. The important point is that we have used JSON-LD to create graph structured data that is semantically meaningful. In particular, we added a schema to define attributes in our dataset through the standard Scehma.org and its namespaces.</p>
+
+<h2 id="linked-data-for-curation">Linked Data for Curation</h2>
+<p>The description of linked data above may seem somewhat tenuously related to data curation. In the following section I will draw on examples from previous modules to explain how and why linked data is relevant to our practical work in curating data for reuse.</p>
+
+<p>In our first module we used the scenario of an intrepid graduate student sitting in a Brazilian rainforrest counting frogs. Our graduate student transported her observations from the field to a digital computing environment. In doing so she faced a series of choices about how to structure her data for future use. Now, it is unrealistic to expect that our graduate student would follow any of the strict rules described above to create an initial digital record of her observations as linked data. More than likely she will simply enter her data in a spreadsheet application like Excel and use some plain text variation of this table (like a csv) for her analysis.</p>
+
+<p>As downstream curators we will receive a copy of her completed Excel table. In preparing that data for publication the table will likely require some tidying and some restructuring in order to be meaningfully reused. When we have completed this tidying, and created some additional descriptive metadata, we are ready to publish this data to a repository where other users can search for and discover the data. Using linked data, not only could we publish some structured descriptive information about the data that is available, but we could also connect this data to all of the other factual information on the web about the species of frogs that are being described, the place where the observations were made, the dates when the observations occurred, etc. In doing so we would have a semantically rich description of our dataset that could be indexed and made more reliably evaluated by an end-user of our repository. Think for example if, like the Google Knowledge Panel, our data repositories could report factual information about our data and all related data instead of just a static webpage.</p>
+
+<p>Let’s explore how linked data could enhance another example from our previous modules.</p>
+
+<p>In the Data Acquisition, Search, and Discovery module I described a process of seeking and ultimately being disappointed by the results of 311 open data relevant to a research project. Problematically I was interpreting variables described in metadata and then not finding these variables accurately recorded in the dataset that was being described. If in a linked data paradigm there were a standard that was used, like Schema.org, to say exactly what the variable represents and how I should interpret the use of that variable I could have saved a lot of trouble in opening and reading datasets. Further, I could have also had a much better initial search experience. By retrieving standardized descriptive names of the attributes of a dataset I could have likely determined that the data published by New York City, Bellevue, and Detroit did not meet my needs.</p>
+
+<p>Practically though it seems rather unrealistic to expect that open data publishers who struggle to create accurate and meaningful descriptive metadata could also create linked open data. And this is very true - it is currently rather difficult to publish linked open data without significant effort in markup. But, just as web 1.0 evolved to web 2.0 where interactive web content could be published with tools like Wikipedia, WordPress, or Twitter - so too will there be an evolution of the web to more easily and simply publish semantically enhanced linked data. How and when that next evolution will occur is hard to predict. But (this is the rare moment where I will praise industry), it is very encouraging to see that major tech companies like Google, Yahoo, and Microsoft are adopting Schema.org, and encouraging it’s use. In fact, just recently <a href="http://blog.schema.org/2020/03/schema-for-coronavirus-special.html">Schema.org published a new set of markup recommendations</a> for publishing linked data about Covid-19. If there is any silver lining in the current pandemic it is that we are seeing important use cases about the publishing of timely data emerge. For the time being, linked data is a fancy and sometimes novel method of data publishing that affords some convenience to end users. But, the more quickly we see responses needed for emerging public health and safety scenarios the better we realize the potential for curating linked open data.</p>
+
+<h2 id="lecture">Lecture</h2>
+
+<p>&lt;iframe width=853 height=478 frameborder=”0” scrolling=”no” src=”https://screencast-o-matic.com/embed?sc=cYhuoBpZLZ&amp;v=6&amp;ff=1&amp;title=0&amp;controls=1” allowfullscreen=”true”&gt;&lt;/iframe&gt;</p>
+
+<h2 id="reading">Reading</h2>
+
+<ul>
+  <li>Allemang, D., &amp; Hendler, J. (2011). Semantic web for the working ontologist: effective modeling in RDFS and OWL. Second Edition. <a href="https://canvas.uw.edu/files/74020763/download?download_frd=1">PDF</a></li>
+  <li>
+    <ul>
+      <li>Read Chapter 1 for an introduction to SW’s concepts. If you are interested Chapter 2 gives a bit more detail on how the SW works, and Chapter 3 introduces RDF and knowledge modeling.</li>
+    </ul>
+  </li>
+  <li>Ontology Development 101 (Noy and McGuiness) https://protege.stanford.edu/publications/ontology_development/ontology101-noy-mcguinness.html (Read Section 1 and 2; 3 and 4 are optional)</li>
+  <li>
+    <ul>
+      <li>Note - this is a classic formulation of what an 
+ontology is and how to create one… The software they reference in building out the example is called Protege (free https://protege.stanford.edu/ ) - If you are really keen you can follow along.(For reference - this short list from Wikipedia is quite helpful) https://en.wikipedia.org/wiki/Ontology_(information_science)#Components</li>
+    </ul>
+  </li>
+  <li>Ontology for Data Science https://towardsdatascience.com/ontology-and-data-science-45e916288cc5
+Sem Web for the Legal Domain https://content.iospress.com/articles/semantic-web/sw224</li>
+</ul>
+
+<p>Case Study (optional):</p>
+
+<ul>
+  <li>ARL White Paper on Wikidata: Opportunities and Recommendations (2019) https://www.arl.org/publications-resources/4751-arl-white-paper-on-wikidata-opportunities-and-recommendations#.XLdxXZNKh2Y</li>
+</ul>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+<!--     <h2 class="footer-heading">University of Washington Information School</h2> -->
+         <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+ 
+
+         <p class="text">
+Box 352840 - Mary Gates Hall, Ste. 370<br />
+Seattle<br />
+Washington<br />
+
+      </div>
+
+      <div class="footer-col  footer-col-2">
+       <ul class="social-media-list">
+     
+
+          
+
+          
+  <li>
+    <a href="https://twitter.com/uw_ischool">
+      <i class="fab fa-twitter" style="color:gray"></i> uw_ischool
+    </a>
+  </li>
+
+
+          
+
+          
+
+          
+  <li>
+    <a href="https://ischool.uw.edu/">
+      <i class="fas fa-globe" style="color:gray"></i> ischool.uw.edu/
+    </a>
+  </li>
+
+
+
+
+       
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+  </body>
+
+</html>
+<!-- d.s.m.s.050600.062508.030515.080516.030818 | "Baby, I'm Yours" -->

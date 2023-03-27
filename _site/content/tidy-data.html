@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  
+
+
+
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title> Tidy Data - Data Curation II / Spring 2023 </title>
+  <meta name="description" content="Tidy Data - Data Curation II / Spring 2023">
+  
+  <link rel="stylesheet" href="/lis546_Sp23/_css/main.css">
+  <link rel="canonical" href="http://localhost:4000/lis546_Sp23/content/tidy-data">
+  <link rel="alternate" type="application/rss+xml" title="Data Curation II / Spring 2023 - University of Washington Information School" href="http://localhost:4000/lis546_Sp23/feed.xml" />
+<link rel='stylesheet' id='open-sans-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&#038;subset=latin%2Clatin-ext&#038;ver=4.2.4' type='text/css' media='all' />
+<link href='https://fonts.googleapis.com/css?family=Titillium+Web:600italic,600,400,400italic' rel='stylesheet' type='text/css'>
+
+
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper" style="z-index: 100;">
+      <table><tr>
+          <td><img width="75" src="/lis546_Sp23/_images/iSchoolSymbolOnly_RGB_White.png" valign="middle"></td>
+          <td style="padding-left:10px;"><a class="schoolname" style="font-size: 15px;" class="site-title" href="https://ischool.uw.edu/">University of Washington Information School</a>
+          <br/>
+          <span style="margin-top: -2px;margin-bottom: -10px;" class="site-title"><a href="/lis546_Sp23/" title="Data Curation II / Spring 2023 - University of Washington Information School"><b>Data Curation II</a></b></span>
+          <br/>
+          <span class="coursesemeter" style="font-size: 12px;font-weight: bold;margin-top: 10px;display: block;">Spring 2023</span>
+          </td>
+        </tr></table>
+
+    <nav class="site-nav">
+
+      <a href="#" class="menu-icon menu.open">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>  
+
+    <div class="trigger"><h1>Main Navigation</h1>
+
+ <ul class="menu">
+    
+    <li>
+        <a class="page-link" href="/lis546_Sp23/">
+            <i class="fa fa-home fa-lg"></i> Home
+        </a>
+    </li>
+    
+    <li>
+        <a class="page-link" href="/lis546_Sp23/schedule/">
+            <i class="fas fa-calendar-alt"></i> Schedule
+        </a>
+    </li>
+    
+    <li>
+        <a class="page-link" href="/lis546_Sp23/lectures/">
+            <i class="fas fa-book-reader"></i> Modules
+        </a>
+    </li>
+    
+    <li>
+        <a class="page-link" href="/lis546_Sp23/assignments/">
+            <i class="fas fa-user-graduate"></i> Assignments
+        </a>
+    </li>
+    
+    <li>
+        <a class="page-link" href="/lis546_Sp23/project/">
+            <i class="fas fa-user-graduate"></i> Project
+        </a>
+    </li>
+    
+</ul>
+
+     </div>  
+    </nav>
+
+  </div>
+
+  <div class="header-texture" style="height:100%; z-index: 0; position: absolute; top:0; right: 0; left: 0; 
+  background-image: url('/lis546_Sp23/_images/pattern.png');" />
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <h1 id="tidy-data">Tidy Data</h1>
+<p><strong>Original Author: Nic Weber</strong><br />
+<strong>Editing &amp; Updates: Bree Norlander</strong></p>
+
+<p>The idea of “tidy data” underlies principles in data management, and database administration that have been around for decades. In 2014, Hadley Wickham started to formalize some of these rules in what he called “Principles for Tidy Data.” <a href="https://www.jstatsoft.org/article/view/v059i10/v59i10.pdf">PDF</a></p>
+
+<p>These principles are focused mainly on how to follow some simple conventions for structuring data in a matrices (or tables) to use in the statistical programming language <code class="language-plaintext highlighter-rouge">R</code>.</p>
+
+<p>In this module, I am going to give an overview of tidy data principles as they relate to data curation, but also try to extend “tidy data” to some of the underlying principles in organizing, managing, and preparing all kinds of structured data for meaningful use. This module will be relevant again in module 8 when we discuss tidy metadata.</p>
+
+<h2 id="tidy-data-principles">Tidy Data Principles</h2>
+<p>The foundation of Wickham’s “Tidy Data” relies upon a definition of a single table which contains (Wickham, p. 3, 2014):</p>
+
+<ul>
+  <li>A collection of <strong>values</strong>, and every value belongs to a corresponding variable (column) and observation (row).</li>
+  <li>A <strong>variable</strong> (column), contains all values that measure the same attribute (such as height, temperature, duration) across all units (observations/rows).</li>
+  <li>An <strong>observation</strong> (row), contains all values measured on the same unit (such as a person, a date, a state) across all attributes (variables/columns).</li>
+</ul>
+
+<p>It also allows for the creation of relationships with multiple tables with this principle:</p>
+
+<ul>
+  <li>Each type of observational unit forms a table.</li>
+</ul>
+
+<p>We will be focused on tidying a single table for most of this module, but you can see an example of multiple tables in the R for Data Science section on <a href="https://r4ds.had.co.nz/relational-data.html#nycflights13-relational">relational data in the NYC Flights dataset</a>.</p>
+
+<p>Put simply, for any given table we associate one observation with one or more variables. Each variable in a tidy dataset has a standard unit of measurement for its values.</p>
+<figure>
+  <img src="https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/TidyData-Pic.png" alt="Image of tidy data in rows and columns" width="800" />
+  <figcaption>This image is from the open access textbook <a href="https://r4ds.had.co.nz/tidy-data.html#fig:tidy-structure" target="_blank">R for Data Science</a>.</figcaption>
+</figure>
+<p><br />
+This image depicts the structure of a tidy dataset.</p>
+
+<p>The following tidy data table includes characters appearing in a Lewis Caroll <a href="https://en.wikipedia.org/wiki/Sylvie_and_Bruno">novel</a>. The characters are observations, and the variables that we associate with each observation are <code class="language-plaintext highlighter-rouge">Age</code> and <code class="language-plaintext highlighter-rouge">Height</code>. Each variable has a standard unit of measurement.</p>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-fymr{font-weight:bold;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+
+<table class="tg" style="undefined;table-layout: fixed; width: 411px">
+<colgroup>
+<col style="width: 97px" />
+<col style="width: 145px" />
+<col style="width: 169px" />
+</colgroup>
+  <tr>
+    <th class="tg-fymr">Name</th>
+    <th class="tg-fymr">Age</th>
+    <th class="tg-fymr">Height</th>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Bruno</td>
+    <td class="tg-0lax">22 years</td>
+    <td class="tg-0lax">61 inches</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Sylvie</td>
+    <td class="tg-0lax">23 years</td>
+    <td class="tg-0lax">62 inches</td>
+  </tr>
+</table>
+<p><br /></p>
+
+<h2 id="tidy-data-curation">Tidy Data Curation</h2>
+
+<p>The principles described above may seem simplistic and highly intuitive. But, often these principles aren’t followed when creating or publishing a dataset. This may be for a variety of reasons, but most obvious is that data creators are often working for convenience in data entry rather than thinking about future data analysis.</p>
+
+<p>Think back to our module 2 example of an ecology graduate student sitting in a field observing frogs. After a long day of fieldwork she might not care too much about how she makes her data conform with principles of tidy data, she just wants to record her observations. Or, she may be simply following the conventions of a structure that has already been set up by a member of her lab. Later, when she returns to the data to perform some analysis for a publication she may need to clean the data in order to ease computation. But, often she’ll simply archive her raw data and not worry about what she did to transform the data in order to make it useful for analysis. These data management practices are highly inefficient, and represent an excellent point for curators to intervene.</p>
+
+<p>For data curators, the principles of tidy data can be applied at different points in time.</p>
+
+<ul>
+  <li>
+    <p>Upstream tidying: In working “upstream” a data curator is collaboratively developing standards to govern data collection and management. In this proactive work a data curator can advocate for these principles at the point in which data is initially made digital.</p>
+  </li>
+  <li>
+    <p>Downstream tidying: More commonly, a data curator will receive some untidy data after it has been collected and analyzed. Working downstream requires tidying, such as restructuring and standardizing data, so that it adheres to the principles described above.</p>
+  </li>
+</ul>
+
+<p>In working downstream, there are some additional data transformations that are helfpul for adhering to tidy data principles. These include using pivots to widen or make data longer, and separating or gathering data into a single variable.</p>
+
+<h2 id="pivoting-data">Pivoting data</h2>
+
+<p>A pivot table is commonly used to summarize data in some statistical way so as to reduce or summarize information that may be included in the original table. In describing the “pivot” as it applies to a tidy dataset, there are two common problems that this technique can help solve.</p>
+
+<p>First, a variable is often inefficently <strong>“spread”</strong> across multiple <strong>columns</strong>. For example, we may have the observation of a country and a variable like GDP that is represented annually. Our dataset could look like this:</p>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-fymr{font-weight:bold;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+
+<table class="tg" style="undefined;table-layout: fixed; width: 449px">
+<colgroup>
+<col style="width: 106px" />
+<col style="width: 158px" />
+<col style="width: 185px" />
+</colgroup>
+  <tr>
+    <th class="tg-fymr">Country</th>
+    <th class="tg-fymr">2016</th>
+    <th class="tg-fymr">2017</th>
+  </tr>
+  <tr>
+    <td class="tg-0lax">USA</td>
+    <td class="tg-0lax">18.71</td>
+    <td class="tg-0lax">19.49</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">UK</td>
+    <td class="tg-0lax">2.69</td>
+    <td class="tg-0lax">2.66</td>
+  </tr>
+</table>
+<p><br /></p>
+
+<p>The problem with this structure is that the GDP variables are currently represented as annual values. That is, we have variables that are spread out across multiple columns when they could be easily and more effectively included as values for multiple observations.</p>
+
+<p>To tidy this kind of dataset we would transform the data by using a <strong>long pivot</strong>. We will restructure the data table so that it is longer - containing more observations. To do this we will:</p>
+
+<ul>
+  <li>Create a <code class="language-plaintext highlighter-rouge">Year</code> column that can represent the year in which the GDP is being observed for a country.</li>
+  <li>Create a second column that can represent the GDP value.</li>
+  <li>We will then separate the observations based on the year in which they occur.</li>
+</ul>
+
+<p>Our new tidy dataset then looks like this:</p>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-fymr{font-weight:bold;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+
+<table class="tg" style="undefined;table-layout: fixed; width: 525px">
+<colgroup>
+<col style="width: 124px" />
+<col style="width: 185px" />
+<col style="width: 216px" />
+</colgroup>
+  <tr>
+    <th class="tg-fymr">Country</th>
+    <th class="tg-fymr">Year</th>
+    <th class="tg-fymr">GDP</th>
+  </tr>
+  <tr>
+    <td class="tg-0lax">USA</td>
+    <td class="tg-0lax">2016</td>
+    <td class="tg-0lax">18.71</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">UK</td>
+    <td class="tg-0lax">2016</td>
+    <td class="tg-0lax">2.69</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">USA</td>
+    <td class="tg-0lax">2017</td>
+    <td class="tg-0lax">19.49</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">UK</td>
+    <td class="tg-0lax">2017</td>
+    <td class="tg-0lax">2.66</td>
+  </tr>
+</table>
+<p><br /></p>
+
+<p>Our dataset now contains four observations: USA 2016, USA 2017, UK 2016, and UK 2017. What we’ve done is remove any external information needed to interpret what the data represent. This could, for example, help with secondary analysis when we want to directly plot GDP over time.</p>
+
+<p>The second type of data structuring problem that curators are likely to encounter is when one observation is <strong>scattered</strong> across multiple <strong>rows</strong>. This is the opposite of the problem that we encountered with variables spread across multiple columns. In short, the problem with having multiple observations scattered across rows is that we’re duplicating information by confusing a variable for a value.</p>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-fymr{font-weight:bold;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+
+<table class="tg" style="undefined;table-layout: fixed; width: 524px">
+<colgroup>
+<col style="width: 116px" />
+<col style="width: 119px" />
+<col style="width: 108px" />
+<col style="width: 181px" />
+</colgroup>
+  <tr>
+    <th class="tg-fymr">Country</th>
+    <th class="tg-fymr">Year</th>
+    <th class="tg-fymr">Measure</th>
+    <th class="tg-fymr">Number</th>
+  </tr>
+  <tr>
+    <td class="tg-0lax">USA</td>
+    <td class="tg-0lax">2016</td>
+    <td class="tg-0lax">GDP</td>
+    <td class="tg-0lax">18.71 trillion USD</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">USA</td>
+    <td class="tg-0lax">2016</td>
+    <td class="tg-0lax">Population</td>
+    <td class="tg-0lax">323.1 million people</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">UK</td>
+    <td class="tg-0lax">2016</td>
+    <td class="tg-0lax">GDP</td>
+    <td class="tg-0lax">2.69 trillion USD</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">UK</td>
+    <td class="tg-0lax">2016</td>
+    <td class="tg-0lax">Population</td>
+    <td class="tg-0lax">65.38 million people</td>
+  </tr>
+</table>
+<p><br /></p>
+
+<p>It should be obvious that we are not abiding by tidy data principles in <em>at least</em> one respect. The variable (column), <code class="language-plaintext highlighter-rouge">Number</code>, does not contain a single unit of measurement. Instead it contains two different measurements, “USD” and “count of people”. Additionally, the variable (column), <code class="language-plaintext highlighter-rouge">Measure</code>, contains multiple values, “GDP” and “Population.” To tidy this kind of dataset we will use a <strong>wide pivot</strong>. We will restructure the data so that each column corresponds with one variable, and each variable contains a value of a single unit of measurement.</p>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-fymr{font-weight:bold;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+
+<table class="tg" style="undefined;table-layout: fixed; width: 562px">
+<colgroup>
+<col style="width: 124px" />
+<col style="width: 128px" />
+<col style="width: 116px" />
+<col style="width: 194px" />
+</colgroup>
+  <tr>
+    <th class="tg-fymr">Country</th>
+    <th class="tg-fymr">Year</th>
+    <th class="tg-fymr">GDP</th>
+    <th class="tg-fymr">Population</th>
+  </tr>
+  <tr>
+    <td class="tg-0lax">USA</td>
+    <td class="tg-0lax">2016</td>
+    <td class="tg-0lax">18.71</td>
+    <td class="tg-0lax">323.1</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">UK</td>
+    <td class="tg-0lax">2016</td>
+    <td class="tg-0lax">2.69</td>
+    <td class="tg-0lax">65.38</td>
+  </tr>
+</table>
+<p><br /></p>
+
+<p>Our dataset now contains only two observations - the GDP and Population for the UK and USA in 2016. But, note that we also solved a separate problem that plagues the scattering of observations. In the first dataset we had to declare, in the <code class="language-plaintext highlighter-rouge">Number</code> column, the unit of measurement. GDP is measure in the trillions of USD and Population is measured in the millions of count of people. Through our wide pivot transformation we now have a standard measurement unit for each variable, and no longer have to include measurement information in our values. (One reason this is important is that the value can now have a <a href="https://en.wikipedia.org/wiki/Data_type">data type</a> that is useful for performing mathematics. Originally, the value was a combination of a number (e.g. type = numeric) and words (e.g. type = string). Most data analysis tools will coerce the entire value into a string/character and the user will not be able to perform calculations.) In this example we have not included the metadata about the variable. Ideally, we would either conform to a metadata schema that specifies units, or include a data dictionary indicating the standard unit of measurement, or we state it explicitly in the column heading (such as <code class="language-plaintext highlighter-rouge">GDP_USD_trillions</code>). How you indicate the units of measurement will vary depending on your domain and the standard practices in your setting.</p>
+
+<p>In sum, the pivot works to either:</p>
+
+<ol>
+  <li>Transform variables so that they correspond with just one observation. We do this by adding new observations. This makes a tidy dataset longer.</li>
+  <li>Transform values that are acting as variables. We do this by creating new variables and replacing the incorrect observation. This makes a tidy dataset wider.</li>
+</ol>
+
+<h2 id="separating-and-gathering">Separating and Gathering</h2>
+<p>Two other types of transformations are often necessary to create a tidy dataset: <strong>Separating</strong> values that may be incorrectly combined, and <strong>Gathering</strong> redundant values into a single variable. Both of these transformations are highly context dependent.</p>
+
+<h3 id="separating">Separating</h3>
+<p>Separating variables is a transformation necessary when two distinct values are used as a summary. This is a common shorthand method of data entry.</p>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-fymr{font-weight:bold;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+
+<table class="tg" style="undefined;table-layout: fixed; width: 406px">
+<colgroup>
+<col style="width: 137px" />
+<col style="width: 141px" />
+<col style="width: 188px" />
+</colgroup>
+  <tr>
+    <th class="tg-fymr">Country</th>
+    <th class="tg-fymr">Year</th>
+    <th class="tg-fymr">GDP per capita</th>
+  </tr>
+  <tr>
+    <td class="tg-0lax">USA</td>
+    <td class="tg-0lax">2016</td>
+    <td class="tg-0lax">18710/0.3231</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">UK</td>
+    <td class="tg-0lax">2016</td>
+    <td class="tg-0lax">2690/0.06538</td>
+  </tr>
+</table>
+<p><br /><br />
+In this table we have a variable <code class="language-plaintext highlighter-rouge">GDP per capita</code> that represents the amount of GDP divided by the population of each country (the numbers have changed from the previous examples to standardize the units of measurement). This may be intuitive to an undergraduate economics student, but it violates our tidy data principle of having one value per variable. Also notice that the <code class="language-plaintext highlighter-rouge">GDP per capita</code> variable does not use a standard unit of measurement and includes a character (string) <code class="language-plaintext highlighter-rouge">/</code>.</p>
+
+<p>To separate these values we would simply create a new column for each of the variables. You may recognize this as a form of ‘wide pivot’.</p>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-1wig{font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-fymr{font-weight:bold;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+
+<table class="tg" style="undefined;table-layout: fixed; width: 559px">
+<colgroup>
+<col style="width: 124px" />
+<col style="width: 88px" />
+<col style="width: 84px" />
+<col style="width: 123px" />
+<col style="width: 140px" />
+</colgroup>
+  <tr>
+    <th class="tg-fymr">Country</th>
+    <th class="tg-fymr">Year</th>
+    <th class="tg-fymr">GDP</th>
+    <th class="tg-1wig">Population</th>
+    <th class="tg-1wig">GDP per Capita</th>
+  </tr>
+  <tr>
+    <td class="tg-0lax">USA</td>
+    <td class="tg-0lax">2016</td>
+    <td class="tg-0lax">18710</td>
+    <td class="tg-0lax">0.3231</td>
+    <td class="tg-0lax">57908</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">UK</td>
+    <td class="tg-0lax">2016</td>
+    <td class="tg-0lax">2690</td>
+    <td class="tg-0lax">0.06538</td>
+    <td class="tg-0lax">41144</td>
+  </tr>
+</table>
+<p><br /><br />
+By separating the values into their own columns we know have a tidy dataset that includes four variables for each observation. Again, the explanation of units of measurement and the calculation used to creat the “GDP per capita” column should be included in the metadata.</p>
+
+<h3 id="gathering">Gathering</h3>
+<p>Gathering variables is the exact opposite of separating - instead of having multiple values in a single variable, a data collector may have gone overboard in recording their observations and unintentionally created a dataset that is too granular (that is, has too much specificity). Generally, granular data is good - but it can also create unnecessary work for performing analysis or interpreting data when taken too far.</p>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-fymr{font-weight:bold;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+
+<table class="tg" style="undefined;table-layout: fixed; width: 598px">
+<colgroup>
+<col style="width: 133px" />
+<col style="width: 80px" />
+<col style="width: 80px" />
+<col style="width: 80px" />
+<col style="width: 140px" />
+</colgroup>
+  <tr>
+    <th class="tg-fymr">Species</th>
+    <th class="tg-fymr">Hour</th>
+    <th class="tg-fymr">Minute</th>
+    <th class="tg-fymr">Second</th>
+    <th class="tg-fymr">Location</th>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Aparasphenodon brunoi</td>
+    <td class="tg-0lax">09</td>
+    <td class="tg-0lax">58</td>
+    <td class="tg-0lax">10</td>
+    <td class="tg-0lax">Brazil</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Aparasphenodon brunoi</td>
+    <td class="tg-0lax">11</td>
+    <td class="tg-0lax">22</td>
+    <td class="tg-0lax">17</td>
+    <td class="tg-0lax">Honduras</td>
+  </tr>
+</table>
+<p><br /><br />
+In this dataset we have a very granular representation of time. If, as data curators, we wanted to represent time using a common standard like <a href="https://en.wikipedia.org/wiki/ISO_8601#Times">ISO 8601</a> (and we would, because we’re advocates of standardization) then we need to gather these three distinct variables into one single variable. This gathering transformation will represent, in a standard way, when the species was observed (Yes, this frog’s common name is <a href="https://en.wikipedia.org/wiki/Bruno%27s_casque-headed_frog">“Bruno’s casque-headed frog”</a> - I have no idea whether or not this is related to the Lewis Caroll novel, but I like continuity.)</p>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-fymr{font-weight:bold;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+
+<table class="tg" style="undefined;table-layout: fixed; width: 435px">
+<colgroup>
+<col style="width: 142px" />
+<col style="width: 197px" />
+<col style="width: 96px" />
+</colgroup>
+  <tr>
+    <th class="tg-fymr">Species</th>
+    <th class="tg-fymr">Time of Observation</th>
+    <th class="tg-fymr">Location</th>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Aparasphenodon brunoi</td>
+    <td class="tg-0lax">09:58:10</td>
+    <td class="tg-0lax">Brazil</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Aparasphenodon brunoi</td>
+    <td class="tg-0lax">11:22:17</td>
+    <td class="tg-0lax">Honduras</td>
+  </tr>
+</table>
+<p><br /></p>
+
+<p>Our dataset now has just two variables - the time when a species was observed, and the location. We’ve appealed to standard (IS0 8601) to represent time, and expect that anyone using this dataset will know the temporal convention HH:MM:SS. And, we assume that the timezone is standardized and stated in the metadata (otherwise we would need a column for timezone).</p>
+
+<p>As I said in opening this section - the assumptions we make in tidying data are highly context dependent. If we were working in a field where granular data like <code class="language-plaintext highlighter-rouge">seconds</code> was not typical, this kind of representation might not be necessary. But, if we want to preserve all of the information that our dataset contains then appealing to broad standards is a best practice.</p>
+
+<h2 id="tidy-data-in-practice">Tidy Data in Practice</h2>
+
+<p>For the purposes of this class, using tidy data principles in a specific programming language is not necessary. Simply understanding common transformations and principles are all that we need to start curating tidy data.</p>
+
+<p>But, it is worth knowing that the tidy data principles have been implemented in a number of executable libraries using <code class="language-plaintext highlighter-rouge">R</code>. This includes the suite of libraries known as the <a href="https://www.tidyverse.org/">tidyverse</a>. A nice overview of what the tidyverse libraries make possible working with data in <code class="language-plaintext highlighter-rouge">R</code> is summarized in this <a href="https://rviews.rstudio.com/2017/06/08/what-is-the-tidyverse/">blogpost</a> by Joseph Rickert. (<em>Note from Bree:</em> I love <code class="language-plaintext highlighter-rouge">R</code> and use it everyday!)</p>
+
+<p>There are also a number of beginner <a href="https://education.rstudio.com/learn/beginner/">tutorials</a> and <a href="https://rstudio.com/resources/cheatsheets/">cheat-sheets</a> available to get started. If you come from a database background, I particularly like this <a href="https://idc9.github.io/stor390/notes/tidy_data/tidy_data.html#relational_data_and_joining_tables">tutorial</a> on tidy data applied to the relational model by my colleague <a href="https://idc9.github.io/">Iain Carmichael</a>.</p>
+
+<h2 id="extending-tidy-data-beyond-the-traditional-observation">Extending Tidy Data Beyond the Traditional Observation</h2>
+<p>Many examples of tidy data, such as the ones above, depend upon discrete observations that are often rooted in statistical evidence, or a scientific domain. Qualitative and humanities data often contain unique points of reference (e.g. notions of place rather than mapped coordinates), interpreted factual information (e.g. observations to a humanist mean something very different than to an ecologist), and a need for granularity that may seem non-obvious to the tidy data curator.</p>
+
+<p>In the following section I will try to offer some extensions to the concept of tidy data that draws upon the work of <a href="https://matthewlincoln.net/">Matthew Lincoln</a> for tidy digital humanities data (see an example of one of Matthew’s workshops <a href="https://matthewlincoln.net/2020/05/26/tidy-data-for-humanities.html">here</a>). In particular, we  will look at ways to transform two types of data: Dates and Categories. Each of these types of data often have multiple ways of being represented. But, this shouldn’t preclude us from bringing some coherence to untidy data.</p>
+
+<p>For these explanations I’ll use Matthew’s data because it represents a wonderful example of how to restructure interpreted factual information that was gathered from a museum catalog. The following reference dataset will be used throughout the next two sections. Take a quick moment to read and think about the data that we will transform.</p>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-1wig{font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-fymr{font-weight:bold;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+
+<table class="tg" style="undefined;table-layout: fixed; width: 689px">
+<colgroup>
+<col style="width: 96px" />
+<col style="width: 135px" />
+<col style="width: 99px" />
+<col style="width: 79px" />
+<col style="width: 149px" />
+<col style="width: 131px" />
+</colgroup>
+  <tr>
+    <th class="tg-fymr">acq_no</th>
+    <th class="tg-fymr">museum</th>
+    <th class="tg-fymr">artist</th>
+    <th class="tg-1wig">date</th>
+    <th class="tg-1wig">medium</th>
+    <th class="tg-1wig">tags</th>
+  </tr>
+  <tr>
+    <td class="tg-0lax">1999.32</td>
+    <td class="tg-0lax">Rijksmuseum</td>
+    <td class="tg-0lax">Studio of Rembrandt, Govaert Flink</td>
+    <td class="tg-0lax">after 1636</td>
+    <td class="tg-0lax">oil on canvas</td>
+    <td class="tg-0lax">religious, portrait</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">1908.54</td>
+    <td class="tg-0lax">Victoria &amp; Albert</td>
+    <td class="tg-0lax">Jan Vermeer</td>
+    <td class="tg-0lax">1650 circa</td>
+    <td class="tg-0lax">oil paint on panel</td>
+    <td class="tg-0lax">domestic scene and women</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">1955.32</td>
+    <td class="tg-0lax">British Museum</td>
+    <td class="tg-0lax">Possibly Vermeer, Jan</td>
+    <td class="tg-0lax">1655 circa</td>
+    <td class="tg-0lax">oil on canvas</td>
+    <td class="tg-0lax">woman at window, portrait</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">1955.33</td>
+    <td class="tg-0lax">Rijksmuseum</td>
+    <td class="tg-0lax">Hals, Frans</td>
+    <td class="tg-0lax">16220</td>
+    <td class="tg-0lax">oil on canvas, relined</td>
+    <td class="tg-0lax">portraiture</td>
+  </tr>
+</table>
+<p><br /></p>
+<h3 id="dates">Dates</h3>
+<p>In the previous section I described the adherence to a standard, ISO 8601, for structuring time based on the observation of a species. We can imagine a number of use cases where this rigid standard would not be useful for structuring a date or time. In historical data, for example, we may not need the specificity of an ISO standard, and instead we may need to represent something like a time period, a date range, or an estimate of time. In the museum catalog dataset we see three different ways to represent a date: After a date, <a href="https://en.wikipedia.org/wiki/Circa">circa</a> a year, and as a data error in the catalog (<code class="language-plaintext highlighter-rouge">16220</code>).</p>
+
+<p>It is helpful to think of these different date representations as “duration” (events with date ranges) and “fixed points” in time.</p>
+
+<p>Following the tidy data principles, if we want to represent a specific point in time we often need to come up with a consistent unit of measurement. For example, we may have a simple variable like date with the following different representations:</p>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+
+<table class="tg">
+  <tr>
+    <th class="tg-0lax"><span style="font-weight:bold">Date </span></th>
+  </tr>
+  <tr>
+    <td class="tg-0lax">1900s </td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">2012 </td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">9th century</td>
+  </tr>
+</table>
+<p><br /><br />
+Here we have three different representations of a point in time. If we want to tidy this data we will have to decide what is the most meaningful representation of this data as a whole. If we choose century, as I would, then we will have to sacrifice a bit of precision for our second observation. The benefit is that we will have consistency in representing the data in aggregate.</p>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+
+<table class="tg">
+  <tr>
+    <th class="tg-0lax"><span style="font-weight:bold">Date_century</span></th>
+  </tr>
+  <tr>
+    <td class="tg-0lax">20</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">21</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">9</td>
+  </tr>
+</table>
+<p><br /><br />
+But now, let’s assume that this tradeoff in precision isn’t as clear. If, for example, our dataset contains a date range (duration) mixed with point in time values, then we need to do some extra work to represent this information clearly in a tidy dataset.</p>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-cly1{text-align:left;vertical-align:middle}
+</style>
+
+<table class="tg">
+  <tr>
+    <th class="tg-cly1"><span style="font-weight:bold">Date</span></th>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Mid 1200s</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">9th century</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">19-20th c.</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">1980's</td>
+  </tr>
+</table>
+<p><br /><br />
+This data contains a number of different estimates about when a piece of art may have been produced. The uncertainty along with the factual estimate is what we want to try to preserve in tidying the data. An approach could be to transform each date estimate into a range.</p>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-1wig{font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-g7sd{font-weight:bold;border-color:inherit;text-align:left;vertical-align:middle}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+
+<table class="tg" style="undefined;table-layout: fixed; width: 180px">
+<colgroup>
+<col style="width: 120px" />
+<col style="width: 120px" />
+</colgroup>
+  <tr>
+    <td class="tg-g7sd">date_early</td>
+    <td class="tg-1wig">date_late</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">1230</td>
+    <td class="tg-0lax">1270</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">800</td>
+    <td class="tg-0lax">899</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">1800<br /></td>
+    <td class="tg-0lax">1999</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">1980</td>
+    <td class="tg-0lax">1989</td>
+  </tr>
+</table>
+<p><br />
+Our data transformation preserves the range estimates, but attempts to give a more consistent representation of the original data. Since we don’t know, for example, when in the mid-1200’s a piece was produced, we infer a range and then create two columns - earliest possible date, and latest possible date - to convey that information to a potential user.</p>
+
+<p>Another obstacle we may come across in representing dates in our data is missing or non-existent data.</p>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-1wig{font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+
+<table class="tg">
+  <tr>
+    <th class="tg-1wig">Date<br /></th>
+  </tr>
+  <tr>
+    <td class="tg-0lax">2000-12-31</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">2000-01-01 </td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">1999-12-31</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">1999-01</td>
+  </tr>
+</table>
+<p><br />
+We may be tempted to look at these four observations and think it is a simple data entry error - the last observation is clearly supposed to follow the sequence of representing the last day in a year, and the first day in a year. But, without complete knowledge we would have to decide whether or not we should infer this pattern or whether we should transform all of the data to be a duration (range of dates).</p>
+
+<p>There is not a single right answer. A curator would simply have to decide how and in what ways the data might be made more meaningful for reuse. The wrong approach though would be to leave the ambiguity in the dataset. Instead, what we might do is correct what we assume to be a data entry error and create documentation which conveys that inference to a potential reuser.</p>
+
+<p>There are many ways to do this with metadata, but a helpful approach might be just to add a new column with notes.</p>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-1wig{font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+
+<table class="tg">
+  <tr>
+    <th class="tg-1wig">Date<br /></th>
+    <th class="tg-1wig">Notes</th>
+  </tr>
+  <tr>
+    <td class="tg-0lax">2000-12-31</td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">2000-01-01 </td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">1999-12-31</td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">1999- 01-01</td>
+    <td class="tg-0lax">Date is inferred. The original entry read "1999-01"</td>
+  </tr>
+</table>
+<p><br />
+Documentation is helpful for all data curation tasks, but is essential in tidying data that may have a number of ambiguities.</p>
+
+<p>Let’s return to our original dataset and clean up the dates following the above instructions for tidying ambiguous date information.</p>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-1wig{font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-fymr{font-weight:bold;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+
+<table class="tg" style="undefined;table-layout: fixed; width: 350px">
+<colgroup>
+<col style="width: 84px" />
+<col style="width: 120px" />
+<col style="width: 120px" />
+<col style="width: 120px" />
+</colgroup>
+  <tr>
+    <th class="tg-fymr">acq_no</th>
+    <th class="tg-1wig">original_date</th>
+    <th class="tg-1wig">date_early</th>
+    <th class="tg-1wig">date_late</th>
+  </tr>
+  <tr>
+    <td class="tg-0lax">1999.32</td>
+    <td class="tg-0lax">after 1636</td>
+    <td class="tg-0lax">1636</td>
+    <td class="tg-0lax">1669</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">1908.54</td>
+    <td class="tg-0lax">1650 circa</td>
+    <td class="tg-0lax">1645</td>
+    <td class="tg-0lax">1655</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">1955.32</td>
+    <td class="tg-0lax">1655 circa</td>
+    <td class="tg-0lax">1650</td>
+    <td class="tg-0lax">1660</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">1955.33</td>
+    <td class="tg-0lax">16220</td>
+    <td class="tg-0lax">1622</td>
+    <td class="tg-0lax">1622</td>
+  </tr>
+</table>
+<p><br />
+We have added two new variables which represent a duration (range of time) - the earliest estimate and the latest estimate of when a work of art was created. (You may be wondering why 1669 is the latest date for the first entry. Rembrandt died in 1669. His work definitely had staying power, but I think it’s safe to say he wasn’t producing new paintings after that).</p>
+
+<p>Note that we also retained the original dates in our dataset. This is another approach to communicating ambiguity - we can simply retain the untidy data, but provide a clean version for analysis. I don’t particularly like this approach, but if we assume that the user of this tidy data has the ability to easily exclude a variable from their analysis then this is a perfectly acceptable practice. (<em>Note from Bree</em>: In my work I tend to prefer the approach of keeping the original data and creating a new column/s with the corrected data. Again this is an example of how practice might differ depending on context or domain.)</p>
+
+<h3 id="categories">Categories</h3>
+<p>LIS research in knowledge organization (KO) has many useful principles for approaching data and metadata tidying, including the idea of “authority control” which we will talk about in depth in coming weeks. In short though, authority control is the process of appealing to a standard way of representing a spelling, categorization, or classification in data.</p>
+
+<p>In approaching interpretive data that may contain many ambiguities, we can draw upon the idea of authority control to logically decide how best to represent categorical information to our users.</p>
+
+<p>A helpful heuristic to keep in mind when curating data with categories is that it is much easier to combine categories later than it is to separate them initially. We can do this by taking some time to evaluate and analyze a dataset first, and then adding new categories later.</p>
+
+<p>Let’s return to our original dataset to understand what authority control looks like in tidy data practice.</p>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-fymr{font-weight:bold;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+
+<table class="tg" style="undefined;table-layout: fixed; width: 269px">
+<colgroup>
+<col style="width: 114px" />
+<col style="width: 155px" />
+</colgroup>
+  <tr>
+    <th class="tg-fymr">acq_no</th>
+    <th class="tg-fymr">medium</th>
+  </tr>
+  <tr>
+    <td class="tg-0lax">1999.32</td>
+    <td class="tg-0lax">oil on canvas</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">1908.54</td>
+    <td class="tg-0lax">oil paint on panel</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">1955.32</td>
+    <td class="tg-0lax">oil on canvas</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">1955.33</td>
+    <td class="tg-0lax">oil on canvas, relined</td>
+  </tr>
+</table>
+<p><br />
+In the variable medium there are actually three values:</p>
+
+<ol>
+  <li>The medium that was used to produce the painting.</li>
+  <li>The material (or support) that the medium was applied to.</li>
+  <li>A conservation technique.</li>
+</ol>
+
+<p>This ambiguity likely stems from the fact that art historians often use an informal vocabulary for describing a variable like medium.</p>
+
+<p>Think of the placard on any museum that you have visited – Often the “medium” information on that placard will contain a plain language description. This information is stored in a museum database and used to both identify a work owned by the museum, but also produce things like exhibit catalogues and placards. Here is an example of placard using information represented in our dataset:</p>
+
+<p><img src="https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/rembrandt-example.jpg" alt="Placard depicting information about a Rembrandt self-portrait hanging in a museum" width="600" />
+<br />
+But, we don’t want to create a dataset that retains ambiguous short-hand categories simply because this is convenient to an exhibit curator. What we want is to tidy the data such that it can be broadly useful, and accurately describe a particular piece of art.</p>
+
+<p>This example should trigger a memory from our earlier review of tidy data principles - when we see the conflation of two or more values in a single variable we need to apply a “separate” transformation. To do this we will create three new variables to perform a “wide pivot”.</p>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-1wig{font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-fymr{font-weight:bold;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+
+<table class="tg" style="undefined;table-layout: fixed; width: 439px">
+<colgroup>
+<col style="width: 122px" />
+<col style="width: 107px" />
+<col style="width: 100px" />
+<col style="width: 110px" />
+</colgroup>
+  <tr>
+    <th class="tg-fymr">acq_no</th>
+    <th class="tg-fymr">medium</th>
+    <th class="tg-1wig">support</th>
+    <th class="tg-1wig">cons_note</th>
+  </tr>
+  <tr>
+    <td class="tg-0lax">1999.32</td>
+    <td class="tg-0lax">oil</td>
+    <td class="tg-0lax">canvas</td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">1908.54</td>
+    <td class="tg-0lax">oil</td>
+    <td class="tg-0lax">panel</td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">1955.32</td>
+    <td class="tg-0lax">oil</td>
+    <td class="tg-0lax">canvas</td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">1955.33</td>
+    <td class="tg-0lax">oil</td>
+    <td class="tg-0lax">canvas</td>
+    <td class="tg-0lax">relined</td>
+  </tr>
+</table>
+<p><br />
+In this wide pivot, we retained the original <code class="language-plaintext highlighter-rouge">medium</code> variable, but we have also separated the <code class="language-plaintext highlighter-rouge">support</code> and <code class="language-plaintext highlighter-rouge">conservation notes</code> into new variables. (Note: I will have much more to say about this example and how we can use an “authority control” in future modules.)</p>
+
+<p>Our original dataset also contained another variable <code class="language-plaintext highlighter-rouge">Name</code> with multiple values and ambiguities. In general, names are the cause of great confusion in information science. In part because names are often hard to disambiguate across time, but also because “identity” is difficult in the context of cultural heritage data. Art history is no exception.</p>
+
+<p>In our original dataset, we have a mix of name disambugity and identity problems.</p>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-fymr{font-weight:bold;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+
+<table class="tg" style="undefined;table-layout: fixed; width: 374px">
+<colgroup>
+<col style="width: 138px" />
+<col style="width: 236px" />
+</colgroup>
+  <tr>
+    <th class="tg-fymr">acq_no</th>
+    <th class="tg-fymr">artist</th>
+  </tr>
+  <tr>
+    <td class="tg-0lax">1999.32</td>
+    <td class="tg-0lax">Studio of Rembrandt, Govaert Flink</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">1908.54</td>
+    <td class="tg-0lax">Jan Vermeer</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">1955.32</td>
+    <td class="tg-0lax">Possibly Vermeer, Jan</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">1955.33</td>
+    <td class="tg-0lax">Hals, Frans</td>
+  </tr>
+</table>
+<p><br />
+Let’s unpack some of these ambiguities:</p>
+
+<ul>
+  <li>The first observation “Studio of Rembrandt, Govaert Flink” contains two names - <code class="language-plaintext highlighter-rouge">Rembrandt</code> and <code class="language-plaintext highlighter-rouge">Govaert Flink</code>. It also has a qualification, that the work was produced in <code class="language-plaintext highlighter-rouge">the studio of</code> Rembrandt.</li>
+  <li>The third observation contains a qualifier <code class="language-plaintext highlighter-rouge">Possibly</code> to note uncertainty in the painting’s provenance.</li>
+  <li>All four of the observations have a different way of arranging given names and surnames.</li>
+</ul>
+
+<p>To tidy names there are a number of clear transformations we could apply. We could simply create a <code class="language-plaintext highlighter-rouge">first_name</code> and <code class="language-plaintext highlighter-rouge">last_name</code> variable and seperate these values.</p>
+
+<p>But this is not all of the information that our <code class="language-plaintext highlighter-rouge">Name</code> variable contains. It also contains qualifiers. And, it is much more difficult to effectively retain qualifications in structured data. In part because they don’t neatly fall into the triple model that we expect our plain language to take when being structured as a table.</p>
+
+<p>Take for example our third observation. The subject “Vermeer” has an object (the painting) “View of Delft” being connected by a predicate “painted”. In plain language we could easily represent this triple as “Vermeer painted View_of_Delft”.</p>
+
+<p>But, our first observation is much more complex and not well suited for the triple form. The plain language statement would look somoething like “The studio of Rembrandt sponsored Govaert Flink in painting ‘Isaac blessing Jacob’” (The painting in question is <a href="https://upload.wikimedia.org/wikipedia/commons/b/b2/Amsterdam_-_Rijksmuseum_1885_-_The_Gallery_of_Honour_%281st_Floor%29_-_Isaac_blessing_Jacob_1638_by_Govert_Flinck.jpg">here</a>.)</p>
+
+<p>To represent these ambiguities in our tidy data, we need to create some way to qualify and attribute the different works to different people. Warning in advance, this will be a VERY wide pivot.</p>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-fymr{font-weight:bold;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+@media screen and (max-width: 767px) {.tg {width: auto !important;}.tg col {width: auto !important;}.tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;}}</style>
+
+<div class="tg-wrap"><table class="tg" style="undefined;table-layout: fixed; width: 750px">
+<colgroup>
+<col style="width: 80px" />
+<col style="width: 80px" />
+<col style="width: 80px" />
+<col style="width: 80px" />
+<col style="width: 80px" />
+<col style="width: 80px" />
+<col style="width: 80px" />
+</colgroup>
+  <tr>
+    <th class="tg-fymr">acq_no</th>
+    <th class="tg-fymr">artist_1 1stname</th>
+    <th class="tg-fymr">artist_1 2ndname<br /></th>
+    <th class="tg-fymr">artist_1 qual<br /></th>
+    <th class="tg-fymr">artist_2 1stname<br /></th>
+    <th class="tg-fymr">artist_2 2ndname<br /></th>
+    <th class="tg-fymr">artist_2 qual<br /></th>
+  </tr>
+  <tr>
+    <td class="tg-0lax">1999.32</td>
+    <td class="tg-0lax">Rembrandt</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">studio</td>
+    <td class="tg-0lax">Govaert</td>
+    <td class="tg-0lax">Flinck</td>
+    <td class="tg-0lax">possibly</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">1908.54</td>
+    <td class="tg-0lax">Jan</td>
+    <td class="tg-0lax">Vermeer</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">1955.32</td>
+    <td class="tg-0lax">Jan</td>
+    <td class="tg-0lax">Vermeer</td>
+    <td class="tg-0lax">possibly</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">1955.33</td>
+    <td class="tg-0lax">Hals</td>
+    <td class="tg-0lax">Frans</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+  </tr>
+</table></div>
+<p><br />
+Across all observations we separated first and second names. In the case of Vermeer, this is an important distinction as there are multiple Vermeers that produced works of art likely to be found in a museum catalogue.</p>
+
+<p>In the third observation, we also added a qualifier “possibly” to communicate that the origin of the work is assumed, but not verified to be Vermeer. We also used this qualification variable for Rembrandt, who had a studio that most definitely produced a work of art, but the person who may have actually put oil to canvas is ambiguous.</p>
+
+<p>We also created a representation of the artist that is numbered - so that we could represent the first artist and the second artist associated with a painting.</p>
+
+<p>Each of these approaches to disambiguation is based on a “separating” transformation through a wide pivot. We tidy the dataset by creating qualifiers, and add variables to represent multiple artists.</p>
+
+<p>This solution is far from perfect, and we can imagine this going quickly overboard without some control in place for how we will name individuals and how we will assign credit for their work (imagine creating the entry for the <a href="https://en.wikipedia.org/wiki/NAMES_Project_AIDS_Memorial_Quilt">NAMES Project AIDS Memorial Quilt</a>. But, this example also makes clear that the structural decisions are ours to make as data curators. We can solve each transformation problem in multiple ways. The key to tidy data is having a command of the different strategies for transforming data, and knowing when and why to apply each transformation.</p>
+
+<p>In future chapters we will further explore the idea of appealing to an “authority control” when making these types of decisions around tidying data and metadata.</p>
+
+<h2 id="summary">Summary</h2>
+<p>In this chapter we’ve gone full tilt on the boring aspects of data structuring. In doing so, we tried to adhere to a set of principles for tidying data:</p>
+
+<ul>
+  <li>Observations are rows that have variables containing values.</li>
+  <li>Variables are columns. Each variable contains only one value, and each value follows a standard unit of measurement.</li>
+</ul>
+
+<p>We focused on three types of transformations for tidying data:</p>
+
+<ul>
+  <li>Pivots - which are either wide or long.</li>
+  <li>Separating - which creates new variables</li>
+  <li>Gathering - which collapses variables</li>
+</ul>
+
+<p>I also introduced the idea of using “authority control” for normalizing or making regular data that does not neatly conform to the conventions spelled out by “Tidy Data Principles”.</p>
+
+<h1 id="lecture">Lecture</h1>
+
+<p>&lt;iframe width=853 height=482 frameborder=”0” scrolling=”no” src=”https://screencast-o-matic.com/embed?sc=cYfo0QzbHl&amp;v=6&amp;ff=1&amp;title=0&amp;controls=1” allowfullscreen=”true”&gt;&lt;/iframe&gt;</p>
+
+<h1 id="readings">Readings</h1>
+
+<p><strong>Required</strong></p>
+
+<ul>
+  <li>Rowson and Munoz (2016) Against Cleaning: <a href="http://curatingmenus.org/articles/against-cleaning/">http://curatingmenus.org/articles/against-cleaning/</a></li>
+  <li>Wickham, H. (2014), “Tidy Data,” Journal of Statistical Software, 59, 1–23 <a href="https://www.jstatsoft.org/article/view/v059i10/v59i10.pdf">https://www.jstatsoft.org/article/view/v059i10/v59i10.pdf</a> (Optional - same article with more code and examples <a href="https://r4ds.had.co.nz/tidy-data.html">https://r4ds.had.co.nz/tidy-data.html</a>)</li>
+</ul>
+
+<p><strong>Optional</strong></p>
+
+<p>Extending tidy data principles:</p>
+
+<ul>
+  <li>Tierney, N. J., &amp; Cook, D. H. (2018). Expanding tidy data principles to facilitate missing data exploration, visualization and assessment of imputations. arXiv preprint <a href="https://arxiv.org/abs/1809.02264">arXiv:1809.02264</a>. (There are a number of very helpful R examples in that paper)</li>
+  <li>Leek (2016) Non-tidy data <a href="https://simplystatistics.org/2016/02/17/non-tidy-data/">https://simplystatistics.org/2016/02/17/non-tidy-data/</a></li>
+</ul>
+
+<p>Reading about data structures in spreadsheets:</p>
+
+<ul>
+  <li>Broman, K. W., &amp; Woo, K. H. (2018). Data organization in spreadsheets. The American Statistician, 72(1), 2-10. <a href="https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989">https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989</a></li>
+</ul>
+
+<p>Teaching or learning through spreadsheets:</p>
+
+<ul>
+  <li>Tort, F. (2010). Teaching spreadsheets: Curriculum design principles. arXiv preprint <a href="https://arxiv.org/abs/1009.2787">arXiv:1009.2787</a>.</li>
+</ul>
+
+<p>Spreadsheet practices in the wild:</p>
+
+<ul>
+  <li>Mack, K., Lee, J., Chang, K., Karahalios, K., &amp; Parameswaran, A. (2018, April). Characterizing scalability issues in spreadsheet software using online forums. In Extended Abstracts of the 2018 CHI Conference on Human Factors in Computing Systems (pp. 1-9). <a href="https://dl.acm.org/doi/10.1145/3170427.3174359">Online</a></li>
+</ul>
+
+<p>Formatting data tables in spreadsheets:</p>
+
+<ul>
+  <li><a href="https://datacarpentry.org/2015-05-03-NDIC/excel-ecology/01-format-data.html">Data Carpentry lesson</a></li>
+</ul>
+
+<h2><a id="Exercise">Exercise</a></h2>
+<p>Last week you had the opportunity to think about how to transform the traditional layout of a recipe into the form of data. This week, we present to you chocolate chip cookie recipes in “parametric” <a href="https://d3vjjov8ymzzxi.cloudfront.net/chefsteps-com-files/chefsteps-cookie-table.pdf">form</a> from ChefSteps. It appears that the plan was to take a bunch of different recipes and average them. (Creative - Bree would totally try this!) Here is the <a href="https://docs.google.com/spreadsheets/d/11H6XGUWNVAsIbtUHCrjFsk4iLViELHG4CZKmQEyyWSA/edit#gid=0">data</a> behind this infographic in a very messy spreadsheet. Credit to <a href="https://jennybryan.org/about/">Jenny Bryan</a> for this example of messy data.</p>
+
+<p>This dataset definitely does not meet the definition of “tidy”. There are a number of ways we could restructure this data so that it follows some best practices in efficient and effective reuse. Your assignment is as follows:</p>
+
+<ol>
+  <li>Post to the <a href="https://canvas.uw.edu/courses/1465297/discussion_topics/6184521">Canvas discussion board</a>, your thoughts on what should make up the:
+    <ul>
+      <li>observations (rows)</li>
+      <li>variables (columns)</li>
+    </ul>
+  </li>
+  <li>Test out your choices by creating a sample dataset with <em>at least</em> 3 rows and 3 columns and the associated values. Post your mockup (an Excel spreadsheet, a screenshot, a photo - whatever works).</li>
+  <li>Discuss what was easy and difficult about structuring this data.</li>
+</ol>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+<!--     <h2 class="footer-heading">University of Washington Information School</h2> -->
+         <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+ 
+
+         <p class="text">
+Box 352840 - Mary Gates Hall, Ste. 370<br />
+Seattle<br />
+Washington<br />
+
+      </div>
+
+      <div class="footer-col  footer-col-2">
+       <ul class="social-media-list">
+     
+
+          
+
+          
+  <li>
+    <a href="https://twitter.com/uw_ischool">
+      <i class="fab fa-twitter" style="color:gray"></i> uw_ischool
+    </a>
+  </li>
+
+
+          
+
+          
+
+          
+  <li>
+    <a href="https://ischool.uw.edu/">
+      <i class="fas fa-globe" style="color:gray"></i> ischool.uw.edu/
+    </a>
+  </li>
+
+
+
+
+       
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+  </body>
+
+</html>
+<!-- d.s.m.s.050600.062508.030515.080516.030818 | "Baby, I'm Yours" -->
