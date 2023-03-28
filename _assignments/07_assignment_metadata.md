@@ -1,13 +1,13 @@
 ---
 type: assignment
-date: 2021-05-16T23:59:00Z
 title: 'Metadata Assignment'
 pdf:
+date: 2023-03-27T23:59:00Z
 attachment:
 solutions:
-due_event: 
-    type: due
-    date: 2021-05-23T23:59:00Z
+due_event:
+    type: due    
+    date: 2023-05-12T23:59:00Z
     description: 'Submit Metadata Application Profile'
     url: /assignments/07_assignment_metadata
 ---
@@ -37,9 +37,8 @@ For each element in your application profile you should (eventually) provide the
 - Any rules for content
 - An example
 
-Here is an [example entry](https://github.com/RochelleLundy/INFX-551-Spring2017/tree/master/r3Recycling/protocolReport/metadata) from a previous class. 
+Here is an [example entry](https://github.com/RochelleLundy/INFX-551-Spring2017/tree/master/r3Recycling/protocolReport/metadata) from a previous class.
 
 You should also choose an encoding scheme for your examples (JSON or XML. Note: I don't expect you to actually produce these records.)
 
 Remember from our readings: "If an implementor wishes to create 'new' elements that do not exist elsewhere then (under this model) they must create their own namespace schema, and take responsibility for 'declaring' and maintaining that schema." You probably don't want to do this, but if you do let's discuss the requirements.
-

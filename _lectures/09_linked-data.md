@@ -1,10 +1,10 @@
 ---
 type: lecture
-date: 2021-05-24T8:00:00+8:00
+date: 2023-05-22T8:00:00+8:00
 title: "Week 9: Linked Data"
 tldr: "Introducing some working definitions and providing an overview of concepts related to linked data and the promise, but ultimate failure of the semantic web."
 thumbnail: /static_files/presentations/linked.png
-links: 
+links:
     - url: https://screencast-o-matic.com/embed?sc=cYhuoBpZLZ&v=6&ff=1&title=0&controls=1
       name: video
     - url: /content/linked-data.html
@@ -23,4 +23,3 @@ links:
 
 **Suggested Readings:**
 - [ARL White Paper on Wikidata: Opportunities and Recommendations (2019)](https://www.arl.org/publications-resources/4751-arl-white-paper-on-wikidata-opportunities-and-recommendations#.XLdxXZNKh2Y)
-

@@ -1,10 +1,10 @@
 ---
 type: lecture
-date: 2021-05-17T8:00:00+8:00
+date: 2023-05-15T8:00:00+8:00
 title: "Week 8: Metadata Application Profiles"
 tldr: "Introduction to tidy metadata."
 thumbnail: /static_files/presentations/metadata.png
-links: 
+links:
     - url: https://screencast-o-matic.com/embed?sc=cYhi29gDkq&v=6&ff=1&title=0&controls=1
       name: video
     - url: /content/metadata-application-profiles.html

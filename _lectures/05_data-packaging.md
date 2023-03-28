@@ -1,10 +1,10 @@
 ---
 type: lecture
-date: 2021-04-26T8:00:00+8:00
+date: 2023-04-24T8:00:00+8:00
 title: "Week 5: Data Packaging"
 tldr: "How and why our work in developing metadata for data curation is paramount to sustainable access, and introduce a few broadly used standards for creating data packages."
 thumbnail: /static_files/presentations/data-pkg.png
-links: 
+links:
     - url: https://screencast-o-matic.com/embed?sc=cYhnb3BAeu&v=6&ff=1&title=0&controls=1
       name: video
     - url: /content/data-packaging.html

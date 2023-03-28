@@ -1,11 +1,11 @@
 ---
 type: lecture
-date: 2021-03-29T8:00:00+8:00
+date: 2023-03-27T8:00:00+8:00
 title: "Week 1: Course Overview and Introduction"
 tldr: "Overview of and Introduction to Data Curation II."
 thumbnail: /static_files/presentations/overview.png
-links: 
-    - url: https://www.youtube.com/watch?v=nGYnknL1QFs
+links:
+    - url:
       name: video
     - url: /content/overview_and_intro.html
       name: content
@@ -15,4 +15,3 @@ links:
 ---
 **Required Reading:**
 - [Course Content]({{ site.baseurl }}/content/overview_and_intro.html)
-

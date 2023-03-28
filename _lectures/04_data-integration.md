@@ -1,11 +1,11 @@
 ---
 type: lecture
-date: 2021-04-19T8:00:00+8:00
+date: 2023-04-17T8:00:00+8:00
 title: "Week 4: Data Integration"
 tldr: "Data integration as it operates at the logical level of tables, and data that feed into user interfaces."
 thumbnail: /static_files/presentations/data-int.png
 links:
-    - url:  https://youtu.be/9g3cCV2UYeM 
+    - url:  https://youtu.be/9g3cCV2UYeM
       name: lecture
     - url: https://www.canva.com/design/DAEaTIz5QL0/odw-F4t4Pntrlvf07D_ZNg/view
       name: guest lecture

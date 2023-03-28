@@ -3,7 +3,7 @@ layout: default
 ---
 # Data Acquisition, Search, and Discovery
 **Original Author: Nic Weber**  
-**Editing & Updates: Bree Norlander** 
+**Editing & Updates: Bree Norlander**
 
 The last week in our four 'Grand Challenges in Data Curation' focuses on the process of searching for, discovering, and accessing data that is made publicly available on the web. This is a complicated problem because of the simple fact that "data on the web" have unique properties that are similar to, but fundamentally different than "documents" that are structured for indexing and retrieval within information systems. In the following module I review the fundamental challenges that data curators face in making data discoverable.
 
@@ -38,21 +38,21 @@ In searching for information, one typically turns to reliable or trusted authori
 
 - **Known-Item Search** (Lee and Renear, 2006) - A known‐item search occurs when the user "has a limited but correct description of an existing document. The user is sure of the fact that the document exists, that its title and author are explicitly stated somewhere in the document" (Dahlström & Gunnarsson, 2000). Known-item search is also a variation of a subject search - it is an attempt to locate a specific document or resource within an information system that the user knows can and should be discoverable.
 
-In all three of the search strategies employed a distinction can be drawn between the recall and precision of an information system. 
+In all three of the search strategies employed a distinction can be drawn between the recall and precision of an information system.
 
-- **Recall** is the total set of documents that are retrieved when a search or query is executed. 
-- **Precision** is the amount of relevant information that is returned to a user when executing a querty. 
+- **Recall** is the total set of documents that are retrieved when a search or query is executed.
+- **Precision** is the amount of relevant information that is returned to a user when executing a querty.
 
 For example, we may search `data.gov` for data about recycling programs in the USA. Some of the results of our search would be datasets about recycled materials while some of these datasets may be about waste disposal more generally. If we were to judge `data.gov` in terms of recall - we would measure whether or not all data related to recycling were retrieved. But, if we were to judge `data.gov` based on precision - we measure how many datasets were retrieved, versus how many datasets were specifically meeting the parameters of our query "recycling programs in the USA"
 
-Precision and recall are very helpful measurement techniques for judging how well a system performs, but these two metrics don't necessarily result in high end-user satisfaction. In the following sections I'll attempt to make this point clearer. 
+Precision and recall are very helpful measurement techniques for judging how well a system performs, but these two metrics don't necessarily result in high end-user satisfaction. In the following sections I'll attempt to make this point clearer.
 
-## Data Discovery Challenges - By Example 
+## Data Discovery Challenges - By Example
 Here are some examples from my ongoing research that I hope makes the challenges of dataset discovery tractable.
 
 In response to Covid-19, state's in the USA have put into place social distancing orders. Being a federated nation of states - the enforcement of these orders falls to local municipalities. Each municipality has, in turn, crafted their own policies about how social distancing should be enforced. Some cities have even started to fine citizens for violating social distancing orders. There have been (as we have seen) regional variations in compliance with state social distancing ordinances.   
 
-In an open data paradigm there should be evidence of how law enforcement is upholding a social distancing ordinance. We *should* be able to look at local police data related to ticketing and arrests (infractions) - across municipalities - to understand how and where social distancing is being upheld, and where it is being ignored. Even better, I know from previous research that there exists a national standard for categorizing infractions, called the [National Incident Based Reporting System](https://en.wikipedia.org/wiki/National_Incident-Based_Reporting_System) (NIBR). Using this standard, I should be able to locate local police data, and use the NIBR standard to track infractions across municipalities. 
+In an open data paradigm there should be evidence of how law enforcement is upholding a social distancing ordinance. We *should* be able to look at local police data related to ticketing and arrests (infractions) - across municipalities - to understand how and where social distancing is being upheld, and where it is being ignored. Even better, I know from previous research that there exists a national standard for categorizing infractions, called the [National Incident Based Reporting System](https://en.wikipedia.org/wiki/National_Incident-Based_Reporting_System) (NIBR). Using this standard, I should be able to locate local police data, and use the NIBR standard to track infractions across municipalities.
 
 Sounds easy enough, right? Here are three examples of my journey to search for and discover relevant data.  
 
@@ -68,88 +68,88 @@ Withholding some commentary about how journalists cite their data sources, let's
 3. Whether a citation was issued or not
 4. Racial profile of the individual stopped (this is deeply problematic surveillance, but the reports indicate that this demographic information is recorded)
 
-This is a known-item search. I know exactly what information is being reported, and I should be able to locate this information in a public record. But, the news report indicates this is information that was "exclusively" obtained (even if the NYT seems to have updated it). So, maybe this is a known-item that doesn't actually exist publicly. Regardless, I set about trying to locate relevant data to understand where exactly these reports were coming from. 
+This is a known-item search. I know exactly what information is being reported, and I should be able to locate this information in a public record. But, the news report indicates this is information that was "exclusively" obtained (even if the NYT seems to have updated it). So, maybe this is a known-item that doesn't actually exist publicly. Regardless, I set about trying to locate relevant data to understand where exactly these reports were coming from.
 
-Here is a brief description of my search process: 
+Here is a brief description of my search process:
 
-- I first searched Google for "NYC Crime Data" - this should give me a rough cut at locating the relevant data at NYC's Open Data Portal. 
-- After browsing a number of results, I determined that the dataset ["NYPD Complaint Data Current (Year To Date)"](https://data.cityofnewyork.us/Public-Safety/NYPD-Complaint-Data-Current-Year-To-Date-/5uac-w243/) is probably the best candidate. 
+- I first searched Google for "NYC Crime Data" - this should give me a rough cut at locating the relevant data at NYC's Open Data Portal.
+- After browsing a number of results, I determined that the dataset ["NYPD Complaint Data Current (Year To Date)"](https://data.cityofnewyork.us/Public-Safety/NYPD-Complaint-Data-Current-Year-To-Date-/5uac-w243/) is probably the best candidate.
 - Note, I also browsed and searched for data within the "data.cityofnewyork.us" portal - but got back a confusing number of potential data sources. There is no public log of "police stops" so I know that at best the data that I can find should have information about infractions or complaints. My search has already been narrowed based on this initial, very rough, information seeking process.  
-- I then searched for the string that was mentioned in the above articles `"for violations of emergency procedures and acts liable to spread disease"`, but I find no results in the "NYPD Complaint Data Current (Year To Date)" dataset. 
+- I then searched for the string that was mentioned in the above articles `"for violations of emergency procedures and acts liable to spread disease"`, but I find no results in the "NYPD Complaint Data Current (Year To Date)" dataset.
 - If I use the attribute (variable) descriptions in the dataset's metadata I can determine that the `Offense Description` variable is probably my best bet for identifying the infractions related to social distancing. Note - this isn't just a best guess - this is what the [NIBR standard](https://en.wikipedia.org/wiki/National_Incident-Based_Reporting_System#Group_B_offenses[2]) dictates the infraction should be classified as. But, filtering this data I find only five infractions (!?!?) for the dates when social distancing went into effect in New York state (03.23).
 - After some additional searches for relevant data, I give up and determine that even though I know this information exists I cannot find it. This known-item search failed based on how the data were described in reports, and the reality of how data are actually described with metadata by a data publisher.   
 
-Let's take another example of the same phenomena. 
+Let's take another example of the same phenomena.
 
-### Attempt 2: Detroit 
+### Attempt 2: Detroit
 In Detroit, Police [reportedly](https://web.archive.org/web/20210118210819/https://deadlinedetroit.com/articles/24934/detroit_police_issue_140_citations_for_social_distancing_violations) issued 56 misdemeanor tickets in a single weekend, and are [actively using surveillance technologies](https://web.archive.org/web/20210121151642/https://www.bridgemi.com/michigan-government/violating-michigan-social-distancing-orders-big-brother-may-be-watching) to issue an additional "1,700 citations publishable by fines of up to $1,000 and 3,100 warnings for social distancing violation" (sidenote: "publishable"?! that must be a typo...).
 
-Again, the news reports about social distancing violations in Detroit makes no reference to the actual data source used - but we should be able to corroborate these statistics given Michigan laws related to open records. In Michigan, a municipal police department must publicly post citation infractions to an open data repository no later than 24 hours after a cited infraction occurs. This is an actual, executable known-item search - I know that this data should exist, and I know what it's contents should include. 
+Again, the news reports about social distancing violations in Detroit makes no reference to the actual data source used - but we should be able to corroborate these statistics given Michigan laws related to open records. In Michigan, a municipal police department must publicly post citation infractions to an open data repository no later than 24 hours after a cited infraction occurs. This is an actual, executable known-item search - I know that this data should exist, and I know what it's contents should include.
 
 I attempted to find this dataset by first navigating to "data.detroitmi.gov" and then browsing for police data. If I search for "infractions" or "crimes" I get back 7 results. Narrowing this down by the description of each dataset, I find that "RMS Crime Incidents" should have all cited infractions issued by the Detroit Police Department. But again, the descriptive metadata for this search requires me to do a lot of browsing, evaluating, and guessing about what data is actually relevant to my query.  
 
-Here is the [dataset](https://data.detroitmi.gov/datasets/rms-crime-incidents?geometry=-83.628%2C42.264%2C-82.570%2C42.442) for all Detroit Police Department cited infractions from 2017- to present day. If I had just executed a generic google search for ["Detroit Crime Data"](https://www.google.com/search?q=Detroit+Crime+Data) this would have been my second result (note your search results may vary, when Bree looked this up on 4/20/21 it was the first result). Not bad! 
+Here is the [dataset](https://data.detroitmi.gov/datasets/rms-crime-incidents?geometry=-83.628%2C42.264%2C-82.570%2C42.442) for all Detroit Police Department cited infractions from 2017- to present day. If I had just executed a generic google search for ["Detroit Crime Data"](https://www.google.com/search?q=Detroit+Crime+Data) this would have been my second result (note your search results may vary, when Bree looked this up on 4/20/21 it was the first result). Not bad!
 
-Let's try to explore the dataset though, because even though I have the data that I THINK I need, its not yet clear (as a generic end-user) if this is data is actually what I need to substantiate the news report that I read. 
+Let's try to explore the dataset though, because even though I have the data that I THINK I need, its not yet clear (as a generic end-user) if this is data is actually what I need to substantiate the news report that I read.
 
-If we take a tidy data approach to this dataset - each observation (row) is a cited infraction, and the variables are attributes of the data like "date of infraction", "place of infraction", and some other information about the reported incidents. There are potentially three variables that might contain information about social distancing violations -  `Charge Description`, `Offense Category`, and  `Offense Description`. After reading more of the documentation, I determine that `Offense Description` (like the NYCPD data) is supposed to follow the NIBR standard. 
+If we take a tidy data approach to this dataset - each observation (row) is a cited infraction, and the variables are attributes of the data like "date of infraction", "place of infraction", and some other information about the reported incidents. There are potentially three variables that might contain information about social distancing violations -  `Charge Description`, `Offense Category`, and  `Offense Description`. After reading more of the documentation, I determine that `Offense Description` (like the NYCPD data) is supposed to follow the NIBR standard.
 
-However, the actual values in this dataset don't follow the NIBR standard. In fact, if we look at the total number of infractions by `Offense Description` there is no category that even has 1700 infractions for this time period - the most number of cited infractions is just over 1400 `Accident Hit and Run`. Looking for every partial match for an infraction like "social distancing" reveals no data. 
+However, the actual values in this dataset don't follow the NIBR standard. In fact, if we look at the total number of infractions by `Offense Description` there is no category that even has 1700 infractions for this time period - the most number of cited infractions is just over 1400 `Accident Hit and Run`. Looking for every partial match for an infraction like "social distancing" reveals no data.
 
 Again, I have a known-item search that cannot be accurately executed. The data that exists is poorly described by metadata that should be making my search much easier.  
 
-Let's explore one more example of a failed search for relevant data. 
+Let's explore one more example of a failed search for relevant data.
 
 ### Attempt 3: Bellevue, WA
-The City of Bellevue, WA in King County has developed a [specific application](https://bellevuewa.gov/city-news/report-stay-home-violations) for residents to report violations of the Washington State's "Stay home, Stay healthy" (social distancing) guidelines. As of April 22nd, 2020 the [Bellevue police department claimed](https://web.archive.org/web/20200526224243/https://mynorthwest.com/1829768/social-distancing-violations-bellevue-app/) to have received 567 reports of violations related to social distancing. I have previously worked with cities throughout King County on making 311 request data publicly available, and I know that Bellevue, WA regularly publishes 311 data to their city portal. 
+The City of Bellevue, WA in King County has developed a [specific application](https://bellevuewa.gov/city-news/report-stay-home-violations) for residents to report violations of the Washington State's "Stay home, Stay healthy" (social distancing) guidelines. As of April 22nd, 2020 the [Bellevue police department claimed](https://web.archive.org/web/20200526224243/https://mynorthwest.com/1829768/social-distancing-violations-bellevue-app/) to have received 567 reports of violations related to social distancing. I have previously worked with cities throughout King County on making 311 request data publicly available, and I know that Bellevue, WA regularly publishes 311 data to their city portal.
 
-So yet again, at face value this is a known item search - a news outlet reports on a Police Department's activities and there exists a corresponding public dataset where this information should be discoverable. When I search [Bellevue's data portal](https://bellevue.data.socrata.com) I find a number of "311" related data sets, and one that claims to be "updated daily" with a most recent update on May 10, 2020. 
+So yet again, at face value this is a known item search - a news outlet reports on a Police Department's activities and there exists a corresponding public dataset where this information should be discoverable. When I search [Bellevue's data portal](https://bellevue.data.socrata.com) I find a number of "311" related data sets, and one that claims to be "updated daily" with a most recent update on May 10, 2020.
 
-When I view the [landing page of this dataset](https://bellevue.data.socrata.com/Responsive-Government/MyBellevue-311-data/ueem-kcku) the metadata tells me that, indeed, this resource was last updated on May 10th. 
+When I view the [landing page of this dataset](https://bellevue.data.socrata.com/Responsive-Government/MyBellevue-311-data/ueem-kcku) the metadata tells me that, indeed, this resource was last updated on May 10th.
 
 ![](https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/bellevue.png)
 
-However, when I look at the actual data - I discover that the last date when information about 311 complaints has been updated was February 29th, 2020. 
+However, when I look at the actual data - I discover that the last date when information about 311 complaints has been updated was February 29th, 2020.
 
-Again, my efforts to discover a data source that should be publicly available yields none of the actual data I am hoping to find. This known-item search failed because the metadata powering my search within the portal is incorrect. 
+Again, my efforts to discover a data source that should be publicly available yields none of the actual data I am hoping to find. This known-item search failed because the metadata powering my search within the portal is incorrect.
 
-## Open Data Discovery 
-A number of seemingly mundane issues thwarted my ability to search for and discover relevant data: 
+## Open Data Discovery
+A number of seemingly mundane issues thwarted my ability to search for and discover relevant data:
 
-1. Data exist, but are not public. 
-2. Data exist, but standards are not followed. 
+1. Data exist, but are not public.
+2. Data exist, but standards are not followed.
 2. Data exist, but poor metadata quality leads to confusion about the actual content.   
 
-Each of these issues are, at the core, challenges to publishing open data such that is meaningfully discoverable. It's also worth noting that while my search is for very specific data the phenomena of finding and using [open data related to emerging public health crises](https://www.gothamgazette.com/opinion/9379-opening-up-new-york-covid-19-data-can-save-lives) is being argued and debated in numerous venues. 
+Each of these issues are, at the core, challenges to publishing open data such that is meaningfully discoverable. It's also worth noting that while my search is for very specific data the phenomena of finding and using [open data related to emerging public health crises](https://www.gothamgazette.com/opinion/9379-opening-up-new-york-covid-19-data-can-save-lives) is being argued and debated in numerous venues.
 
 Making data broadly discoverable requires, at minimum, the indexing of metadata, the accurate and meaningful description of data, and facilitating search and browsing of these resources through graphic user interfaces. In the next sections I'll step through some of the practical steps necessary to carry out indexing of data, and the implication this has on data discovery.
- 
-## Data Indexing  
-The indexing of datasets differs in some appreciable ways from other web-based "documents", but at the [root of all indexing is the markup of a document such that "tags" or attributes can be reliably crawled by search engine service providers](https://moz.com/beginners-guide-to-seo/how-search-engines-operate). Often times these "tags" have certain information, such as keywords, that describe what the resource contains, who the publisher is, etc. For the sake of convenience, just think of tags as structured metadata about a web-resource. Search engines "crawl" these tags to create an index of all the related resources that match keywords. So if I search for "Cooperatives in Seattle, WA" I can get a reliable list of all documents published to the web where documents have keywords matching keywords related to my query, such as "Cooperative", "Seattle", and "WA". 
 
-Importantly, search engines don't just list these resources or documents in a generic order. Instead, sophisticated approaches have been developed to rank which documents are most important. If I search for "Cooperatives in Seattle, WA" I get not only all the documents that have keywords related to my search (in Information Retrieval this is **recall**), but I get the most relevant documents related to my specific search (in Information Retrieval this is **precision**). 
+## Data Indexing  
+The indexing of datasets differs in some appreciable ways from other web-based "documents", but at the [root of all indexing is the markup of a document such that "tags" or attributes can be reliably crawled by search engine service providers](https://moz.com/beginners-guide-to-seo/how-search-engines-operate). Often times these "tags" have certain information, such as keywords, that describe what the resource contains, who the publisher is, etc. For the sake of convenience, just think of tags as structured metadata about a web-resource. Search engines "crawl" these tags to create an index of all the related resources that match keywords. So if I search for "Cooperatives in Seattle, WA" I can get a reliable list of all documents published to the web where documents have keywords matching keywords related to my query, such as "Cooperative", "Seattle", and "WA".
+
+Importantly, search engines don't just list these resources or documents in a generic order. Instead, sophisticated approaches have been developed to rank which documents are most important. If I search for "Cooperatives in Seattle, WA" I get not only all the documents that have keywords related to my search (in Information Retrieval this is **recall**), but I get the most relevant documents related to my specific search (in Information Retrieval this is **precision**).
 
 The famous [Page-Rank algorithm](https://en.wikipedia.org/wiki/PageRank) developed for Google search is an indexing approach that tries to achieve **precision** by privileging documents that not only have relevant keywords, but also are "linked to" by multiple other web-based documents.  
 
-Given this very brief description of search engines, there are some challenges for indexing datasets published to the web: 
+Given this very brief description of search engines, there are some challenges for indexing datasets published to the web:
 
-- Most datasets are not structured as web-based documents, but instead have a landing page where metadata about the data are described, and HTML or XML "Tags" are used to describe the contents of the data. Sometimes this descriptive information is turned into machine-readable tags, but often times data publishers do not take this extra step. This prohibits search engines from accurately indexing the pages where data can be discovered. 
+- Most datasets are not structured as web-based documents, but instead have a landing page where metadata about the data are described, and HTML or XML "Tags" are used to describe the contents of the data. Sometimes this descriptive information is turned into machine-readable tags, but often times data publishers do not take this extra step. This prohibits search engines from accurately indexing the pages where data can be discovered.
 
 Here is an example of [landing page for a dataset](https://doi.pangaea.de/10.1594/PANGAEA.833670) that is published by the repository Pangea.
 
-The data repository publishes this landing page and then uses markup of the HTML in the page to describe the contents of the data that are linked off of this page. 
+The data repository publishes this landing page and then uses markup of the HTML in the page to describe the contents of the data that are linked off of this page.
 
 ![](https://files.readme.io/e1e53df-LandingPagePANGAEAwithPageSource.png)
 
-If we look closely at the HTML of this landing page, we can better understand how indexing practically works for datasets: 
+If we look closely at the HTML of this landing page, we can better understand how indexing practically works for datasets:
 
-In the html of this landing page, Pangea has used the tag `<meta` to tell an indexing service that the page contains metadata. In this case, the publisher can also use existing standards, like the Dublin Core metadata attribute `name=DC.identifier`, to qualify exactly what kind of information the indexing service will find when it crawls this tag - it can find information about the identifier of the dataset. So, by using the tag `<meta name=DC.identifier` the indexing service will find metadata about the identifier of the data described on the landing page. 
+In the html of this landing page, Pangea has used the tag `<meta` to tell an indexing service that the page contains metadata. In this case, the publisher can also use existing standards, like the Dublin Core metadata attribute `name=DC.identifier`, to qualify exactly what kind of information the indexing service will find when it crawls this tag - it can find information about the identifier of the dataset. So, by using the tag `<meta name=DC.identifier` the indexing service will find metadata about the identifier of the data described on the landing page.
 
-Embedding all of the dataset's metadata in HTML pages (like the example above) is laborious and inefficient. This would require that each time we publish a new dataset, we not only have to create metadata and attach it to a dataset, but we also have to create that metadata and make it available in specifically formatted HTML tags. We should commend Pangea for their effort - but surely there is a better, more efficient way to index datasets. 
+Embedding all of the dataset's metadata in HTML pages (like the example above) is laborious and inefficient. This would require that each time we publish a new dataset, we not only have to create metadata and attach it to a dataset, but we also have to create that metadata and make it available in specifically formatted HTML tags. We should commend Pangea for their effort - but surely there is a better, more efficient way to index datasets.
 
-[Schema.org](https://schema.org/) is a community effort by web companies to do just this - it attempts to create a standard way to markup data on the web such that there is not a duplicate of effort in describing resources (e.g. [dataset](https://schema.org/Dataset)) and marking-up pages (or creating HTML) to be indexed for discovery. Schema.org allows JSON or XML to be embedded directly into HTML. So, for example we could create a JSON record that describes our dataset (as we talked about in [Tables, Trees & Triples](https://norlab.github.io/LIS-546-SPR2021/content/tables-trees-triples.html) and embed this information directly in our HTML so that a dataset, based on its descriptive metadata, is indexed and made discoverable. This is a significant step towards reducing the amount of effort that is needed to create discoverable datasets. It also allows for an encoding, like JSON or XML, to be used to power multiple "views" of a dataset. We could, for example, use a JSON record so that descriptive metadata is displayed to an end-user on a landing page, and use this same JSON record to power indexing in search engines that crawl pages looking for information about datasets. 
+[Schema.org](https://schema.org/) is a community effort by web companies to do just this - it attempts to create a standard way to markup data on the web such that there is not a duplicate of effort in describing resources (e.g. [dataset](https://schema.org/Dataset)) and marking-up pages (or creating HTML) to be indexed for discovery. Schema.org allows JSON or XML to be embedded directly into HTML. So, for example we could create a JSON record that describes our dataset (as we talked about in [Tables, Trees & Triples](https://norlab.github.io/LIS-546-SPR2021/content/tables-trees-triples.html) and embed this information directly in our HTML so that a dataset, based on its descriptive metadata, is indexed and made discoverable. This is a significant step towards reducing the amount of effort that is needed to create discoverable datasets. It also allows for an encoding, like JSON or XML, to be used to power multiple "views" of a dataset. We could, for example, use a JSON record so that descriptive metadata is displayed to an end-user on a landing page, and use this same JSON record to power indexing in search engines that crawl pages looking for information about datasets.
 
-Here is an [example](https://developers.google.com/search/docs/data-types/dataset) from Google on how the Schema.org standard can be practically implemented. 
+Here is an [example](https://developers.google.com/search/docs/data-types/dataset) from Google on how the Schema.org standard can be practically implemented.
 
 ```
 <html>
@@ -229,7 +229,7 @@ Here is an [example](https://developers.google.com/search/docs/data-types/datase
 </html>
 ```
 
-Note that in this example we have attributes, such as `Creator` and `License` and `Keywords` all of which are about the dataset being indexed. 
+Note that in this example we have attributes, such as `Creator` and `License` and `Keywords` all of which are about the dataset being indexed.
 
 ```
 "creator":{
@@ -244,50 +244,50 @@ Note that in this example we have attributes, such as `Creator` and `License` an
    }
 ```
 
-Practically, this results in a dataset that can be found by someone posing a query such as "Cyclone Storm Data". Each of these keywords appear as structured descriptive metadata about the dataset, and also appear in the HTML markup that a search engine can crawl for indexing. 
+Practically, this results in a dataset that can be found by someone posing a query such as "Cyclone Storm Data". Each of these keywords appear as structured descriptive metadata about the dataset, and also appear in the HTML markup that a search engine can crawl for indexing.
 
-So practically, the ability to discover and search for data is made possible by descriptive metadata that is properly formatted, and describes the resource (data) that is found at a particular location. 
+So practically, the ability to discover and search for data is made possible by descriptive metadata that is properly formatted, and describes the resource (data) that is found at a particular location.
 
-It is worth noting that none of these techniques necessarily means that a known-item search will result in data that is accurate or timely - but these techniques do allow us to reduce effort in describing datasets, and depend on accurate metadata to facilitate accurate retrieval. When I searched for "Bellevue 311 data" what I discovered was a dataset that was supposed to have been updated on "May 10, 2020" but the actual data did not contain any information past February 29, 2020. This mismatch between descriptive metadata and data content is a violation of the Tidy Metadata Principles that we will learn more about next week - and this example makes clear that the Grand Challenges of data curation are highly related: 
+It is worth noting that none of these techniques necessarily means that a known-item search will result in data that is accurate or timely - but these techniques do allow us to reduce effort in describing datasets, and depend on accurate metadata to facilitate accurate retrieval. When I searched for "Bellevue 311 data" what I discovered was a dataset that was supposed to have been updated on "May 10, 2020" but the actual data did not contain any information past February 29, 2020. This mismatch between descriptive metadata and data content is a violation of the Tidy Metadata Principles that we will learn more about next week - and this example makes clear that the Grand Challenges of data curation are highly related:
 
-- Poor metadata quality results in poor dataset discovery. 
+- Poor metadata quality results in poor dataset discovery.
 - Improper packaging of data results in poor dataset retrieval and reuse.
 
-Grand challenges are "grand" in some sense because they require concerted community effort to overcome. Solutions like Schema.org allow for indexing of information about data so that I can, for example, use a generic query in Google like "Detroit Crime Data" and discover that a relevant dataset exists. 
+Grand challenges are "grand" in some sense because they require concerted community effort to overcome. Solutions like Schema.org allow for indexing of information about data so that I can, for example, use a generic query in Google like "Detroit Crime Data" and discover that a relevant dataset exists.
 
-### Summary 
-Data search and discovery is a Grand Challenge in data curation because it depends, simultaneously, on the accurate description of resources and the structure of these descriptions to be amenable to indexing. For end-users attempting to find relevant datasets through a search engine - standards like Schema.org can help facilitate retrieval. This is made possible by the use of encodings like JSON and XML which can transform structured descriptions of data into graphical user interface displays, as well as mark-up of HTML that is crawled by indexing services. 
+### Summary
+Data search and discovery is a Grand Challenge in data curation because it depends, simultaneously, on the accurate description of resources and the structure of these descriptions to be amenable to indexing. For end-users attempting to find relevant datasets through a search engine - standards like Schema.org can help facilitate retrieval. This is made possible by the use of encodings like JSON and XML which can transform structured descriptions of data into graphical user interface displays, as well as mark-up of HTML that is crawled by indexing services.
 
-Discoverability is dependent upon reliable integration, packaging, and tidy metadata. Information Retrieval concepts like precision and recall are excellent benchmarks for measuring a system's performance, but ultimately the satisfaction of data users comes down to how useful an end-user finds the actual data to be. So, when any one of these grand challenges are not addressed thoroughly the results of our search for and discovery of data will be diminished in terms of end-user satisfaction. 
+Discoverability is dependent upon reliable integration, packaging, and tidy metadata. Information Retrieval concepts like precision and recall are excellent benchmarks for measuring a system's performance, but ultimately the satisfaction of data users comes down to how useful an end-user finds the actual data to be. So, when any one of these grand challenges are not addressed thoroughly the results of our search for and discovery of data will be diminished in terms of end-user satisfaction.
 
 ## Reading
 
-This week I am going to ask you to read three things, but offer a number of other readings in this area if you are interested: 
+This week I am going to ask you to read three things, but offer a number of other readings in this area if you are interested:
 
-Read this piece that was recently published on the development of a search infrastructure at Google: 
+Read this piece that was recently published on the development of a search infrastructure at Google:
 
 - Brickley, D., Burgess, M., & Noy, N. (2019, May). Google Dataset Search: Building a search engine for datasets in an open Web ecosystem. In The World Wide Web Conference (pp. 1365-1375). [PDF on Canvas](https://canvas.uw.edu/files/76572318/download?download_frd=1)
 
-Then read these two short blog posts about when the initative started, and where it finished: 
+Then read these two short blog posts about when the initative started, and where it finished:
 
 - Noy, N et al (2017) "Facilitating the discovery of public datasets" [Link](https://ai.googleblog.com/2017/01/facilitating-discovery-of-public.html)
 - Noy, N (2020) "Discovering millions of datasets on the web" [Link](https://www.blog.google/products/search/discovering-millions-datasets-web/)
 
 Additional valuable readings on data discovery:
 
-- Wu, M., Psomopoulos, F., Khalsa, S. J., & de Waard, A. (2019). Data Discovery Paradigms: User Requirements and Recommendations for Data Repositories. Data Science Journal, 18(1). [Link](https://datascience.codata.org/articles/10.5334/dsj-2019-003/) 
-- Gregory, K. M., Cousijn, H., Groth, P., Scharnhorst, A., & Wyatt, S. (2019). Understanding data search as a socio-technical practice. Journal of Information Science, [PDF](https://journals.sagepub.com/doi/pdf/10.1177/0165551519837182) 
-- Vissers, J., Van den Bosch, F., Bogaerts, A., Cocquyt, C., Degreef, J., Diagre, D., ... & Fabri, R. (2017). Scientific user requirements for a herbarium data portal. PhytoKeys, (78), 37 [Link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5543274/) 
-- Fenlon, K., Senseney, M., Green, H., Bhattacharyya, S., Willis, C., & Downie, J. S. (2014). Scholar‐built collections: A study of user requirements for (Humanities) research in large‐scale digital libraries. Proceedings of the American Society for Information Science and Technology, 51(1), 1-10. [PDF](https://onlinelibrary.wiley.com/doi/pdf/10.1002/meet.2014.14505101047) 
-- Macgregor, George. "Improving the discoverability and web impact of open repositories: techniques and evaluation." Code4Lib Journal 43 (2019).  [PDF](https://strathprints.strath.ac.uk/66997/1/Macgregor_C4L_2019_Improving_the_discoverability_and_web_impact_of_open_repositories_techniques_and_evaluation.pdf) 
+- Wu, M., Psomopoulos, F., Khalsa, S. J., & de Waard, A. (2019). Data Discovery Paradigms: User Requirements and Recommendations for Data Repositories. Data Science Journal, 18(1). [Link](https://datascience.codata.org/articles/10.5334/dsj-2019-003/)
+- Gregory, K. M., Cousijn, H., Groth, P., Scharnhorst, A., & Wyatt, S. (2019). Understanding data search as a socio-technical practice. Journal of Information Science, [PDF](https://journals.sagepub.com/doi/pdf/10.1177/0165551519837182)
+- Vissers, J., Van den Bosch, F., Bogaerts, A., Cocquyt, C., Degreef, J., Diagre, D., ... & Fabri, R. (2017). Scientific user requirements for a herbarium data portal. PhytoKeys, (78), 37 [Link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5543274/)
+- Fenlon, K., Senseney, M., Green, H., Bhattacharyya, S., Willis, C., & Downie, J. S. (2014). Scholar‐built collections: A study of user requirements for (Humanities) research in large‐scale digital libraries. Proceedings of the American Society for Information Science and Technology, 51(1), 1-10. [PDF](https://onlinelibrary.wiley.com/doi/pdf/10.1002/meet.2014.14505101047)
+- Macgregor, George. "Improving the discoverability and web impact of open repositories: techniques and evaluation." Code4Lib Journal 43 (2019).  [PDF](https://strathprints.strath.ac.uk/66997/1/Macgregor_C4L_2019_Improving_the_discoverability_and_web_impact_of_open_repositories_techniques_and_evaluation.pdf)
 
 Case Study (optional):
 
-- Pienta, A., Akmon, D., Noble, J., Hoelter, L., & Jekielek, S. (2017). A Data-Driven Approach to Appraisal and Selection at a Domain Data Repository. International journal of digital curation, 12(2), 362. [Link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6128405/) 
+- Pienta, A., Akmon, D., Noble, J., Hoelter, L., & Jekielek, S. (2017). A Data-Driven Approach to Appraisal and Selection at a Domain Data Repository. International journal of digital curation, 12(2), 362. [Link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6128405/)
 
 ## Lecture
 
-A note about the lecture: since the recording of this lecture, we have changed the order of the modules and you will be learning about [Tidy Metadata](https://norlab.github.io/LIS-546-SPR2021/content/metadata-application-profiles.html) **next** week. 
+A note about the lecture: since the recording of this lecture, we have changed the order of the modules and you will be learning about [Tidy Metadata](https://norlab.github.io/LIS-546-SPR2021/content/metadata-application-profiles.html) **next** week.
 <div>
 <iframe width=853 height=508 frameborder="0" scrolling="no" src="https://screencast-o-matic.com/embed?sc=cYh2Dik1zz&v=5&controls=1&ff=1" allowfullscreen="true"></iframe>
 </div>
@@ -302,20 +302,20 @@ API is the acronym for Application Programming Interface. An API does the work o
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/s7wmiS2mSXY?start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-So why should a data curator be interested in APIs? An API is a common tool for retrieving data. 
+So why should a data curator be interested in APIs? An API is a common tool for retrieving data.
 
-**Why APIs Matter** 
+**Why APIs Matter**
 
 APIs provide the messenger service you need to collect data from sites like [Twitter](https://developer.twitter.com/en/docs/api-reference-index), [MySportsFeeds](https://www.mysportsfeeds.com/data-feeds/), [RottenTomatoes](https://developer.fandango.com/rotten_tomatoes), [Twitch](https://dev.twitch.tv/docs/api/), and more. Most of these sites will require you to apply for an API key and may have restrictions on the use of their data. For example, RottenTomatoes, states “Please note that at this time we no longer support unauthorized use of our data (e.g. unofficial projects, non-user facing data integrations).”
 
 If you are interested in working with data, whether it be as a Data Curator, a Government Docs Librarian, or a Data Scientist, it will benefit you to be familiar with APIs. The following are use cases for which you may find yourself using an API:
 
-+ Accessing/retrieving a specific dataset 
++ Accessing/retrieving a specific dataset
 + Retrieving a filtered dataset from a large dataset (perhaps you only need data for your specific state in a dataset that contains naionwide data)
 + Searching for specific data within a dataset (e.g. does this dataset contain data from my zip code or what are the unique values within a specific column)
 + Performing simple calculations or summaries on a dataset directly within your browser (no need to download the data and use another software platform)
 
-As is the case with repositories, data portals, and an email from your boss, data retrieved from an API may be presented in a variety of different formats. When you use a "web service" API you will mainly see outputs in the form of eXtensible Markup Language known as XML, JavaScript Object Notation known as JSON (or geoJSON for geographic data), or Comma Separated Values known as CSV. 
+As is the case with repositories, data portals, and an email from your boss, data retrieved from an API may be presented in a variety of different formats. When you use a "web service" API you will mainly see outputs in the form of eXtensible Markup Language known as XML, JavaScript Object Notation known as JSON (or geoJSON for geographic data), or Comma Separated Values known as CSV.
 
 A **web service** is a "[system or software that uses an address, i.e., URL on the World Wide Web, to provide access to its services](https://rapidapi.com/blog/types-of-apis/#web-service-apis)". This means that the API output can be viewed directly in a web browser. The three most common types of web service APIs are:
 
@@ -329,13 +329,13 @@ REST services tend to offer an easy to parse URL structure consisting primarily 
 
 ### Simple REST Example
 
-Let’s take a look at a simple REST API example. This API is from Paul Hallet and is called [SWAPI](https://swapi.dev): The Star Wars API. Paul [writes](https://swapi.dev/about), "After hours of watching films and trawling through content online, we present to you all the People, Films, Species, Starships, Vehicles and Planets from Star Wars." SWAPI is built just to be an API, while other web applications may use the data, this API wasn't built with any particular application in mind. I did some searching of the website backend (hosted on [Github](https://github.com/phalt/swapi/)) and found that the data are available in six JSON files: films.json, people.json, planets.json, species.json, starships.json, and vehicles.json. You'll note that these files match with Paul's list of datasets in the quote above. In [REST naming conventions](https://restfulapi.net/resource-naming/), these datasets are referred to as "Resources" and as we see here, should be a noun indicating what is within the Resource. The SWAPI API, because it's built using a REST architecture, allows us to view the output from our API query directly in the browser. Let’s check out the People data. 
+Let’s take a look at a simple REST API example. This API is from Paul Hallet and is called [SWAPI](https://swapi.dev): The Star Wars API. Paul [writes](https://swapi.dev/about), "After hours of watching films and trawling through content online, we present to you all the People, Films, Species, Starships, Vehicles and Planets from Star Wars." SWAPI is built just to be an API, while other web applications may use the data, this API wasn't built with any particular application in mind. I did some searching of the website backend (hosted on [Github](https://github.com/phalt/swapi/)) and found that the data are available in six JSON files: films.json, people.json, planets.json, species.json, starships.json, and vehicles.json. You'll note that these files match with Paul's list of datasets in the quote above. In [REST naming conventions](https://restfulapi.net/resource-naming/), these datasets are referred to as "Resources" and as we see here, should be a noun indicating what is within the Resource. The SWAPI API, because it's built using a REST architecture, allows us to view the output from our API query directly in the browser. Let’s check out the People data.
 
 The [SWAPI documentation](https://swapi.dev/documentation#people) tells us that queries within the People Resource will result in the following "Attributes":
 
 ![SWAPI People Attributes: name, birth_year, eye_color, gender, hair_color, height, mass, skin_color, homeworld, films, species, starships, vehicles, url, created, edited, and you can search in the name field](https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/SWAPI_People.png)
 
-It also notes that searches will only happen with the Name attribute field. 
+It also notes that searches will only happen with the Name attribute field.
 
 The highest level search we can do within the People Resource is also the URL with which we will begin our queries: [`https://swapi.dev/api/people/`](https://swapi.dev/api/people/). You can go directly to that URL in your browser to see the first 10 data entries in the People Resource. This API requires you to paginate through the entries in intervals of 10. Fortunately, it tells you exactly how many entries there are and what the API query will be for the next page:
 
@@ -357,7 +357,7 @@ This is a simple example of the concept discussed above that REST services tend 
 
 ## JSON Parser with API
 
-With the previous example, you may have wondered what to do with the JSON output. We often interact with data in a tabular format when we use products like Microsoft Excel, Google Sheets, and even R and Python. So let's look at another rest API example and use a JSON editor to make it easier to parse the JSON. 
+With the previous example, you may have wondered what to do with the JSON output. We often interact with data in a tabular format when we use products like Microsoft Excel, Google Sheets, and even R and Python. So let's look at another rest API example and use a JSON editor to make it easier to parse the JSON.
 
 I discovered this interesting [API](https://poetrydb.org/index.html) that retrieves data from a poetry database. I like this example because it provides an example of digital humanities data. Click on [Learn More](https://github.com/thundercomb/poetrydb/blob/master/README.md) from the [homepage](https://poetrydb.org/index.html). This brings us to the Github repository hosting the API. The first thing you see is README document with instructions on how to structure the URL in order to retrieve the data you’re interested in.
 
@@ -365,7 +365,7 @@ Let's start with the first example on the page. [`http://poetrydb.org/title/Ozym
 
 ![Output of URL as seen in Safari browser](https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/Poetry_JSON_Safari.png)
 
-If this output were considerably longer and contained more nested arrays, it would be easy to get lost in the data. So let's use a helpful tool called [JSON Formatter](https://jsonformatter.org/), one of many JSON parsers. Click on the Upload Data button in the center of the screen and paste in a URL. Let's try data about poems by author Bronte using this URL (and note that for some reason in order for this to work here we have to add the 's' to http): `https://poetrydb.org/author/Bronte`. 
+If this output were considerably longer and contained more nested arrays, it would be easy to get lost in the data. So let's use a helpful tool called [JSON Formatter](https://jsonformatter.org/), one of many JSON parsers. Click on the Upload Data button in the center of the screen and paste in a URL. Let's try data about poems by author Bronte using this URL (and note that for some reason in order for this to work here we have to add the 's' to http): `https://poetrydb.org/author/Bronte`.
 
 ![Pop-up Window to paste URL](https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/JSONFormatter_Load.png)
 
@@ -400,4 +400,4 @@ This brings you to some very important documentation telling you how to query th
 
 ![](https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/AnimalsNameQuery.png)
 
-The documentation gives you the exact query URL for searching the dataset for a particular pet name. I want you to query the dataset for a pet name that is **not** *Zen*. Post to the [discussion board](https://canvas.uw.edu/courses/1465297/discussion_topics/6318579) the name of the pet you chose to query on and what you found for results. Feel free to test things like different cases, names with spaces, etc. If this was really easy for you, try retrieving a csv instead of JSON, or try a SoQL query found at this [link](https://dev.socrata.com/docs/functions/#2.1,) in the documentation.
+The documentation gives you the exact query URL for searching the dataset for a particular pet name. I want you to query the dataset for a pet name that is **not** *Zen*. Post to the [discussion board](https://canvas.uw.edu/courses/1641385/discussion_topics/8016065) the name of the pet you chose to query on and what you found for results. Feel free to test things like different cases, names with spaces, etc. If this was really easy for you, try retrieving a csv instead of JSON, or try a SoQL query found at this [link](https://dev.socrata.com/docs/functions/#2.1,) in the documentation.

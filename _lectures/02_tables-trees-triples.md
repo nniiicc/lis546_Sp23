@@ -1,16 +1,16 @@
 ---
 type: lecture
-date: 2021-04-05T8:00:00+8:00
+date: 2023-04-03T8:00:00+8:00
 title: "Week 2: Tables, Trees, & Triples"
 tldr: "Given the fundamental relational nature of data we should start the course off by thinking about how to make decisions about ways data should be represented and made accessible to users."
 thumbnail: /static_files/presentations/ttt.png
-links: 
+links:
     - url: https://screencast-o-matic.com/embed?sc=cYfQcuavjV&v=5&ff=1
       name: video
     - url: /content/tables-trees-triples.html
       name: content
     - url: /content/tables-trees-triples.html#Exercise
-      name: exercise 
+      name: exercise
 
 ---
 **Required Readings:**

@@ -82,8 +82,9 @@ layout: home
     <td class="tg-0lax">Presentations</td>
   </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <br>
+
 ## Quick Links
-- The Canvas Page (for registered students only): [Data Curation II](https://canvas.uw.edu/courses/1641385).
-- MyPlan details: [LIS 546 MyPlan](https://myplan.washington.edu/course/#/courses/LIS546).
+- Canvas Page (for registered students only): [Data Curation II](https://canvas.uw.edu/courses/1641385).

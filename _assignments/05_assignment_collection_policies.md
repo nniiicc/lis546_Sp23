@@ -1,13 +1,13 @@
 ---
 type: assignment
-date: 2021-04-25T23:59:00Z
 title: 'Collection Policies Assignment'
 pdf:
+date: 2023-03-27T23:59:00Z
 attachment:
 solutions:
-due_event: 
+due_event:
     type: due
-    date: 2021-05-02T23:59:00Z
+    date: 2023-04-29T23:59:00Z
     description: 'Submit Collection Policies'
     url: /assignments/05_assignment_collection_policies
 ---
@@ -30,7 +30,7 @@ Here are some valuable examples:
 - QDR: has a very structured submission process, including a set of helpful [data deposit forms](https://qdr.syr.edu/deposit/process)
 - IDEALS: a repository at the University of Illinois has an excellent policy on the preservation grantees they can make for [particular file formats](https://wiki.illinois.edu/wiki/display/IDEALS/Digital+Preservation+Support+Policy#DigitalPreservationSupportPolicy-Category1)
 - SF Open Data: [Submission Guidelines](https://datasf.org/publishing/submission-guidelines/)
-- A more general approach is to define the scope of an open data program, see the Seattle Open Data [description](http://www.seattle.gov/tech/initiatives/open-data/about-the-open-data-program) for a helpful example. 
+- A more general approach is to define the scope of an open data program, see the Seattle Open Data [description](http://www.seattle.gov/tech/initiatives/open-data/about-the-open-data-program) for a helpful example.
 
 **Protocol Deliverable**      
 Establish the policies that will govern your data collection policy. This should include (at minimum):
@@ -42,4 +42,3 @@ Establish the policies that will govern your data collection policy. This should
 - What kind of preservation guarantees will you make for each format?
 
 You should feel free to LIBERALLY borrow from existing repository policies or protocols that we have looked at this quarter. You should also feel empowered to look at other protocols, or other repositories and decide how to answer some of these questions.
-

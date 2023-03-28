@@ -1,13 +1,13 @@
 ---
 type: assignment
-date: 2021-05-23T23:59:00Z
 title: 'Licensing Assignment'
 pdf:
+date: 2023-03-27T23:59:00Z
 attachment:
 solutions:
-due_event: 
+due_event:
     type: due
-    date: 2021-05-30T23:59:00Z
+    date: 2023-05-19T23:59:00Z
     description: 'Submit Licensing Assignment'
     url: /assignments/08_assignment_licensing
 ---
@@ -31,4 +31,3 @@ Here are the basic questions you should answer in this section of your protocol:
 
 If you are interested in a primer on data licensing you might consult the following:
 - Carroll, M. W. (2015). Sharing research data and intellectual property law: A primer. PLoS biology, 13(8), e1002235. [HTML](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002235)
-

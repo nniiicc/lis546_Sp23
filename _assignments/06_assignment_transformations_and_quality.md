@@ -1,13 +1,13 @@
 ---
 type: assignment
-date: 2021-05-09T23:59:00Z
 title: 'Transformations and Quality Assignment'
 pdf:
+date: 2023-03-27T23:59:00Z
 attachment:
 solutions:
-due_event: 
+due_event:
     type: due
-    date: 2021-05-16T23:59:00Z
+    date: 2023-05-05T23:59:00Z
     description: 'Submit Transformations and Quality Assignment'
     url: /assignments/06_assignment_transformation_and_quality
 ---
@@ -37,4 +37,3 @@ Of course, transforming data to meet the needs of our users is one of the primar
 *Data Values*           
 - What steps should be taken to normalize the data? (hint: You could go through something like `common transforms` in Refine and come up with an easy (and exhaustive) template). Consider common transformations like: consistent column (variable) names, developing a data dictionary for each dataset, standardizing values for missing or null values, labeling values (by type - e.g. text, number, boolean, categorical, etc.)
 - Return to the principles of Tidy Data (e.g. Each variable you measure should be in one column; Each different observation of that variable should be in a different row; There should be one table for each "kind" of variable; and, If you have multiple tables, they should include a column in the table that allows them to be joined or merged). How would you help ensure that these principles are met for data that you collect?
-

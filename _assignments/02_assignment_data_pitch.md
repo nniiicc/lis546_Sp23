@@ -1,13 +1,13 @@
 ---
 type: assignment
-date: 2021-04-04T23:59:00Z
 title: 'Data Pitch Assignment'
 pdf:
+date: 2023-03-27T23:59:00Z
 attachment:
 solutions:
-due_event: 
-    type: due
-    date: 2021-04-11T23:59:00Z
+due_event:
+    type: due    
+    date: 2023-04-07T23:59:00Z
     description: 'Post Data Pitch'
     url: /assignments/02_assignment_data_pitch
 ---
@@ -20,4 +20,4 @@ Here are the requirements:
 - In 1-2 sentences describe a potential audience for this protocol (in business speak: who are your stakeholders?).
 - Provide a link(s) and a short description (1-2 sentences) of relevant open data that you could curate for the project. The data must be publicly accessible such that anyone can, with minimal effort, access it. Don’t worry if you end up finding different datasets for pieces of the assignment in the future - I just want you to share some examples of datasets that fit within your desired topic. After all you may join a group that does an entirely different topic, that’s okay.
 
-On Canvas I have created a [forum where you can post your data pitch](https://canvas.uw.edu/courses/1465297/discussion_topics/6135517). Please post these by the end of Week 2 (April 11th, 2021).  
+On Canvas I have created a [forum where you can post your data pitch](https://canvas.uw.edu/courses/1641385/discussion_topics/8008442). Please post these by the end of Week 2 (April 07, 2021).  

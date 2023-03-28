@@ -1,10 +1,10 @@
 ---
 type: lecture
-date: 2021-04-12T8:00:00+8:00
+date: 2023-04-10T8:00:00+8:00
 title: "Week 3: Tidy Data"
 tldr: "Overview of tidy data principles as they relate to data curation, plus extending tidy data to some of the underlying principles in organizing, managing, and preparing all kinds of structured data for meaningful use."
 thumbnail: /static_files/presentations/tidy.png
-links: 
+links:
     - url: https://screencast-o-matic.com/embed?sc=cYfo0QzbHl&v=6&ff=1&title=0&controls=1
       name: video
     - url: /content/tidy-data.html

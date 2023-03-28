@@ -1,13 +1,13 @@
 ---
 type: assignment
-date: 2021-05-02T23:59:00Z
 title: 'Repository Architectures (OPTIONAL) Assignment'
 pdf:
+date: 2023-03-27T23:59:00Z
 attachment:
 solutions:
-due_event: 
+due_event:
     type: due
-    date: 2021-06-03T23:59:00Z
+    date: 2023-05-19T23:59:00Z
     description: 'Optional Repository Assignment'
     url: /assignments/09_assignment_repo_arch_OPTIONAL
 ---
@@ -71,4 +71,3 @@ Here is a template you can use when starting to evaluate a new repository platfo
 **Major weaknesses:**
 
 **Overall Assessment:**
-
