@@ -1016,12 +1016,12 @@ Formatting data tables in spreadsheets:
 - [Data Carpentry lesson](https://datacarpentry.org/2015-05-03-NDIC/excel-ecology/01-format-data.html)
 
 <h2><a id="Exercise">Exercise</a></h2>
-Last week you had the opportunity to think about how to transform the traditional layout of a recipe into the form of data. This week, we present to you chocolate chip cookie recipes in "parametric" [form](https://d3vjjov8ymzzxi.cloudfront.net/chefsteps-com-files/chefsteps-cookie-table.pdf) from ChefSteps. It appears that the plan was to take a bunch of different recipes and average them. (Creative - Bree would totally try this!) Here is the [data](https://docs.google.com/spreadsheets/d/11H6XGUWNVAsIbtUHCrjFsk4iLViELHG4CZKmQEyyWSA/edit#gid=0) behind this infographic in a very messy spreadsheet. Credit to [Jenny Bryan](https://jennybryan.org/about/) for this example of messy data.
+Last week you had the opportunity to think about how to transform the traditional layout of a recipe into the form of data. This week, we present to you chocolate chip cookie recipes in "parametric" [form](https://d3vjjov8ymzzxi.cloudfront.net/chefsteps-com-files/chefsteps-cookie-table.pdf) from ChefSteps. It appears that the plan was to take a bunch of different recipes and average them. (Creative!) Here is the [data](https://docs.google.com/spreadsheets/d/11H6XGUWNVAsIbtUHCrjFsk4iLViELHG4CZKmQEyyWSA/edit#gid=0) behind this infographic in a very messy spreadsheet. Credit to [Jenny Bryan](https://jennybryan.org/about/) for this example of messy data.
 
 This dataset definitely does not meet the definition of "tidy". There are a number of ways we could restructure this data so that it follows some best practices in efficient and effective reuse. Your assignment is as follows:
 
-1. Post to the [Canvas discussion board](https://canvas.uw.edu/courses/1465297/discussion_topics/6184521), your thoughts on what should make up the:
+1. Post to the [Canvas discussion board](https://canvas.uw.edu/courses/1641385/discussion_topics/8051894), your thoughts on what should make up the:
     - observations (rows)
-    - variables (columns)
+    - variables (columns
 2. Test out your choices by creating a sample dataset with *at least* 3 rows and 3 columns and the associated values. Post your mockup (an Excel spreadsheet, a screenshot, a photo - whatever works).
-3. Discuss what was easy and difficult about structuring this data. 
+3. Discuss what was easy and difficult about structuring this data.

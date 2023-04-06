@@ -4,7 +4,7 @@ layout: default
 # Tables, Trees, and Triples
 **Original Author: Nic Weber**  
 **Editing & Updates: Bree Norlander**  
-  
+
 ## Introduction
 Susan Leigh Star once famously wrote that "Information science is the study of boring things." (Star, 2002) [PDF](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.19.7523&rep=rep1&type=pdf). She meant this in loving way. As a field of practitioners and researchers we're concerned with the organization and encoding of information, as well as the standards and practices that govern reliable knowledge production. This requires us to study and become versant in particular "boring" details of how information is represented within broader information systems and infrastructures. An information infrastructure is, by Starr's account, highly relational. Information and infrastructures mean different things to different people at different points in time. Data is no different. In fact, there is a soundbite that you may come across in the data curation community that goes like this:
 
@@ -24,7 +24,7 @@ The data that our intrepid ecology graduate student has collected is made portab
 
 The choices she makes in this brief instance are what transforms her observations from the **conceptual level** of "a thing that happened in the world" to the **logical level** of how that data are structured with a standard, or non-standard schema. Our computers further abstract this data into a **physical level** where the data are *encoded* or made machine interpretable as files, and bits (1s and 0s) written to a disk and stored on a server or drive somewhere.
 
-These three levels - the conceptual, logical, and physical - are all related to the idea of abstraction. This terminology is common in the domain of database management and refers to, "the process of hiding irrelevant information at each level of a database" ([reference](https://holycoders.com/dbms-data-abstraction-and-data-independence/)). We abstract away from the messiness of the conceptual world by using logic that structures information in physical storage and retrieval hardware. (You can imagine that without abstraction we might contantly be staring at 0s and 1s on our screens instead of charts and GIFs and tweets.) 
+These three levels - the conceptual, logical, and physical - are all related to the idea of abstraction. This terminology is common in the domain of database management and refers to, "the process of hiding irrelevant information at each level of a database" ([reference](https://holycoders.com/dbms-data-abstraction-and-data-independence/)). We abstract away from the messiness of the conceptual world by using logic that structures information in physical storage and retrieval hardware. (You can imagine that without abstraction we might contantly be staring at 0s and 1s on our screens instead of charts and GIFs and tweets.)
 
 The choices made at the logical level will have profound consequences for later reuse. And while our ecology graduate student has many choices available to her (will she or will she not go have that beer?) at the logical level of data representation her choices typically break down into three categories: Tables, trees, or triples.
 
@@ -51,7 +51,7 @@ Our computers can easily render this JPG, but they cannot easily process or make
 Writing an XML schema that defines properties of Blake's work - like anthology, poem, stanza, and line - will allow us to create a structured data representation of the poem that can be easily be stored and retrieved at the physical level.
 
 ```
-<anthology> 
+<anthology>
   <poem>  		
     <heading>The SICK ROSE</heading>  		
     <stanza>   		
@@ -253,13 +253,12 @@ For a bit of historical background, Ch 1 of this book (pages 1-13) provides an e
 - Abiteboul, S., Buneman, P., & Suciu, D. (2000). Data on the Web: from relations to semistructured data and XML. Morgan Kaufmann. [PDF](https://github.com/norlab/LIS-546-SPR2021/raw/master/content/readings/Data-on-the-Web-Skeleton.pdf)
 
 <h2><a id="Exercise">Exercise</a></h2>
-In preparation for our class on `Tidy Data` next week we will attempt to add some structure to a rather innocuous piece of information that is published to the web and that maybe you've encountered even more frequently during COVID-19 quarantine: Chocolate Chip Cookie Recipes.  
+In preparation for our class on `Tidy Data` next week we will attempt to add some structure to a rather innocuous piece of information that is published to the web and that maybe you've encountered during a Seattle winter of boredom: Chocolate Chip Cookie Recipes.  
 
 Imagine that you are starting a data repository specifically for cookie recipes. You get to choose how best to set up your repository. You are at the stage where you want to decide how to represent the data included in a recipe. Your exercise for this week is to look at this [chocolate chip cookie recipe](https://www.pccmarkets.com/recipe/thick-chewy-chocolate-chip-cookies/) ([PDF version](https://github.com/norlab/LIS-546-SPR2021/raw/master/content/readings/PCC_Chocolate_Chip_Cookies.pdf)) and choose to represent it as a table, tree, or triple. Use what you've learned in this module and this [blog post](https://katiekodes.com/intro-xml-json-2/) as a guide for tables and trees. If you choose to make triples, start by outlining the `subject - object - predicate` relationship. If you want to get fancy, take a look at this [blog post](https://www.stardog.com/tutorials/data-model/).
 
-Some things to keep in mind: 
+Some things to keep in mind:
 
 - Don't worry about using established metadata schema for this exercise (we'll get to that later). You can make-up the schema (i.e. the column names or tags used to indicate the variable, the namespaces) and you don't need to create definitions for the metadata, just make sure your terms are fairly self-explanatory (e.g. use `ingredient` instead of `thing`).
 - There isn't a "right" answer to which representation you choose
-- On the [canvas forum](https://canvas.uw.edu/courses/1465297/discussion_topics/6164920), share your representation with the class, and explain why you made the choices you did. What was difficult, what was easy? You can share this in whatever form you like (create one directly in Canvas, link to a Google Doc, Upload an Excel file, post a .jpg of your hand-drawn representation, etc.)
-
+- On the [canvas forum](https://canvas.uw.edu/courses/1641385/discussion_topics/8051808), share your representation with the class, and explain why you made the choices you did. What was difficult, what was easy? You can share this in whatever form you like (create one directly in Canvas, link to a Google Doc, Upload an Excel file, post a .jpg of your hand-drawn representation, etc.)
