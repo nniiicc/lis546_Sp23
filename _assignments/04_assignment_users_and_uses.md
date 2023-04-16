@@ -51,10 +51,8 @@ Here is an [example](https://rochellelundy.gitbooks.io/r3-recycling-repository/c
 
 ## Protocol Deliverable
 
-For this assignment you will submit to Canvas a document that addresses the following:
+For this assignment you will create a document that addresses the following:
 - Describe potential users. Who is the audience for your data repository/collection?
 - Choose an existing openly available dataset within your topic domain and provide an overview.
 - Choose one potential user (or user group such as “policymaker”). Write their story. What is their use case? What do they want from the collection? What is their goal in accessing the data?
 - Assess the dataset’s ability to meet the users goals. Does this dataset provide them everything they need? How will they access the data? What will they do with the data? What features are missing for your user?
-
-For your final deliverable you will be doing this for each of your users, but in a more truncated fashion. You won’t need to include overviews and assessments of each dataset for each user.
