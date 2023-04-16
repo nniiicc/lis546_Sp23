@@ -366,17 +366,9 @@ View(mtcarswhole)
 
 <p>Once these tasks were complete we looked at practical ways to combine two tables, including horizontal and vertical integration. We also were introduced to the magic of <code class="language-plaintext highlighter-rouge">dplyr</code> in performing simple data integrations in <code class="language-plaintext highlighter-rouge">R</code>.</p>
 
-<h1 id="guest-lecture">Guest Lecture</h1>
-
-<p>This week we have a <a href="https://www.canva.com/design/DAEaTIz5QL0/odw-F4t4Pntrlvf07D_ZNg/view">guest lecture</a> by Kaitlin Throgmorton, MLIS who is a Data Curator and Bioinformatics Analyst at <a href="https://sagebionetworks.org/">Sage Bionetworks</a>. Kaitlin graduated last year (2020) and also took Data Curation I and II. Her lecture isn’t specifically about Data Integration but the concepts she introduces are important throughout the data curation cycle and I wanted you to have access to her talk sooner rather than later. It may seem hard to believe, but she was exactly where you are one year ago. I just wish this presentation could be in-person so you could ask her all your questions about the profession. But feel free to email her if you do have questions. I am extremely grateful that she was willing to put her time into this guest lecture.</p>
-
-<p>Please <a href="https://www.canva.com/design/DAEaTIz5QL0/odw-F4t4Pntrlvf07D_ZNg/view" target="_blank">open the video in a new browser window or tab</a> to view. This slides for her talk are available openly in a <a href="https://github.com/kthrog/LIS-546-guest-lecture">Github repository</a>.</p>
-
 <h1 id="lecture">Lecture</h1>
 
-<p>Instead of a traditional lecture this week, I’ve recorded a 15-minute presentation about a real-world data integration problem and solution from my own work. <a href="https://github.com/norlab/LIS-546-SPR2021/raw/master/content/readings/DataIntegrationSlides.pdf">PDF of slides available</a>.</p>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9g3cCV2UYeM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<div id="som-player" class="som-embed-player" data-id="cYf3oHAIEB"><script src="https://screenpal.com/player/appearance/cYf3oHAIEB"></script>&lt;iframe width=853 height=482 style="border:0;" scrolling="no" src="https://screenpal.com/player/cYf3oHAIEB?width=100%&amp;height=100%&amp;ff=1&amp;title=0&amp;copyUrl=1" allowfullscreen="true"&gt;&lt;/iframe&gt;</div>
 
 <h1 id="readings">Readings</h1>
 <p>Data integration is a topic that can be incredibly complex, and much of the published literature fails to make this an approachable or even realistic read for a course like DC II. But below are two readings that I highly recommend:</p>
@@ -401,13 +393,15 @@ View(mtcarswhole)
 </ul>
 
 <h2><a id="Exercise">Exercise</a></h2>
-<p>The exercise this week was inspired by an interesting analysis of New York City 311 data by <a href="https://twitter.com/chris_whong/status/1240363144654000132">Chris Whong</a> (<a href="https://web.archive.org/web/20210314224906/https://twitter.com/chris_whong/status/1240363144654000132">archived tweet</a>) last year at the beginning of the pandemic. What he observed was a 1000% increase in “Consumer Complaint” 311 requests since the first recorded case of Covid-19 infection in NYC. This was not without some important external conditions - after this recorded infection there was a more concerted effort by NYC residents to stockpile supplies. Having heard numerous informal complaints of price-gouging the city recommended that consumers report businesses using a 311 hotline.</p>
+<p>The exercise this week was inspired by an interesting analysis of New York City 311 data by <a href="https://twitter.com/chris_whong/status/1240363144654000132">Chris Whong</a> (<a href="https://web.archive.org/web/20210314224906/https://twitter.com/chris_whong/status/1240363144654000132">archived tweet</a>) who at the beginning of the Covid-19 pandemic did a lot of very interesting data analysis. What he observed back in 2019 was a 1000% increase in “Consumer Complaint” 311 requests after the first recorded case of Covid-19 infection in NYC. This was not without some important external conditions - after this recorded infection there was a more concerted effort by NYC residents to stockpile supplies. Having heard numerous informal complaints of price-gouging the city recommended that consumers report businesses using a 311 hotline.</p>
 
 <p>A simple graph makes this more compelling than the narrative description - we see a huge spike in complaints beginning March 1st.</p>
 
 <p><img src="https://pbs.twimg.com/media/ETapolDX0AAt9Ye?format=png&amp;name=900x900" alt="" /></p>
 
-<p>Inspired by this creative visualizing of 311 data and by the examples included in the content this week, you will be trying your hands at integrating 311 data from two different cities from a similar time period of March 1, 2020 through May 1, 2020. Lucky for us, there is an existing repository of <a href="https://andrew-friedman.github.io/jkan/datasets/">311 city data</a>. However, retrieving data from some of these repositories can be difficult depending on the size of the data download and the ability to filter before downloading. So I am providing you with datasets to use. (If you’re really ambitious and have the time you are more than welcome to choose your own cities and download the data - but don’t prioritize this over other work for this class and other classes.) I have provided you with a random sample of <a href="https://github.com/norlab/LIS-546-SPR2021/raw/master/content/data/SF_311_Feb-Apr.csv">200 rows of data from San Francisco</a> and <a href="https://github.com/norlab/LIS-546-SPR2021/raw/master/content/data/Boston_311_Feb-Apr.csv">200 rows of data from Boston</a>. (Note: you should be able to right-click on the pages that load from the links and Save Page As to open the content locally. But I will also upload the files to <a href="https://canvas.uw.edu/courses/1465297/files/folder/Datasets">Canvas</a>.)</p>
+<p>Inspired by this creative visualizing of 311 data and by the examples included in the content this week, you will be trying your hands at integrating 311 data from two different cities from a similar time period of March 1, 2020 through May 1, 2020. Lucky for us, there is an existing repository of <a href="https://andrew-friedman.github.io/jkan/datasets/">311 city data</a>. However, retrieving data from some of these repositories can be difficult depending on the size of the data download and the ability to filter before downloading. So I am providing you with datasets to use. (If you’re really ambitious and have the time you are more than welcome to choose your own cities and download the data - but don’t prioritize this over other work for this class and other classes.)</p>
+
+<p>I have provided you with a random sample of <a href="https://github.com/norlab/LIS-546-SPR2021/raw/master/content/data/SF_311_Feb-Apr.csv">200 rows of data from San Francisco</a> and <a href="https://github.com/norlab/LIS-546-SPR2021/raw/master/content/data/Boston_311_Feb-Apr.csv">200 rows of data from Boston</a>. (Note: you should be able to right-click on the pages that load from the links and Save Page As to open the content locally.)</p>
 
 <p>Your exercise this week is to attempt to integrate (at least some) of the provided data. You may use your favorite tool for working with tables. Examples include: Microsoft Excel, Google Sheets, OpenRefine, R, Python. This task will be challenging but hopefully rewarding.</p>
 
@@ -422,7 +416,7 @@ View(mtcarswhole)
 
 <p><strong>What to turn in:</strong></p>
 
-<p>Post the following in the <a href="https://canvas.uw.edu/courses/1641385/discussion_topics/8008427">discussion</a> for this week’s exercise:</p>
+<p>Post the following in the <a href="https://canvas.uw.edu/courses/1641385/discussion_topics/8072058">discussion</a> for this week’s exercise:</p>
 <ul>
   <li>Provide a table with an example of your integration. You do not need to integrate all 400 rows. Just choose an example to showcase the work you did. You can provide your new table via a Google Sheet, Excel document, .csv, or even a screenshot of the new table from whatever software platform you are using. If you were unable to integrate the the tables, show an example of the two tables and where you got stuck. I’m not promising that this will be easy, but I also don’t want you to spend hours on this. Take one hour to make your best attempt and then follow the next step.</li>
   <li>Provide an explanation (~1 paragraph) of what you tried to integrate the data, and why this was or was not challenging. Was this an example of vertical or horizontal integration (or a combination)?</li>

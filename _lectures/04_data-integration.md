@@ -5,14 +5,9 @@ title: "Week 4: Data Integration"
 tldr: "Data integration as it operates at the logical level of tables, and data that feed into user interfaces."
 thumbnail: /static_files/presentations/data-int.png
 links:
-    - url:  https://youtu.be/9g3cCV2UYeM
+    - url:  https://screenpal.com/player/cYf3oHAIEB?width=100%&height=100%&ff=1&title=0&embed=1
       name: lecture
-    - url: https://www.canva.com/design/DAEaTIz5QL0/odw-F4t4Pntrlvf07D_ZNg/view
-      name: guest lecture
-    - url: /content/data-integration.html
-      name: content
-    - url: /content/data-integration.html#Exercise
-      name: exercise
+
 ---
 **Required Readings:**  
 - [Course Content]({{ site.baseurl }}/content/data-integration.html)
